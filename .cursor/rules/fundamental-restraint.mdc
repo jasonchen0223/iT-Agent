@@ -1,0 +1,341 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# 智能代理协作系统 (iT-Agent) AI开发约束规则
+
+## 1. 代码风格与约定
+
+- 使用中文注释和文档，保持与项目文档一致的语言
+- 遵循单人开发者友好的简洁代码风格，优先考虑可读性和可维护性
+- 函数和组件应当小而专注，遵循单一职责原则
+- 避免超过100行的函数，超过500行的文件
+- 使用空格而非制表符进行缩进，保持4空格缩进
+- 代码提交前应移除所有console.log调试语句，除非特别注明为必要日志
+- 优先使用async/await而非Promise链
+- 使用ES6+特性，如箭头函数、解构赋值、模板字符串等
+
+## 2. 技术偏好与约束
+
+- 前端开发使用Next.js（App Router）+ React 18+
+- 样式采用Tailwind CSS，避免使用内联样式或传统CSS文件
+- UI主题为宇宙星空主题，配色应遵循项目UI设计系统规范
+- 状态管理优先使用React Context + hooks，避免引入Redux等复杂框架
+- 数据库访问使用Prisma ORM，避免直接SQL查询
+- 认证采用NextAuth.js，遵循项目中已定义的认证流程
+- 实时通信使用Socket.IO，遵循已定义的通信协议
+- AI代理部分使用AutoGen框架，避免引入其他AI框架如LangChain
+- 向量数据库使用OpenAI Ada + Sentence Transformers的方案
+- 避免引入未在tech_stack.md中指定的依赖项
+
+## 3. 代码结构与命名规范
+
+- 文件和目录使用kebab-case (例如：agent-config.js)
+- React组件使用PascalCase (例如：AgentCard.jsx)
+- 函数、变量使用camelCase (例如：getAgentConfig)
+- 常量使用UPPER_SNAKE_CASE (例如：MAX_AGENTS)
+- 组件目录结构应遵循项目已有的模式，遵循features/components分离原则
+- TypeScript接口以大写I开头 (例如：IAgentConfig)
+- TypeScript类型以大写T开头 (例如：TAgentRole)
+- 自定义hooks以use开头 (例如：useAgentStatus)
+- API路由应遵循RESTful设计原则
+- 遵循项目数据模型中定义的实体关系和命名
+
+## 4. 文档与注释
+
+- 为每个组件、函数、类添加JSDoc风格的注释
+- 注释应使用中文，保持一致性
+- 复杂逻辑需添加解释性注释
+- 公共API和关键函数参数必须有完整的类型注解和注释
+- 代码修改时应更新相关文档，保持文档与代码同步
+- 遵循项目文档结构，将新文档放在合适的目录下
+- 测试用例应当有明确的描述，解释测试的目的
+
+## 5. AI行为约束
+
+- 在修改现有代码前，先理解其功能和设计意图
+- 优先重用项目中已有的组件、函数和工具，避免重复造轮子
+- 在任务目标不明确时，请求用户澄清
+- 在进行大规模变更前，先提供草案或计划供用户确认
+- 提出的解决方案应考虑单人开发者的维护成本
+- 遵循项目development_guidelines.md中规定的开发流程
+- 任何对架构或核心功能的重大更改需要特别标注并解释
+- 避免生成过于复杂的解决方案，优先考虑简单直接的实现
+- 代码调整应遵循渐进式改进原则，避免全盘重写
+
+## 6. 多代理系统相关规则
+
+- 代理定义遵循AutoGen的标准格式
+- 代理之间的通信遵循项目中定义的通信协议
+- 代理行为应可配置，避免硬编码行为模式
+- 代理UI展示应符合宇宙星空主题设计
+- 代理相关功能命名应一致（如Agent而非Bot或Assistant）
+- 代理系统应支持可视化协作过程
+- 优先使用TypeScript定义代理类型和接口
+
+## 7. 测试与质量保证
+
+- 新功能应有对应的单元测试和集成测试
+- 使用Testing Library进行React组件测试
+- 遵循项目testing_strategy.md中定义的测试原则
+- 测试应覆盖正常流程和异常情况
+- 避免使用模拟(mock)覆盖太多实际行为
+- 优先编写小型、专注的测试用例
+- 所有代码修改应通过现有测试，不破坏已有功能
+
+## 8. 安全与错误处理
+
+- 敏感信息（如API密钥）不应硬编码，应使用环境变量
+- 用户输入必须进行验证和净化
+- 正确处理和记录错误，提供有用的错误信息
+- API错误响应应遵循一致的格式
+- 实现适当的权限控制和身份验证
+- 避免暴露内部实现细节给客户端
+- 使用try-catch处理可能的异常情况
+
+## 9. 性能考量
+
+- 避免不必要的组件重渲染
+- 大型数据集应实现分页或虚拟滚动
+- 长时间运行的操作应提供用户反馈
+- 实现适当的缓存策略
+- 图片和资源应优化加载性能
+- 避免阻塞主线程的密集计算
+
+## 10. 开发工作流
+
+- 遵循项目定义的Git工作流程
+- 功能开发应使用feature分支
+- 提交消息应清晰描述更改内容
+- 代码更改应与project_progress.md中的任务相关联
+- 遵循语义化版本控制原则
+- 代码合并前应进行自测和代码审查 
+
+## 11. 特定文件类型规则
+
+### 11.1 React组件文件 (.tsx, .jsx)
+
+```tsx
+// 组件文件模板示例
+import React from 'react';
+import { ComponentProps } from './component-types';
+
+/**
+ * 组件名称
+ * 
+ * 组件描述与用途
+ * 
+ * @param {ComponentProps} props - 组件属性
+ * @returns {React.ReactElement} 组件渲染结果
+ */
+export const ComponentName: React.FC<ComponentProps> = ({
+    prop1,
+    prop2,
+    children,
+}) => {
+    // 状态定义
+    
+    // 副作用处理
+    
+    // 事件处理函数
+    
+    // 辅助函数
+    
+    // 渲染
+    return (
+        <div>
+            {/* 组件内容 */}
+        </div>
+    );
+};
+```
+
+- 组件必须使用函数式组件，避免class组件
+- 组件文件名应使用PascalCase，与组件名一致
+- 每个组件一个文件，避免在同一文件中定义多个导出组件
+- 组件props必须使用TypeScript接口定义并导出
+- 组件文件结构按照：导入、类型定义、组件定义、辅助函数、默认导出
+- 事件处理函数命名为handleXxx格式（如handleClick, handleSubmit）
+- 将关注点分离，UI渲染逻辑与业务逻辑分离
+- 复杂组件应拆分为更小的子组件
+- 非受控组件尽量避免使用，优先使用受控组件
+- 使用React.memo()包装纯展示组件以避免不必要的重渲染
+
+### 11.2 样式文件 (Tailwind)
+
+- 配置文件应包含项目宇宙星空主题的自定义配色方案
+- 使用Tailwind组合类优先于创建新的自定义类
+- 复杂组件的重复样式应抽取为Tailwind插件或组合类
+- 响应式设计使用Tailwind的断点系统，遵循移动优先原则
+- 暗模式支持必须考虑，使用dark:前缀类
+- 禁止在组件中使用内联样式或传统CSS文件
+- 自定义动画效果应定义在tailwind.config.js中
+
+### 11.3 API路由文件 (Next.js)
+
+```ts
+// API路由文件模板示例
+import { NextRequest, NextResponse } from 'next/server';
+import { db } from '@/lib/db';
+import { validateInput } from '@/lib/validation';
+
+/**
+ * 路由处理函数
+ * 
+ * 功能描述
+ * 
+ * @param {NextRequest} request - 请求对象
+ * @returns {NextResponse} 响应对象
+ */
+export async function GET(request: NextRequest) {
+    try {
+        // 参数验证
+
+        // 权限验证
+
+        // 业务逻辑
+
+        // 返回结果
+        return NextResponse.json({ success: true, data: {} });
+    } catch (error) {
+        console.error('路由错误:', error);
+        return NextResponse.json(
+            { success: false, error: '请求处理失败' }, 
+            { status: 500 }
+        );
+    }
+}
+```
+
+- API路由遵循RESTful设计原则
+- 每个路由函数必须有错误处理
+- 输入参数必须验证，使用专门的验证库或函数
+- 返回数据格式统一：{ success: boolean, data?: any, error?: string }
+- 适当使用HTTP状态码反映请求处理结果
+- 路由命名遵循语义化原则，如/api/agents而非/api/a
+- 敏感操作必须有适当的权限检查
+- 复杂业务逻辑应抽取到单独的service层
+
+### 11.4 数据库模型 (Prisma)
+
+```prisma
+// Prisma模型示例
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  sessions  Session[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+```
+
+- 模型字段名使用camelCase
+- 每个模型至少包含id, createdAt, updatedAt字段
+- 关系字段应清晰命名，表明关系性质
+- 适当使用索引以优化查询性能
+- 字段约束应明确，包括唯一性、必填性等
+- 枚举类型应首先在schema中定义，再在模型中使用
+- 模型之间的关系应在双方都定义清楚
+- 使用注释解释复杂字段或关系的用途
+
+### 11.5 代理定义文件 (AutoGen)
+
+```python
+# AutoGen代理定义示例
+import autogen
+
+"""
+代理名称
+
+代理职责描述与功能
+"""
+代理名称 = autogen.ConversableAgent(
+    name="代理名称",
+    llm_config={
+        "temperature": 0,
+        "request_timeout": 600,
+    },
+    system_message="""你是一个专门的[代理职责]代理...""",
+)
+```
+
+- 每个代理必须有清晰的单一职责
+- 代理定义文件应包含详细的中文注释
+- 代理系统消息应明确、具体，不含模糊指令
+- 代理配置应可参数化，便于动态调整
+- 代理间通信协议应标准化，遵循既定格式
+- 复杂代理行为应分解为多个简单行为
+- 代理应有合理的错误处理和回退机制
+- 代理应支持会话历史记录和上下文管理
+
+### 11.6 工具和辅助函数
+
+```ts
+// 工具函数示例
+/**
+ * 函数名称
+ * 
+ * 函数功能描述
+ * 
+ * @param {类型} 参数名 - 参数描述
+ * @returns {返回类型} 返回值描述
+ */
+export function functionName(param: Type): ReturnType {
+    // 参数验证
+    
+    // 主逻辑
+    
+    // 返回结果
+}
+```
+
+- 函数应遵循单一职责原则
+- 纯函数优先，避免副作用
+- 函数命名应表明操作和返回值，如getUser而非user
+- 工具函数必须有完整的参数和返回值类型注解
+- 错误处理应明确，使用返回错误对象或抛出错误
+- 避免深度嵌套的条件判断，优先使用early return模式
+- 共用工具函数应放在适当的lib或utils目录下
+- 测试覆盖率应高，特别是关键功能
+
+### 11.7 测试文件
+
+```tsx
+// 测试文件示例
+import { render, screen, fireEvent } from '@testing-library/react';
+import { ComponentName } from './ComponentName';
+
+describe('ComponentName', () => {
+    it('应正确渲染组件', () => {
+        // 准备测试数据
+        
+        // 渲染组件
+        
+        // 断言
+    });
+    
+    // 更多测试...
+});
+```
+
+- 测试文件命名为原文件名.test.tsx或.spec.tsx
+- 组件测试应包括渲染测试和交互测试
+- 测试描述应清晰表明测试内容和预期结果
+- 测试应独立，不依赖其他测试的执行结果
+- 优先使用测试库提供的查询方法，如getByRole而非querySelector
+- 模拟外部依赖，如API调用、定时器等
+- 测试应考虑边界情况和错误处理
+- 组织测试为多个小型、聚焦的测试用例
+
+### 11.8 文档文件 (.md)
+
+- 文档使用中文编写
+- 文档结构应清晰，使用标题层级组织内容
+- 代码示例应使用正确的语法高亮
+- 文档应包含目录（大型文档）和适当的链接
+- 更新代码时同步更新相关文档
+- 文档应针对单人开发者，提供足够详细的信息
+- 使用截图或图表辅助说明复杂概念
+- 文档应保持最新，定期审查和更新 
