@@ -65,12 +65,14 @@ export function NotificationItem({
             stroke="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
+            data-oid="g7-8emk"
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
               d="M5 13l4 4L19 7"
+              data-oid="1er4l3s"
             />
           </svg>
         );
@@ -83,12 +85,14 @@ export function NotificationItem({
             stroke="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
+            data-oid="e.uwbn1"
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
               d="M6 18L18 6M6 6l12 12"
+              data-oid="kkr94vi"
             />
           </svg>
         );
@@ -101,12 +105,14 @@ export function NotificationItem({
             stroke="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
+            data-oid="dyo:br3"
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
               d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+              data-oid="ptvgo-z"
             />
           </svg>
         );
@@ -119,12 +125,14 @@ export function NotificationItem({
             stroke="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
+            data-oid="r9:.55i"
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
               d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              data-oid="lggevvu"
             />
           </svg>
         );
@@ -141,20 +149,28 @@ export function NotificationItem({
         getBgColor(),
         isVisible ? "translate-x-0 opacity-100" : "translate-x-full opacity-0",
       )}
+      data-oid="7u29k25"
     >
-      <div className="flex">
-        <div className="flex-shrink-0">{getIcon()}</div>
-        <div className="ml-3 w-0 flex-1">
-          <p className="text-sm font-medium text-white">{title}</p>
-          <p className="mt-1 text-sm text-indigo-100/80">{message}</p>
+      <div className="flex" data-oid="1jv5lgp">
+        <div className="flex-shrink-0" data-oid="hrf:zgi">
+          {getIcon()}
         </div>
-        <div className="ml-4 flex-shrink-0 flex">
+        <div className="ml-3 w-0 flex-1" data-oid="bn6exbo">
+          <p className="text-sm font-medium text-white" data-oid="ocb0lcc">
+            {title}
+          </p>
+          <p className="mt-1 text-sm text-indigo-100/80" data-oid="z7lhf6q">
+            {message}
+          </p>
+        </div>
+        <div className="ml-4 flex-shrink-0 flex" data-oid="b27k89j">
           <button
             className="inline-flex text-indigo-300 hover:text-white focus:outline-none"
             onClick={() => {
               setIsVisible(false);
               setTimeout(() => onClose(id), 300);
             }}
+            data-oid="_8fpfo-"
           >
             <svg
               className="h-5 w-5"
@@ -162,12 +178,14 @@ export function NotificationItem({
               stroke="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
+              data-oid="0w38lzv"
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
                 d="M6 18L18 6M6 6l12 12"
+                data-oid="75o6xlx"
               />
             </svg>
           </button>
@@ -192,7 +210,10 @@ export function NotificationContainer({
   if (!mounted) return null;
 
   return createPortal(
-    <div className="fixed top-4 right-4 z-50 flex flex-col items-end">
+    <div
+      className="fixed top-4 right-4 z-50 flex flex-col items-end"
+      data-oid="d._3cml"
+    >
       {children}
     </div>,
     document.body,

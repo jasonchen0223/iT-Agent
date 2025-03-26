@@ -161,12 +161,14 @@ export const ToastProvider: React.FC<ToastProviderProps> = ({
       <div
         className={`fixed z-50 max-w-md w-full flex flex-col gap-2 ${getPositionClass()}`}
         aria-live="assertive"
+        data-oid="9c_fz3e"
       >
         {toasts.map((toast) => (
           <ToastItem
             key={toast.id}
             toast={toast}
             onClose={() => removeToast(toast.id)}
+            data-oid="wnlwnlg"
           />
         ))}
       </div>,
@@ -182,6 +184,7 @@ export const ToastProvider: React.FC<ToastProviderProps> = ({
         removeToast,
         clearToasts,
       }}
+      data-oid="2ggeysq"
     >
       {children}
       {renderToasts()}
@@ -208,26 +211,26 @@ const ToastItem: React.FC<ToastItemProps> = ({ toast, onClose }) => {
     switch (toast.type) {
       case "success":
         return {
-          icon: <CheckCircle className="w-5 h-5" />,
+          icon: <CheckCircle className="w-5 h-5" data-oid=":-alluj" />,
           bgColor: "bg-green-50 dark:bg-green-950 border-green-500",
           textColor: "text-green-800 dark:text-green-300",
         };
       case "error":
         return {
-          icon: <AlertCircle className="w-5 h-5" />,
+          icon: <AlertCircle className="w-5 h-5" data-oid="zb1gc9." />,
           bgColor: "bg-red-50 dark:bg-red-950 border-red-500",
           textColor: "text-red-800 dark:text-red-300",
         };
       case "warning":
         return {
-          icon: <AlertTriangle className="w-5 h-5" />,
+          icon: <AlertTriangle className="w-5 h-5" data-oid="pjpgf2k" />,
           bgColor: "bg-amber-50 dark:bg-amber-950 border-amber-500",
           textColor: "text-amber-800 dark:text-amber-300",
         };
       case "info":
       default:
         return {
-          icon: <Info className="w-5 h-5" />,
+          icon: <Info className="w-5 h-5" data-oid="kzkopnx" />,
           bgColor: "bg-blue-50 dark:bg-blue-950 border-blue-500",
           textColor: "text-blue-800 dark:text-blue-300",
         };
@@ -240,18 +243,28 @@ const ToastItem: React.FC<ToastItemProps> = ({ toast, onClose }) => {
     <div
       className={`w-full flex items-center p-4 rounded-lg shadow-lg border ${bgColor} ${textColor} transition-all`}
       role="alert"
+      data-oid="v_99g7c"
     >
-      <div className="flex-shrink-0 mr-3">{icon}</div>
-      <div className="flex-1 mr-2">
-        {toast.title && <h3 className="font-medium text-sm">{toast.title}</h3>}
-        <p className="text-sm mt-1">{toast.message}</p>
+      <div className="flex-shrink-0 mr-3" data-oid="5i0vz_l">
+        {icon}
+      </div>
+      <div className="flex-1 mr-2" data-oid="js_1z:3">
+        {toast.title && (
+          <h3 className="font-medium text-sm" data-oid="1-_:k9e">
+            {toast.title}
+          </h3>
+        )}
+        <p className="text-sm mt-1" data-oid="4fd5n_0">
+          {toast.message}
+        </p>
       </div>
       <button
         onClick={onClose}
         className="flex-shrink-0 ml-auto text-gray-400 hover:text-gray-500 focus:outline-none"
         aria-label="关闭"
+        data-oid="wf26sqw"
       >
-        <X className="w-4 h-4" />
+        <X className="w-4 h-4" data-oid="3yo7ny7" />
       </button>
     </div>
   );

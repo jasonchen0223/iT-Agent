@@ -68,14 +68,19 @@ export const ErrorDisplay: React.FC<ErrorDisplayProps> = ({
     switch (severity) {
       case "critical":
         return {
-          icon: <XCircle className="w-6 h-6 text-red-500" />,
+          icon: <XCircle className="w-6 h-6 text-red-500" data-oid="oflq4t9" />,
           containerStyle: "bg-red-50 dark:bg-red-950",
           borderStyle: "border-red-500",
           titleStyle: "text-red-700 dark:text-red-300",
         };
       case "high":
         return {
-          icon: <AlertCircle className="w-6 h-6 text-orange-500" />,
+          icon: (
+            <AlertCircle
+              className="w-6 h-6 text-orange-500"
+              data-oid="m_b8bzv"
+            />
+          ),
 
           containerStyle: "bg-orange-50 dark:bg-orange-950",
           borderStyle: "border-orange-500",
@@ -83,7 +88,12 @@ export const ErrorDisplay: React.FC<ErrorDisplayProps> = ({
         };
       case "medium":
         return {
-          icon: <AlertTriangle className="w-6 h-6 text-amber-500" />,
+          icon: (
+            <AlertTriangle
+              className="w-6 h-6 text-amber-500"
+              data-oid="uv38chz"
+            />
+          ),
 
           containerStyle: "bg-amber-50 dark:bg-amber-950",
           borderStyle: "border-amber-500",
@@ -91,7 +101,7 @@ export const ErrorDisplay: React.FC<ErrorDisplayProps> = ({
         };
       case "low":
         return {
-          icon: <Info className="w-6 h-6 text-blue-500" />,
+          icon: <Info className="w-6 h-6 text-blue-500" data-oid="zyzn:9o" />,
           containerStyle: "bg-blue-50 dark:bg-blue-950",
           borderStyle: "border-blue-500",
           titleStyle: "text-blue-700 dark:text-blue-300",
@@ -99,7 +109,7 @@ export const ErrorDisplay: React.FC<ErrorDisplayProps> = ({
       case "info":
       default:
         return {
-          icon: <Info className="w-6 h-6 text-indigo-500" />,
+          icon: <Info className="w-6 h-6 text-indigo-500" data-oid="tm.h7.a" />,
           containerStyle: "bg-indigo-50 dark:bg-indigo-950",
           borderStyle: "border-indigo-500",
           titleStyle: "text-indigo-700 dark:text-indigo-300",
@@ -121,40 +131,61 @@ export const ErrorDisplay: React.FC<ErrorDisplayProps> = ({
   return (
     <div
       className={`relative rounded-lg border ${borderStyle} p-4 ${containerStyle} ${className}`}
+      data-oid="werqyzu"
     >
-      <div className="flex items-start">
-        <div className="flex-shrink-0 mr-3">{icon}</div>
-        <div className="flex-1">
-          <h3 className={`text-sm font-medium ${titleStyle}`}>
-            {title} {code && <span className="font-mono">({code})</span>}
+      <div className="flex items-start" data-oid="14nn8j8">
+        <div className="flex-shrink-0 mr-3" data-oid="wm2gda1">
+          {icon}
+        </div>
+        <div className="flex-1" data-oid="zhhf-b7">
+          <h3
+            className={`text-sm font-medium ${titleStyle}`}
+            data-oid="f-xagf2"
+          >
+            {title}{" "}
+            {code && (
+              <span className="font-mono" data-oid="lbg6sfu">
+                ({code})
+              </span>
+            )}
           </h3>
-          <div className="mt-2 text-sm text-gray-700 dark:text-gray-300">
-            <p>{message}</p>
+          <div
+            className="mt-2 text-sm text-gray-700 dark:text-gray-300"
+            data-oid="7:sdvqi"
+          >
+            <p data-oid="ndp8kr8">{message}</p>
 
             {suggestion && (
-              <div className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                <p>
-                  <strong>建议:</strong> {suggestion}
+              <div
+                className="mt-2 text-sm text-gray-600 dark:text-gray-400"
+                data-oid="uee:o4p"
+              >
+                <p data-oid="7t_r8q8">
+                  <strong data-oid="hemky0m">建议:</strong> {suggestion}
                 </p>
               </div>
             )}
 
             {details && Object.keys(details).length > 0 && (
-              <div className="mt-2">
+              <div className="mt-2" data-oid="jixoktk">
                 <button
                   type="button"
                   className="flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
                   onClick={() => setShowDetails(!showDetails)}
+                  data-oid="i1eg2t6"
                 >
-                  <span>错误详情</span>
+                  <span data-oid="b2rli4y">错误详情</span>
                   {showDetails ? (
-                    <ChevronUp className="ml-1 w-4 h-4" />
+                    <ChevronUp className="ml-1 w-4 h-4" data-oid="9stevwa" />
                   ) : (
-                    <ChevronDown className="ml-1 w-4 h-4" />
+                    <ChevronDown className="ml-1 w-4 h-4" data-oid="h4io0qe" />
                   )}
                 </button>
                 {showDetails && (
-                  <pre className="mt-2 p-2 bg-gray-100 dark:bg-gray-800 rounded text-xs font-mono overflow-x-auto">
+                  <pre
+                    className="mt-2 p-2 bg-gray-100 dark:bg-gray-800 rounded text-xs font-mono overflow-x-auto"
+                    data-oid="a.vcdnk"
+                  >
                     {formatDetails(details)}
                   </pre>
                 )}
@@ -163,11 +194,12 @@ export const ErrorDisplay: React.FC<ErrorDisplayProps> = ({
           </div>
 
           {onRetry && (
-            <div className="mt-3">
+            <div className="mt-3" data-oid="ojofy2-">
               <button
                 type="button"
                 onClick={onRetry}
                 className="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                data-oid="eznfioa"
               >
                 重试
               </button>
@@ -176,14 +208,17 @@ export const ErrorDisplay: React.FC<ErrorDisplayProps> = ({
         </div>
 
         {dismissible && (
-          <div className="flex-shrink-0 ml-3">
+          <div className="flex-shrink-0 ml-3" data-oid="aqkvw9n">
             <button
               type="button"
               className="inline-flex text-gray-400 hover:text-gray-500 focus:outline-none"
               onClick={onDismiss}
+              data-oid="iohv9vb"
             >
-              <span className="sr-only">关闭</span>
-              <X className="h-5 w-5" />
+              <span className="sr-only" data-oid="z4hn0n-">
+                关闭
+              </span>
+              <X className="h-5 w-5" data-oid="wia17c-" />
             </button>
           </div>
         )}

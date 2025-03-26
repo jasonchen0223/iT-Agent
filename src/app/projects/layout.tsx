@@ -7,11 +7,13 @@ import { ReactNode } from "react";
 export default function ProjectsLayout({ children }: { children: ReactNode }) {
   return (
     <>
-      <StarBackground />
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+      <StarBackground data-oid=".xrqf9d" />
+      <div className="min-h-screen flex flex-col" data-oid="6_-cad.">
+        <Header data-oid="qdq6b_-" />
+        <main className="flex-1" data-oid="ytqx70f">
+          {children}
+        </main>
+        <Footer data-oid=":std1e." />
       </div>
     </>
   );

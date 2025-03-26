@@ -24,6 +24,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         )}
         ref={ref}
         {...props}
+        data-oid="d3:gfcb"
       />
     );
   },

@@ -65,55 +65,89 @@ const SessionList: React.FC<ISessionListProps> = ({
   onCreateSession,
 }) => {
   return (
-    <div className="space-y-4">
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl font-semibold text-indigo-300">会话列表</h2>
+    <div className="space-y-4" data-oid="9.hmb0m">
+      <div
+        className="flex justify-between items-center mb-4"
+        data-oid="w116gbh"
+      >
+        <h2
+          className="text-xl font-semibold text-indigo-300"
+          data-oid="0qwbn06"
+        >
+          会话列表
+        </h2>
         <Button
           variant="default"
           size="sm"
           onClick={onCreateSession}
           disabled={isLoading}
+          data-oid="7je04o0"
         >
           创建会话
         </Button>
       </div>
 
       {isLoading ? (
-        <div className="flex items-center justify-center h-40">
-          <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-indigo-500"></div>
+        <div
+          className="flex items-center justify-center h-40"
+          data-oid="_41xr5a"
+        >
+          <div
+            className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-indigo-500"
+            data-oid="4j6lx7r"
+          ></div>
         </div>
       ) : sessions.length === 0 ? (
-        <Card className="text-center py-10">
-          <p className="text-gray-400 mb-4">暂无会话</p>
-          <Button variant="outline" onClick={onCreateSession}>
+        <Card className="text-center py-10" data-oid="s::p.j5">
+          <p className="text-gray-400 mb-4" data-oid="hmqcyy3">
+            暂无会话
+          </p>
+          <Button
+            variant="outline"
+            onClick={onCreateSession}
+            data-oid="t5n5hic"
+          >
             创建第一个会话
           </Button>
         </Card>
       ) : (
-        <div className="space-y-3">
+        <div className="space-y-3" data-oid="_be54jl">
           {sessions.map((session) => (
             <Card
               key={session.id}
               className="cursor-pointer hover:shadow-glow transition-shadow p-4"
               onClick={() => onSessionClick?.(session.id)}
+              data-oid=":rb8qia"
             >
-              <div className="flex justify-between items-start">
-                <div>
-                  <h3 className="text-lg font-semibold text-white">
+              <div
+                className="flex justify-between items-start"
+                data-oid="_txw8e7"
+              >
+                <div data-oid="mivgcm8">
+                  <h3
+                    className="text-lg font-semibold text-white"
+                    data-oid="dv.wql8"
+                  >
                     {session.name}
                   </h3>
                   {session.description && (
-                    <p className="text-sm text-gray-300 mt-1">
+                    <p
+                      className="text-sm text-gray-300 mt-1"
+                      data-oid="e_j11__"
+                    >
                       {session.description}
                     </p>
                   )}
                 </div>
-                <div className="bg-indigo-900 px-2 py-1 rounded text-xs text-indigo-200">
+                <div
+                  className="bg-indigo-900 px-2 py-1 rounded text-xs text-indigo-200"
+                  data-oid="jpnqqac"
+                >
                   {session.agentCount}个代理
                 </div>
               </div>
 
-              <div className="mt-4 text-xs text-gray-400">
+              <div className="mt-4 text-xs text-gray-400" data-oid="bfu:7ry">
                 创建于:{" "}
                 {typeof session.createdAt === "string"
                   ? session.createdAt

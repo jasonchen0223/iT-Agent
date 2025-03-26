@@ -108,11 +108,15 @@ export const AgentCard: React.FC<IAgentCardProps> = ({ agent, onClick }) => {
     <div
       onClick={onClick}
       className="cursor-pointer transition-all duration-300"
+      data-oid="u9y4bf7"
     >
-      <Card className="bg-indigo-950/30 backdrop-blur-sm hover:border-indigo-500/50">
-        <div className="p-4 space-y-3">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
+      <Card
+        className="bg-indigo-950/30 backdrop-blur-sm hover:border-indigo-500/50"
+        data-oid="16:uz:6"
+      >
+        <div className="p-4 space-y-3" data-oid="6sol7gs">
+          <div className="flex items-center justify-between" data-oid="7pz:g_i">
+            <div className="flex items-center space-x-3" data-oid="tufqkl.">
               {icon ? (
                 <Image
                   src={icon}
@@ -120,58 +124,74 @@ export const AgentCard: React.FC<IAgentCardProps> = ({ agent, onClick }) => {
                   width={40}
                   height={40}
                   className="rounded-full bg-indigo-900/20 p-1"
+                  data-oid="c5hebzg"
                 />
               ) : (
                 <div
                   className="w-10 h-10 rounded-full flex items-center justify-center text-white"
                   style={{ backgroundColor: color }}
+                  data-oid="uhb5zct"
                 >
-                  <span className="text-xl font-medium">
+                  <span className="text-xl font-medium" data-oid="r1lxkfg">
                     {name.substring(0, 2)}
                   </span>
                 </div>
               )}
-              <div>
-                <h3 className="text-lg font-medium text-indigo-100">{name}</h3>
-                <p className="text-sm text-indigo-300/70">
+              <div data-oid="7c.kfpt">
+                <h3
+                  className="text-lg font-medium text-indigo-100"
+                  data-oid="cmj7ul9"
+                >
+                  {name}
+                </h3>
+                <p className="text-sm text-indigo-300/70" data-oid=":942ji_">
                   {roleDisplayNames[role] || role}
                 </p>
               </div>
             </div>
             <span
               className={`px-2 py-1 rounded-full text-xs ${getStatusColor()}`}
+              data-oid=":je9a-8"
             >
               {getStatusText()}
             </span>
           </div>
 
-          <p className="text-indigo-300/70 text-sm line-clamp-3">
+          <p
+            className="text-indigo-300/70 text-sm line-clamp-3"
+            data-oid="949thuv"
+          >
             {description}
           </p>
 
           {agent.capability && agent.capability.length > 0 && (
-            <div className="flex flex-wrap gap-1 pt-1">
+            <div className="flex flex-wrap gap-1 pt-1" data-oid="_bugqvc">
               {agent.capability.slice(0, 2).map((cap) => (
                 <span
                   key={cap}
                   className="px-2 py-0.5 bg-indigo-900/30 text-indigo-300/70 text-xs rounded-full"
+                  data-oid="i16qo32"
                 >
                   {cap}
                 </span>
               ))}
               {agent.capability.length > 2 && (
-                <span className="px-2 py-0.5 bg-indigo-900/20 text-indigo-300/50 text-xs rounded-full">
+                <span
+                  className="px-2 py-0.5 bg-indigo-900/20 text-indigo-300/50 text-xs rounded-full"
+                  data-oid="4x41rwn"
+                >
                   +{agent.capability.length - 2}
                 </span>
               )}
             </div>
           )}
 
-          <div className="pt-2 flex justify-end">
+          <div className="pt-2 flex justify-end" data-oid="olg8p2b">
             <Link
               href={`/agents/${id}`}
               className="text-xs text-indigo-400 hover:text-indigo-300"
               onClick={(e) => e.stopPropagation()}
+              data-oid="e_o8ynl"
             >
               查看详情
             </Link>

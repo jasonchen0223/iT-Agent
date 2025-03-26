@@ -11,11 +11,13 @@ export default function CollaborationLayout({
 }) {
   return (
     <>
-      <StarBackground />
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+      <StarBackground data-oid=".uxse8w" />
+      <div className="min-h-screen flex flex-col" data-oid="i0yekoo">
+        <Header data-oid="lijhm.7" />
+        <main className="flex-1" data-oid="nzxvarg">
+          {children}
+        </main>
+        <Footer data-oid="7zv5_g0" />
       </div>
     </>
   );

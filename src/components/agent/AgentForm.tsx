@@ -269,27 +269,42 @@ const AgentForm: React.FC<IAgentFormProps> = ({
   }, [formData.role, initialData.color]);
 
   return (
-    <Card className="max-w-3xl mx-auto">
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <h2 className="text-xl font-semibold text-indigo-300 mb-4">
+    <Card className="max-w-3xl mx-auto" data-oid="e6c77p4">
+      <form onSubmit={handleSubmit} className="space-y-6" data-oid="b0idqyu">
+        <h2
+          className="text-xl font-semibold text-indigo-300 mb-4"
+          data-oid="iwun7lf"
+        >
           {initialData.id ? "编辑代理" : "创建新代理"}
         </h2>
 
         {error && (
-          <div className="bg-red-900/50 border border-red-700 text-white p-4 rounded-md">
-            <p className="font-semibold">错误</p>
-            <p>{error}</p>
+          <div
+            className="bg-red-900/50 border border-red-700 text-white p-4 rounded-md"
+            data-oid="44ig771"
+          >
+            <p className="font-semibold" data-oid="wmvn5xc">
+              错误
+            </p>
+            <p data-oid="1xb1__2">{error}</p>
           </div>
         )}
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div
+          className="grid grid-cols-1 gap-6 md:grid-cols-2"
+          data-oid="lvxx-8c"
+        >
           {/* 代理名称 */}
-          <div className="col-span-1">
+          <div className="col-span-1" data-oid="9q1wcn:">
             <label
               htmlFor="name"
               className="block text-sm font-medium text-gray-300 mb-1"
+              data-oid="9z8yae_"
             >
-              代理名称 <span className="text-red-500">*</span>
+              代理名称{" "}
+              <span className="text-red-500" data-oid="ml0-zx4">
+                *
+              </span>
             </label>
             <input
               type="text"
@@ -300,16 +315,21 @@ const AgentForm: React.FC<IAgentFormProps> = ({
               className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
               placeholder="输入代理名称"
               required
+              data-oid="dj5g2-f"
             />
           </div>
 
           {/* 代理角色 */}
-          <div className="col-span-1">
+          <div className="col-span-1" data-oid="ugvhf-2">
             <label
               htmlFor="role"
               className="block text-sm font-medium text-gray-300 mb-1"
+              data-oid="sfry05l"
             >
-              代理角色 <span className="text-red-500">*</span>
+              代理角色{" "}
+              <span className="text-red-500" data-oid="s-.1-dx">
+                *
+              </span>
             </label>
             <select
               id="role"
@@ -318,9 +338,10 @@ const AgentForm: React.FC<IAgentFormProps> = ({
               onChange={handleChange}
               className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
               required
+              data-oid="2kaa-if"
             >
               {Object.values(TAgentRole).map((role) => (
-                <option key={role} value={role}>
+                <option key={role} value={role} data-oid="fjef4s:">
                   {roleDisplayNames[role]} ({role})
                 </option>
               ))}
@@ -328,10 +349,11 @@ const AgentForm: React.FC<IAgentFormProps> = ({
           </div>
 
           {/* 代理描述 */}
-          <div className="col-span-2">
+          <div className="col-span-2" data-oid="awhbrc0">
             <label
               htmlFor="description"
               className="block text-sm font-medium text-gray-300 mb-1"
+              data-oid="k51pga8"
             >
               代理描述
             </label>
@@ -343,16 +365,21 @@ const AgentForm: React.FC<IAgentFormProps> = ({
               rows={2}
               className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
               placeholder="描述代理的功能和特点"
+              data-oid="5lqechn"
             />
           </div>
 
           {/* 系统消息 */}
-          <div className="col-span-2">
+          <div className="col-span-2" data-oid="4nyr:fn">
             <label
               htmlFor="systemMessage"
               className="block text-sm font-medium text-gray-300 mb-1"
+              data-oid="m48-qck"
             >
-              系统消息 <span className="text-red-500">*</span>
+              系统消息{" "}
+              <span className="text-red-500" data-oid="md1eo1w">
+                *
+              </span>
             </label>
             <textarea
               id="systemMessage"
@@ -363,22 +390,24 @@ const AgentForm: React.FC<IAgentFormProps> = ({
               className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
               placeholder="输入代理的系统指令消息"
               required
+              data-oid="783a1:."
             />
 
-            <p className="text-xs text-gray-400 mt-1">
+            <p className="text-xs text-gray-400 mt-1" data-oid="vykbtb5">
               系统消息定义了代理的行为、技能和限制
             </p>
           </div>
 
           {/* 代理颜色 */}
-          <div className="col-span-1">
+          <div className="col-span-1" data-oid="ko5v9t4">
             <label
               htmlFor="color"
               className="block text-sm font-medium text-gray-300 mb-1"
+              data-oid="_u.u98k"
             >
               代理颜色
             </label>
-            <div className="flex items-center">
+            <div className="flex items-center" data-oid="jr1w5ye">
               <input
                 type="color"
                 id="color"
@@ -386,6 +415,7 @@ const AgentForm: React.FC<IAgentFormProps> = ({
                 value={formData.color}
                 onChange={handleChange}
                 className="w-10 h-10 bg-transparent rounded-md cursor-pointer"
+                data-oid="jia08ze"
               />
 
               <input
@@ -394,21 +424,31 @@ const AgentForm: React.FC<IAgentFormProps> = ({
                 onChange={handleChange}
                 name="color"
                 className="ml-2 w-28 px-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                data-oid="inoyqcb"
               />
             </div>
           </div>
         </div>
 
         {/* LLM配置 */}
-        <div className="space-y-4">
-          <h3 className="text-md font-medium text-indigo-300">LLM配置</h3>
+        <div className="space-y-4" data-oid="g9h7ij.">
+          <h3
+            className="text-md font-medium text-indigo-300"
+            data-oid=".nm1i6e"
+          >
+            LLM配置
+          </h3>
 
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <div
+            className="grid grid-cols-1 gap-4 md:grid-cols-3"
+            data-oid="-xr7uo6"
+          >
             {/* 模型 */}
-            <div>
+            <div data-oid="8bt9rbx">
               <label
                 htmlFor="model"
                 className="block text-sm font-medium text-gray-300 mb-1"
+                data-oid="k.-:80i"
               >
                 模型
               </label>
@@ -418,21 +458,35 @@ const AgentForm: React.FC<IAgentFormProps> = ({
                 value={formData.llmConfig?.model}
                 onChange={handleLlmConfigChange}
                 className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                data-oid="ji4a:9f"
               >
-                <option value="gpt-4">GPT-4</option>
-                <option value="gpt-4-turbo">GPT-4 Turbo</option>
-                <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
-                <option value="claude-3-opus">Claude 3 Opus</option>
-                <option value="claude-3-sonnet">Claude 3 Sonnet</option>
-                <option value="gemini-pro">Gemini Pro</option>
+                <option value="gpt-4" data-oid="yp665cq">
+                  GPT-4
+                </option>
+                <option value="gpt-4-turbo" data-oid="en6do9k">
+                  GPT-4 Turbo
+                </option>
+                <option value="gpt-3.5-turbo" data-oid="ysx6qmd">
+                  GPT-3.5 Turbo
+                </option>
+                <option value="claude-3-opus" data-oid="40xu5ki">
+                  Claude 3 Opus
+                </option>
+                <option value="claude-3-sonnet" data-oid="s0k4ikf">
+                  Claude 3 Sonnet
+                </option>
+                <option value="gemini-pro" data-oid="wc23z0w">
+                  Gemini Pro
+                </option>
               </select>
             </div>
 
             {/* 温度 */}
-            <div>
+            <div data-oid="kdrdbxb">
               <label
                 htmlFor="temperature"
                 className="block text-sm font-medium text-gray-300 mb-1"
+                data-oid="9k6itz0"
               >
                 温度：{formData.llmConfig?.temperature || 0}
               </label>
@@ -446,19 +500,24 @@ const AgentForm: React.FC<IAgentFormProps> = ({
                 value={formData.llmConfig?.temperature || 0}
                 onChange={handleLlmConfigChange}
                 className="w-full bg-gray-700 rounded-lg appearance-none cursor-pointer"
+                data-oid="5q2r-:r"
               />
 
-              <div className="flex justify-between text-xs text-gray-400 mt-1">
-                <span>精确</span>
-                <span>创造</span>
+              <div
+                className="flex justify-between text-xs text-gray-400 mt-1"
+                data-oid="k7p-e6v"
+              >
+                <span data-oid=".aj:am5">精确</span>
+                <span data-oid="a.0hdz1">创造</span>
               </div>
             </div>
 
             {/* 最大生成长度 */}
-            <div>
+            <div data-oid="x7f6wtd">
               <label
                 htmlFor="maxTokens"
                 className="block text-sm font-medium text-gray-300 mb-1"
+                data-oid="rgnzr46"
               >
                 最大长度：{formData.llmConfig?.maxTokens || 1000}
               </label>
@@ -472,11 +531,15 @@ const AgentForm: React.FC<IAgentFormProps> = ({
                 value={formData.llmConfig?.maxTokens || 1000}
                 onChange={handleLlmConfigChange}
                 className="w-full bg-gray-700 rounded-lg appearance-none cursor-pointer"
+                data-oid="zp60129"
               />
 
-              <div className="flex justify-between text-xs text-gray-400 mt-1">
-                <span>简短</span>
-                <span>详细</span>
+              <div
+                className="flex justify-between text-xs text-gray-400 mt-1"
+                data-oid="c-__:tx"
+              >
+                <span data-oid="3znns:6">简短</span>
+                <span data-oid=":v::4_-">详细</span>
               </div>
             </div>
           </div>
@@ -484,10 +547,18 @@ const AgentForm: React.FC<IAgentFormProps> = ({
 
         {/* 工具选择 */}
         {availableTools.length > 0 && (
-          <div className="space-y-4">
-            <h3 className="text-md font-medium text-indigo-300">可用工具</h3>
+          <div className="space-y-4" data-oid=".e5hybe">
+            <h3
+              className="text-md font-medium text-indigo-300"
+              data-oid="6p:g.0k"
+            >
+              可用工具
+            </h3>
 
-            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+            <div
+              className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3"
+              data-oid="2s_edk5"
+            >
               {availableTools.map((tool) => (
                 <div
                   key={tool.id}
@@ -497,19 +568,27 @@ const AgentForm: React.FC<IAgentFormProps> = ({
                       : "bg-gray-800/50 border-gray-700 hover:border-indigo-500/50"
                   }`}
                   onClick={() => handleToolToggle(tool.id)}
+                  data-oid="6maoc-d"
                 >
                   <input
                     type="checkbox"
                     checked={selectedTools.has(tool.id)}
                     onChange={() => {}}
                     className="mr-2 accent-indigo-600 h-4 w-4"
+                    data-oid="jkgn2jw"
                   />
 
-                  <div>
-                    <p className="text-sm font-medium text-white">
+                  <div data-oid="4noyzx_">
+                    <p
+                      className="text-sm font-medium text-white"
+                      data-oid="5a4v1-w"
+                    >
                       {tool.name}
                     </p>
-                    <p className="text-xs text-gray-400 line-clamp-1">
+                    <p
+                      className="text-xs text-gray-400 line-clamp-1"
+                      data-oid="dicwdz-"
+                    >
                       {tool.description}
                     </p>
                   </div>
@@ -520,13 +599,14 @@ const AgentForm: React.FC<IAgentFormProps> = ({
         )}
 
         {/* 按钮区域 */}
-        <div className="flex justify-end space-x-3 pt-3">
+        <div className="flex justify-end space-x-3 pt-3" data-oid="xphobor">
           {onCancel && (
             <Button
               type="button"
               variant="outline"
               onClick={onCancel}
               disabled={isSubmitting}
+              data-oid="-0nrl58"
             >
               取消
             </Button>
@@ -537,6 +617,7 @@ const AgentForm: React.FC<IAgentFormProps> = ({
             variant="primary"
             disabled={isSubmitting}
             isLoading={isSubmitting}
+            data-oid="gb6d:tb"
           >
             {isSubmitting
               ? "保存中..."

@@ -125,15 +125,15 @@ export default function ToolLogList({ initialLogs }: IToolLogListProps) {
   const renderStatusBadge = (status: "success" | "error") => {
     if (status === "success") {
       return (
-        <Badge className="bg-green-500">
-          <CheckCircle className="w-3 h-3 mr-1" />
+        <Badge className="bg-green-500" data-oid="adb9t3r">
+          <CheckCircle className="w-3 h-3 mr-1" data-oid=":sjzeu:" />
           成功
         </Badge>
       );
     } else {
       return (
-        <Badge className="bg-red-500">
-          <AlertCircle className="w-3 h-3 mr-1" />
+        <Badge className="bg-red-500" data-oid="c-9jqh1">
+          <AlertCircle className="w-3 h-3 mr-1" data-oid="yvdq8-w" />
           失败
         </Badge>
       );
@@ -143,8 +143,11 @@ export default function ToolLogList({ initialLogs }: IToolLogListProps) {
   // 渲染内容
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+      <div className="flex justify-center items-center h-64" data-oid="y7lfce_">
+        <div
+          className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"
+          data-oid="8suyp4."
+        ></div>
       </div>
     );
   }
@@ -154,67 +157,108 @@ export default function ToolLogList({ initialLogs }: IToolLogListProps) {
       <div
         className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
         role="alert"
+        data-oid="iscm0_k"
       >
-        <strong className="font-bold">加载失败！</strong>
-        <span className="block sm:inline"> {error}</span>
+        <strong className="font-bold" data-oid=":gt7pr.">
+          加载失败！
+        </strong>
+        <span className="block sm:inline" data-oid="ikfpi3n">
+          {" "}
+          {error}
+        </span>
       </div>
     );
   }
 
   if (logs.length === 0) {
     return (
-      <div className="text-center py-12 bg-gray-800 rounded-lg">
-        <p className="text-gray-400">暂无工具调用日志</p>
+      <div
+        className="text-center py-12 bg-gray-800 rounded-lg"
+        data-oid="p0t2xul"
+      >
+        <p className="text-gray-400" data-oid="apcx4dk">
+          暂无工具调用日志
+        </p>
       </div>
     );
   }
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4" data-oid="zh8lzn4">
       {/* 日志列表 */}
-      <div className="space-y-3">
+      <div className="space-y-3" data-oid="_xic3_l">
         {currentPageLogs.map((log) => (
           <Link
             href={`/tool-logs/${log.id}`}
             key={log.id}
             className="block hover:bg-gray-800 rounded-lg p-4 border border-gray-700 transition duration-300"
+            data-oid="hr17ajv"
           >
-            <div className="flex justify-between items-start mb-2">
-              <div className="font-semibold text-lg">{log.toolId}</div>
+            <div
+              className="flex justify-between items-start mb-2"
+              data-oid="dx-jtta"
+            >
+              <div className="font-semibold text-lg" data-oid="6wv3prp">
+                {log.toolId}
+              </div>
               {renderStatusBadge(log.status)}
             </div>
 
-            <div className="flex text-sm text-gray-400 space-x-4 mb-2">
-              <span className="flex items-center">
-                <Clock className="w-3 h-3 mr-1" />
+            <div
+              className="flex text-sm text-gray-400 space-x-4 mb-2"
+              data-oid="m95.8er"
+            >
+              <span className="flex items-center" data-oid="nlv_afm">
+                <Clock className="w-3 h-3 mr-1" data-oid="qx18672" />
                 {formatDate(log.startTime)}
               </span>
-              <span>执行时间: {log.executionTime}ms</span>
+              <span data-oid="ahedlnm">执行时间: {log.executionTime}ms</span>
             </div>
 
-            <div className="grid grid-cols-12 gap-2 text-sm mb-2">
-              <div className="col-span-3 md:col-span-2 text-gray-500">
+            <div
+              className="grid grid-cols-12 gap-2 text-sm mb-2"
+              data-oid="v:o8m4p"
+            >
+              <div
+                className="col-span-3 md:col-span-2 text-gray-500"
+                data-oid="osm-_08"
+              >
                 会话ID:
               </div>
-              <div className="col-span-9 md:col-span-10 truncate">
+              <div
+                className="col-span-9 md:col-span-10 truncate"
+                data-oid="566biry"
+              >
                 {log.sessionId}
               </div>
 
-              <div className="col-span-3 md:col-span-2 text-gray-500">
+              <div
+                className="col-span-3 md:col-span-2 text-gray-500"
+                data-oid="2z6.n7q"
+              >
                 代理ID:
               </div>
-              <div className="col-span-9 md:col-span-10 truncate">
+              <div
+                className="col-span-9 md:col-span-10 truncate"
+                data-oid="hpuiv82"
+              >
                 {log.agentId}
               </div>
             </div>
 
-            <div className="flex justify-between items-center mt-2">
-              <div className="text-xs text-gray-500">
+            <div
+              className="flex justify-between items-center mt-2"
+              data-oid="lo_sbq5"
+            >
+              <div className="text-xs text-gray-500" data-oid="jhl746w">
                 {log.error
                   ? `错误: ${log.error.substring(0, 50)}...`
                   : "执行成功"}
               </div>
-              <ChevronRight className="w-5 h-5 text-gray-500" />
+              <ChevronRight
+                className="w-5 h-5 text-gray-500"
+                data-oid="hriouxv"
+              />
             </div>
           </Link>
         ))}
@@ -222,16 +266,20 @@ export default function ToolLogList({ initialLogs }: IToolLogListProps) {
 
       {/* 分页控制 */}
       {totalPages > 1 && (
-        <div className="flex justify-center items-center space-x-2 mt-6">
+        <div
+          className="flex justify-center items-center space-x-2 mt-6"
+          data-oid="dvehktx"
+        >
           <button
             onClick={() => handlePageChange(page - 1)}
             disabled={page === 1}
             className="px-3 py-1 rounded bg-gray-700 text-white disabled:opacity-50"
+            data-oid="tl8ovun"
           >
             上一页
           </button>
 
-          <span className="text-gray-400">
+          <span className="text-gray-400" data-oid="2xnl309">
             第 {page} 页 / 共 {totalPages} 页
           </span>
 
@@ -239,6 +287,7 @@ export default function ToolLogList({ initialLogs }: IToolLogListProps) {
             onClick={() => handlePageChange(page + 1)}
             disabled={page === totalPages}
             className="px-3 py-1 rounded bg-gray-700 text-white disabled:opacity-50"
+            data-oid="16e-pgf"
           >
             下一页
           </button>

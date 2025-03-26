@@ -29,11 +29,15 @@ const NavItem = memo(
     <Link
       href={href}
       className="flex items-center p-2 my-1 rounded-md transition-all hover:bg-indigo-900/40 text-indigo-200 hover:text-white group relative"
+      data-oid="01rsw_k"
     >
-      <Icon className="w-5 h-5 mr-3 flex-shrink-0" />
-      {!collapsed && <span>{label}</span>}
+      <Icon className="w-5 h-5 mr-3 flex-shrink-0" data-oid="qjl6zd:" />
+      {!collapsed && <span data-oid="88reieg">{label}</span>}
       {collapsed && (
-        <span className="absolute left-full rounded-md px-2 py-1 ml-6 bg-indigo-950 text-sm invisible opacity-0 -translate-x-3 group-hover:visible group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 z-50 shadow-glow-sm">
+        <span
+          className="absolute left-full rounded-md px-2 py-1 ml-6 bg-indigo-950 text-sm invisible opacity-0 -translate-x-3 group-hover:visible group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 z-50 shadow-glow-sm"
+          data-oid="ba-3.zg"
+        >
           {label}
         </span>
       )}
@@ -77,7 +81,10 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed, onToggleCollapse }) => {
   // 如果未挂载，返回空占位符
   if (!mounted) {
     return (
-      <aside className="hidden md:block w-64 transition-all duration-300 shrink-0" />
+      <aside
+        className="hidden md:block w-64 transition-all duration-300 shrink-0"
+        data-oid="8m:1wk_"
+      />
     );
   }
 
@@ -96,22 +103,39 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed, onToggleCollapse }) => {
       className={`fixed left-0 top-16 h-[calc(100vh-64px)] bg-gradient-to-b from-indigo-950 to-purple-950 border-r border-indigo-800/30 shadow-md backdrop-blur-md transition-all duration-300 z-40 hidden md:block ${
         collapsed ? "w-16" : "w-64"
       }`}
+      data-oid="ko92ib6"
     >
-      <div className="p-3 h-full flex flex-col">
-        <div className="flex items-center justify-between mb-6">
+      <div className="p-3 h-full flex flex-col" data-oid="ml5o2kg">
+        <div
+          className="flex items-center justify-between mb-6"
+          data-oid="6cuhy91"
+        >
           {!collapsed && (
-            <h2 className="text-lg font-semibold text-indigo-200">导航菜单</h2>
+            <h2
+              className="text-lg font-semibold text-indigo-200"
+              data-oid="m1xc_a7"
+            >
+              导航菜单
+            </h2>
           )}
           <button
             onClick={handleToggleCollapse}
             className="p-1.5 rounded-md bg-indigo-900/40 hover:bg-indigo-800/60 text-indigo-200 transition-colors"
             aria-label={collapsed ? "展开侧边栏" : "收起侧边栏"}
+            data-oid="_bcp2d_"
           >
-            {collapsed ? <ChevronRight size={18} /> : <ChevronLeft size={18} />}
+            {collapsed ? (
+              <ChevronRight size={18} data-oid="iobjmz4" />
+            ) : (
+              <ChevronLeft size={18} data-oid="6wa_lxv" />
+            )}
           </button>
         </div>
 
-        <nav className="flex-1 overflow-y-auto custom-scrollbar">
+        <nav
+          className="flex-1 overflow-y-auto custom-scrollbar"
+          data-oid="tgarajw"
+        >
           {navItems.map((item, index) => (
             <NavItem
               key={`nav-item-${index}`}
@@ -119,21 +143,35 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed, onToggleCollapse }) => {
               icon={item.icon}
               label={item.label}
               collapsed={collapsed}
+              data-oid="-g5.i2c"
             />
           ))}
         </nav>
 
-        <div className="mt-auto pt-4 border-t border-indigo-800/30">
+        <div
+          className="mt-auto pt-4 border-t border-indigo-800/30"
+          data-oid="21gw0nv"
+        >
           <div
             className={`flex items-center ${collapsed ? "justify-center" : "space-x-3"}`}
+            data-oid="3kx0ejs"
           >
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center shadow-glow">
-              <span className="text-white text-xs font-bold">iT</span>
+            <div
+              className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center shadow-glow"
+              data-oid=".:d4e0z"
+            >
+              <span className="text-white text-xs font-bold" data-oid="r4ukod:">
+                iT
+              </span>
             </div>
             {!collapsed && (
-              <div>
-                <p className="text-sm text-indigo-200">iT-Agent</p>
-                <p className="text-xs text-indigo-400">v0.1.0</p>
+              <div data-oid="pz_e-ni">
+                <p className="text-sm text-indigo-200" data-oid="p.ci238">
+                  iT-Agent
+                </p>
+                <p className="text-xs text-indigo-400" data-oid="mu6yw2a">
+                  v0.1.0
+                </p>
               </div>
             )}
           </div>
@@ -144,8 +182,9 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed, onToggleCollapse }) => {
       <button
         className="fixed bottom-4 right-4 md:hidden p-3 rounded-full bg-indigo-900 text-white shadow-glow z-50"
         aria-label="切换侧边栏"
+        data-oid="13kaz:g"
       >
-        <Menu size={24} />
+        <Menu size={24} data-oid="6ko.ey4" />
       </button>
     </aside>
   );

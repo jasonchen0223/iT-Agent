@@ -116,37 +116,64 @@ export default function ToolLogFilter() {
   };
 
   return (
-    <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
-      <h2 className="text-xl font-semibold mb-4 text-blue-400">过滤条件</h2>
+    <div
+      className="bg-gray-800 rounded-lg p-4 border border-gray-700"
+      data-oid="3rfj36m"
+    >
+      <h2
+        className="text-xl font-semibold mb-4 text-blue-400"
+        data-oid="ad-jvem"
+      >
+        过滤条件
+      </h2>
 
-      <div className="space-y-4">
+      <div className="space-y-4" data-oid="i5w67:f">
         {/* 最近日志切换 */}
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
+        <div className="flex items-center justify-between" data-oid="nljpn.c">
+          <div className="flex items-center space-x-2" data-oid="0o1:h2z">
             <Switch
               id="recent-logs"
               checked={onlyRecent}
               onCheckedChange={handleRecentToggle}
+              data-oid="3:8jexs"
             />
 
-            <Label htmlFor="recent-logs">只显示最近日志</Label>
+            <Label htmlFor="recent-logs" data-oid="km:v2s7">
+              只显示最近日志
+            </Label>
           </div>
         </div>
 
         {/* 最近日志数量 */}
         {onlyRecent && (
-          <div className="space-y-2">
-            <Label htmlFor="recent-count">数量</Label>
-            <Select value={recentCount} onValueChange={setRecentCount}>
-              <SelectTrigger id="recent-count">
-                <SelectValue placeholder="选择数量" />
+          <div className="space-y-2" data-oid="u5_x4.o">
+            <Label htmlFor="recent-count" data-oid=":qjr509">
+              数量
+            </Label>
+            <Select
+              value={recentCount}
+              onValueChange={setRecentCount}
+              data-oid=".ow6gtg"
+            >
+              <SelectTrigger id="recent-count" data-oid="7jdfo.l">
+                <SelectValue placeholder="选择数量" data-oid=":iejaon" />
               </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="5">5条</SelectItem>
-                <SelectItem value="10">10条</SelectItem>
-                <SelectItem value="20">20条</SelectItem>
-                <SelectItem value="50">50条</SelectItem>
-                <SelectItem value="100">100条</SelectItem>
+              <SelectContent data-oid="f_iax:e">
+                <SelectItem value="5" data-oid="e2.atkk">
+                  5条
+                </SelectItem>
+                <SelectItem value="10" data-oid="g4xb-3i">
+                  10条
+                </SelectItem>
+                <SelectItem value="20" data-oid="bgfgye:">
+                  20条
+                </SelectItem>
+                <SelectItem value="50" data-oid="0hz1voy">
+                  50条
+                </SelectItem>
+                <SelectItem value="100" data-oid="1h9_6v4">
+                  100条
+                </SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -156,16 +183,28 @@ export default function ToolLogFilter() {
         {!onlyRecent && (
           <>
             {/* 工具ID */}
-            <div className="space-y-2">
-              <Label htmlFor="tool-id">工具</Label>
-              <Select value={toolId} onValueChange={setToolId}>
-                <SelectTrigger id="tool-id">
-                  <SelectValue placeholder="选择工具" />
+            <div className="space-y-2" data-oid="x2aumgo">
+              <Label htmlFor="tool-id" data-oid="p1jqsw2">
+                工具
+              </Label>
+              <Select
+                value={toolId}
+                onValueChange={setToolId}
+                data-oid="my6_45r"
+              >
+                <SelectTrigger id="tool-id" data-oid="ndhdi.s">
+                  <SelectValue placeholder="选择工具" data-oid="t03k5oi" />
                 </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="">全部工具</SelectItem>
+                <SelectContent data-oid="6igonei">
+                  <SelectItem value="" data-oid="hoxnijp">
+                    全部工具
+                  </SelectItem>
                   {tools.map((tool) => (
-                    <SelectItem key={tool.id} value={tool.id}>
+                    <SelectItem
+                      key={tool.id}
+                      value={tool.id}
+                      data-oid="sv7_wjj"
+                    >
                       {tool.name}
                     </SelectItem>
                   ))}
@@ -174,71 +213,96 @@ export default function ToolLogFilter() {
             </div>
 
             {/* 会话ID */}
-            <div className="space-y-2">
-              <Label htmlFor="session-id">会话ID</Label>
+            <div className="space-y-2" data-oid="qa83wid">
+              <Label htmlFor="session-id" data-oid="oalsm-m">
+                会话ID
+              </Label>
               <Input
                 id="session-id"
                 placeholder="输入会话ID"
                 value={sessionId}
                 onChange={(e) => setSessionId(e.target.value)}
+                data-oid="9vv2iuj"
               />
             </div>
 
             {/* 代理ID */}
-            <div className="space-y-2">
-              <Label htmlFor="agent-id">代理ID</Label>
+            <div className="space-y-2" data-oid="4ul8b6_">
+              <Label htmlFor="agent-id" data-oid="zqc:0cy">
+                代理ID
+              </Label>
               <Input
                 id="agent-id"
                 placeholder="输入代理ID"
                 value={agentId}
                 onChange={(e) => setAgentId(e.target.value)}
+                data-oid="krnamyo"
               />
             </div>
 
             {/* 状态 */}
-            <div className="space-y-2">
-              <Label htmlFor="status">状态</Label>
-              <Select value={status} onValueChange={setStatus}>
-                <SelectTrigger id="status">
-                  <SelectValue placeholder="选择状态" />
+            <div className="space-y-2" data-oid="gbz-nuc">
+              <Label htmlFor="status" data-oid="an5dq4e">
+                状态
+              </Label>
+              <Select
+                value={status}
+                onValueChange={setStatus}
+                data-oid="08--z1h"
+              >
+                <SelectTrigger id="status" data-oid="-d:b1vv">
+                  <SelectValue placeholder="选择状态" data-oid="f:4eigb" />
                 </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="">全部状态</SelectItem>
-                  <SelectItem value="success">成功</SelectItem>
-                  <SelectItem value="error">失败</SelectItem>
+                <SelectContent data-oid="-ao2o5.">
+                  <SelectItem value="" data-oid="wd0pl_a">
+                    全部状态
+                  </SelectItem>
+                  <SelectItem value="success" data-oid="9.pkk0x">
+                    成功
+                  </SelectItem>
+                  <SelectItem value="error" data-oid=":g5888d">
+                    失败
+                  </SelectItem>
                 </SelectContent>
               </Select>
             </div>
 
             {/* 开始日期 */}
-            <div className="space-y-2">
-              <Label htmlFor="start-date">开始日期</Label>
+            <div className="space-y-2" data-oid="gq-nz2b">
+              <Label htmlFor="start-date" data-oid="hr9-:r5">
+                开始日期
+              </Label>
               <Input
                 id="start-date"
                 type="date"
                 value={startDate}
                 onChange={(e) => setStartDate(e.target.value)}
+                data-oid="tcks0pm"
               />
             </div>
 
             {/* 结束日期 */}
-            <div className="space-y-2">
-              <Label htmlFor="end-date">结束日期</Label>
+            <div className="space-y-2" data-oid="twmecsn">
+              <Label htmlFor="end-date" data-oid="l6ylqp5">
+                结束日期
+              </Label>
               <Input
                 id="end-date"
                 type="date"
                 value={endDate}
                 onChange={(e) => setEndDate(e.target.value)}
+                data-oid="n:7whp."
               />
             </div>
           </>
         )}
 
         {/* 操作按钮 */}
-        <div className="flex space-x-2 pt-4">
+        <div className="flex space-x-2 pt-4" data-oid="imb5blo">
           <button
             onClick={applyFilter}
             className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded transition"
+            data-oid=":xcj_jc"
           >
             应用过滤
           </button>
@@ -246,6 +310,7 @@ export default function ToolLogFilter() {
           <button
             onClick={resetFilter}
             className="flex-1 bg-gray-600 hover:bg-gray-700 text-white py-2 px-4 rounded transition"
+            data-oid="qtppjuz"
           >
             重置
           </button>

@@ -107,45 +107,76 @@ export default function AgentsPage() {
   };
 
   return (
-    <div className="container mx-auto py-8">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
-        <div>
-          <h1 className="text-2xl font-bold text-indigo-100">智能代理</h1>
-          <p className="text-indigo-300/70 mt-1">管理您的多智能代理团队</p>
+    <div className="container mx-auto py-8" data-oid="cr66bmm">
+      <div
+        className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6"
+        data-oid="n:ykp:f"
+      >
+        <div data-oid="itb:q36">
+          <h1 className="text-2xl font-bold text-indigo-100" data-oid="97u_qyt">
+            智能代理
+          </h1>
+          <p className="text-indigo-300/70 mt-1" data-oid="2xp7bu6">
+            管理您的多智能代理团队
+          </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+        <div
+          className="flex flex-col sm:flex-row gap-3 w-full md:w-auto"
+          data-oid="0c9pie5"
+        >
           <Search
             placeholder="搜索代理..."
             onSearch={handleSearch}
             className="w-full sm:w-64"
+            data-oid="3clmkdn"
           />
 
-          <Button onClick={() => router.push("/agents/create")}>
+          <Button
+            onClick={() => router.push("/agents/create")}
+            data-oid="w.g0lvg"
+          >
             创建代理
           </Button>
         </div>
       </div>
 
       {/* 过滤器和状态指示器 */}
-      <Card className="mb-6 p-4">
-        <div className="flex flex-wrap items-center gap-3">
-          <span className="text-sm text-indigo-300/70">过滤器:</span>
-          <span className="px-3 py-1 bg-indigo-900/40 text-indigo-300 text-sm rounded-full cursor-pointer hover:bg-indigo-900/60">
+      <Card className="mb-6 p-4" data-oid="3873x24">
+        <div className="flex flex-wrap items-center gap-3" data-oid="fddega8">
+          <span className="text-sm text-indigo-300/70" data-oid="bfzjn-.">
+            过滤器:
+          </span>
+          <span
+            className="px-3 py-1 bg-indigo-900/40 text-indigo-300 text-sm rounded-full cursor-pointer hover:bg-indigo-900/60"
+            data-oid="5pk76al"
+          >
             全部
           </span>
-          <span className="px-3 py-1 bg-indigo-900/20 text-indigo-300 text-sm rounded-full cursor-pointer hover:bg-indigo-900/40">
+          <span
+            className="px-3 py-1 bg-indigo-900/20 text-indigo-300 text-sm rounded-full cursor-pointer hover:bg-indigo-900/40"
+            data-oid="egivud0"
+          >
             在线
           </span>
-          <span className="px-3 py-1 bg-indigo-900/20 text-indigo-300 text-sm rounded-full cursor-pointer hover:bg-indigo-900/40">
+          <span
+            className="px-3 py-1 bg-indigo-900/20 text-indigo-300 text-sm rounded-full cursor-pointer hover:bg-indigo-900/40"
+            data-oid=":loqdtk"
+          >
             工作中
           </span>
-          <span className="px-3 py-1 bg-indigo-900/20 text-indigo-300 text-sm rounded-full cursor-pointer hover:bg-indigo-900/40">
+          <span
+            className="px-3 py-1 bg-indigo-900/20 text-indigo-300 text-sm rounded-full cursor-pointer hover:bg-indigo-900/40"
+            data-oid="uqth09x"
+          >
             错误
           </span>
 
-          <div className="ml-auto flex items-center">
-            <span className="text-sm text-indigo-300/70 mr-2">
+          <div className="ml-auto flex items-center" data-oid="3647qxc">
+            <span
+              className="text-sm text-indigo-300/70 mr-2"
+              data-oid="iz.g2an"
+            >
               显示 {filteredAgents.length} 个代理
             </span>
           </div>
@@ -154,16 +185,29 @@ export default function AgentsPage() {
 
       {/* 代理列表 */}
       {filteredAgents.length > 0 ? (
-        <AgentList agents={filteredAgents} onAgentClick={handleAgentClick} />
+        <AgentList
+          agents={filteredAgents}
+          onAgentClick={handleAgentClick}
+          data-oid="98:md7i"
+        />
       ) : (
-        <div className="bg-indigo-900/20 border border-indigo-800/30 rounded-lg p-8 text-center">
-          <h3 className="text-xl font-semibold text-indigo-100 mb-2">
+        <div
+          className="bg-indigo-900/20 border border-indigo-800/30 rounded-lg p-8 text-center"
+          data-oid="0gf1yyh"
+        >
+          <h3
+            className="text-xl font-semibold text-indigo-100 mb-2"
+            data-oid="ce0yw8m"
+          >
             未找到代理
           </h3>
-          <p className="text-indigo-300/70 mb-4">
+          <p className="text-indigo-300/70 mb-4" data-oid=".l3zt0q">
             尝试调整搜索条件或创建新的代理
           </p>
-          <Button onClick={() => router.push("/agents/create")}>
+          <Button
+            onClick={() => router.push("/agents/create")}
+            data-oid="g:pxch_"
+          >
             创建代理
           </Button>
         </div>

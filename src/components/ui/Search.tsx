@@ -81,9 +81,9 @@ export const Search: React.FC<SearchProps> = ({
   }, []);
 
   return (
-    <div className={cn("relative", className)}>
-      <form onSubmit={handleSubmit}>
-        <div className="relative">
+    <div className={cn("relative", className)} data-oid="qslz_a9">
+      <form onSubmit={handleSubmit} data-oid="--5:1dd">
+        <div className="relative" data-oid="7mlarsx">
           <input
             ref={inputRef}
             type="text"
@@ -92,9 +92,13 @@ export const Search: React.FC<SearchProps> = ({
             value={query}
             onChange={handleChange}
             onFocus={() => setIsFocused(true)}
+            data-oid="dwmnx-3"
           />
 
-          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+          <div
+            className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+            data-oid="mnrc.i5"
+          >
             <svg
               className="h-5 w-5 text-indigo-400/70"
               fill="none"
@@ -103,8 +107,12 @@ export const Search: React.FC<SearchProps> = ({
               strokeWidth="2"
               viewBox="0 0 24 24"
               stroke="currentColor"
+              data-oid="ocscer9"
             >
-              <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              <path
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                data-oid="sgf4s:1"
+              />
             </svg>
           </div>
           {query && (
@@ -112,6 +120,7 @@ export const Search: React.FC<SearchProps> = ({
               type="button"
               onClick={() => setQuery("")}
               className="absolute right-3 top-2.5 text-indigo-300/70 hover:text-indigo-100"
+              data-oid="yw7yr95"
             >
               <svg
                 className="w-5 h-5"
@@ -119,12 +128,14 @@ export const Search: React.FC<SearchProps> = ({
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
+                data-oid="d24q8fg"
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
                   d="M6 18L18 6M6 6l12 12"
+                  data-oid="4m9f-if"
                 />
               </svg>
             </button>
@@ -137,13 +148,15 @@ export const Search: React.FC<SearchProps> = ({
         <div
           ref={suggestionRef}
           className="absolute z-10 w-full mt-1 bg-gradient-to-b from-indigo-950/90 to-black/90 border border-indigo-800/30 rounded-md shadow-lg max-h-60 overflow-y-auto"
+          data-oid="8jw5:rd"
         >
-          <ul className="py-1">
+          <ul className="py-1" data-oid="6a67h0g">
             {filteredSuggestions.map((suggestion, index) => (
               <li
                 key={index}
                 className="px-4 py-2 text-indigo-100 hover:bg-indigo-800/30 cursor-pointer"
                 onClick={() => handleSuggestionClick(suggestion)}
+                data-oid="hx2a3m:"
               >
                 {suggestion}
               </li>

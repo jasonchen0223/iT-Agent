@@ -66,24 +66,34 @@ export const ToolCard: React.FC<IToolCardProps> = ({ tool, onClick }) => {
     <div
       className="bg-slate-800 border border-slate-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
       onClick={handleClick}
+      data-oid="htsk_t4"
     >
-      <div className="p-5">
-        <div className="flex items-center justify-between mb-3">
-          <h3 className="text-lg font-semibold text-white truncate">
+      <div className="p-5" data-oid="y3anry-">
+        <div
+          className="flex items-center justify-between mb-3"
+          data-oid="ynd.wp2"
+        >
+          <h3
+            className="text-lg font-semibold text-white truncate"
+            data-oid="il47g6n"
+          >
             {tool.name}
           </h3>
-          <Badge>{tool.category}</Badge>
+          <Badge data-oid="examqeg">{tool.category}</Badge>
         </div>
 
-        <p className="text-slate-300 text-sm mb-4 line-clamp-2">
+        <p
+          className="text-slate-300 text-sm mb-4 line-clamp-2"
+          data-oid="assyfpz"
+        >
           {tool.description}
         </p>
 
-        <div className="flex justify-between items-center">
-          <div className="flex space-x-2">
+        <div className="flex justify-between items-center" data-oid="ghad68-">
+          <div className="flex space-x-2" data-oid="t-.5pdz">
             {tool.tags &&
               tool.tags.map((tag, index) => (
-                <Badge key={index} variant="outline">
+                <Badge key={index} variant="outline" data-oid="30c_o64">
                   {tag}
                 </Badge>
               ))}
@@ -93,6 +103,7 @@ export const ToolCard: React.FC<IToolCardProps> = ({ tool, onClick }) => {
             href={`/tools/${tool.id}`}
             className="text-indigo-400 hover:text-indigo-300 text-sm font-medium"
             onClick={(e) => e.stopPropagation()}
+            data-oid="ckay-fo"
           >
             详情
           </Link>

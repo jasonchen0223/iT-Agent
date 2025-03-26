@@ -36,9 +36,12 @@ export function Tabs({ tabs, defaultTab, children, className }: TabsProps) {
   };
 
   return (
-    <div className={className}>
-      <div className="border-b border-indigo-800/30 mb-6">
-        <div className="flex space-x-6 overflow-x-auto no-scrollbar">
+    <div className={className} data-oid="ki51398">
+      <div className="border-b border-indigo-800/30 mb-6" data-oid="kfu1ujy">
+        <div
+          className="flex space-x-6 overflow-x-auto no-scrollbar"
+          data-oid="02r4qux"
+        >
           {tabs.map((tab) => (
             <button
               key={tab.id}
@@ -51,6 +54,7 @@ export function Tabs({ tabs, defaultTab, children, className }: TabsProps) {
                 tab.disabled && "opacity-50 cursor-not-allowed",
               )}
               disabled={tab.disabled}
+              data-oid="z5y9s30"
             >
               {tab.label}
             </button>
@@ -58,7 +62,9 @@ export function Tabs({ tabs, defaultTab, children, className }: TabsProps) {
         </div>
       </div>
 
-      <div className="tab-content">{findActiveChild()}</div>
+      <div className="tab-content" data-oid="v31m7w2">
+        {findActiveChild()}
+      </div>
     </div>
   );
 }

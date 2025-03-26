@@ -23,18 +23,26 @@ export default function DashboardLayout({
 
   if (!mounted) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center">
-        <div className="space-card p-6 animate-pulse-light">
-          <p className="text-indigo-300">加载中...</p>
+      <div
+        className="min-h-screen flex flex-col items-center justify-center"
+        data-oid="sebp4q2"
+      >
+        <div className="space-card p-6 animate-pulse-light" data-oid="jtkg_t-">
+          <p className="text-indigo-300" data-oid="zcw3suk">
+            加载中...
+          </p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <main className="flex-1 container mx-auto px-4 pt-16 pb-8">
+    <div className="min-h-screen flex flex-col" data-oid="o59eukq">
+      <Navbar data-oid="hrp173k" />
+      <main
+        className="flex-1 container mx-auto px-4 pt-16 pb-8"
+        data-oid="llr5a_o"
+      >
         {children}
       </main>
     </div>

@@ -123,29 +123,41 @@ export const ToolList: React.FC<IToolListProps> = ({ initialTools = [] }) => {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6" data-oid="ccw1ci3">
       {/* 搜索框 */}
-      <div className="relative">
+      <div className="relative" data-oid="y9_7jch">
         <Input
           type="text"
           placeholder="搜索工具..."
           value={searchQuery}
           onChange={handleSearch}
           className="bg-slate-800/40 border-slate-700 text-white placeholder:text-gray-400 focus-visible:ring-indigo-500"
+          data-oid="wy8181l"
         />
       </div>
 
       {/* 加载状态 */}
       {isLoading && (
-        <div className="flex justify-center items-center py-20">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-500"></div>
+        <div
+          className="flex justify-center items-center py-20"
+          data-oid="vecv8cw"
+        >
+          <div
+            className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-500"
+            data-oid="pcjm:lw"
+          ></div>
         </div>
       )}
 
       {/* 错误状态 */}
       {error && !isLoading && (
-        <div className="bg-red-900/30 border border-red-800 rounded-lg p-4 text-red-300">
-          <p className="text-center">{error}</p>
+        <div
+          className="bg-red-900/30 border border-red-800 rounded-lg p-4 text-red-300"
+          data-oid="e4_1k52"
+        >
+          <p className="text-center" data-oid=".v.hdbn">
+            {error}
+          </p>
         </div>
       )}
 
@@ -153,14 +165,24 @@ export const ToolList: React.FC<IToolListProps> = ({ initialTools = [] }) => {
       {!isLoading && !error && (
         <>
           {filteredTools.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+              data-oid="6hgetq5"
+            >
               {filteredTools.map((tool) => (
-                <ToolCard key={tool.id} tool={tool} onClick={handleToolClick} />
+                <ToolCard
+                  key={tool.id}
+                  tool={tool}
+                  onClick={handleToolClick}
+                  data-oid=":a052i5"
+                />
               ))}
             </div>
           ) : (
-            <div className="text-center py-10">
-              <p className="text-gray-400">没有找到匹配的工具</p>
+            <div className="text-center py-10" data-oid="gylxcnd">
+              <p className="text-gray-400" data-oid="wyf2z_1">
+                没有找到匹配的工具
+              </p>
             </div>
           )}
         </>
