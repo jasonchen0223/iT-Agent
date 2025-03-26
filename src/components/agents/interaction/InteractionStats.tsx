@@ -122,40 +122,40 @@ const InteractionStats: React.FC<InteractionStatsProps> = ({
     return (
       <div
         className={`bg-gradient-to-br from-gray-900 to-indigo-900 rounded-lg shadow-xl p-6 animate-pulse ${className}`}
-        data-oid="8xzj6o7"
+        data-oid="4vcbbor"
       >
         <div
           className="flex justify-between items-center mb-4"
-          data-oid=":a.ur88"
+          data-oid="0x628-6"
         >
           <div
             className="h-6 bg-gray-700 rounded w-1/4"
-            data-oid="mqh:_ck"
+            data-oid="j-b8:d3"
           ></div>
           <div
             className="h-4 bg-gray-700 rounded w-24"
-            data-oid="7nezhz5"
+            data-oid="btogm3z"
           ></div>
         </div>
         <div
           className="grid grid-cols-1 md:grid-cols-2 gap-4"
-          data-oid="feno.4o"
+          data-oid="_a-go9v"
         >
           <div
             className="h-32 bg-gray-800 bg-opacity-50 rounded-lg"
-            data-oid="1ua1tkw"
+            data-oid="_erl3pq"
           ></div>
           <div
             className="h-32 bg-gray-800 bg-opacity-50 rounded-lg"
-            data-oid="8pfdnmu"
+            data-oid="j1r-n02"
           ></div>
           <div
             className="h-40 bg-gray-800 bg-opacity-50 rounded-lg"
-            data-oid="7i:1e:f"
+            data-oid="3ty6700"
           ></div>
           <div
             className="h-40 bg-gray-800 bg-opacity-50 rounded-lg"
-            data-oid="gku96sr"
+            data-oid="0fn9n7g"
           ></div>
         </div>
       </div>
@@ -167,27 +167,27 @@ const InteractionStats: React.FC<InteractionStatsProps> = ({
     return (
       <div
         className={`bg-gradient-to-br from-gray-900 to-indigo-900 rounded-lg shadow-xl p-6 ${className}`}
-        data-oid="0unwps:"
+        data-oid="9awqxp:"
       >
         <div
           className="flex items-center space-x-2 text-red-400 mb-4"
-          data-oid="y8eds42"
+          data-oid="omkxt6m"
         >
-          <FiAlertCircle data-oid="cfpe_-f" />
-          <h2 className="font-bold" data-oid="gtidcdn">
+          <FiAlertCircle data-oid="ajr.yig" />
+          <h2 className="font-bold" data-oid="g9-xirs">
             统计加载失败
           </h2>
         </div>
-        <p className="text-gray-300 mb-3" data-oid=":gzcmc8">
+        <p className="text-gray-300 mb-3" data-oid="xuf4amb">
           {error}
         </p>
         <button
           onClick={fetchStats}
           className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-lg text-white transition-colors flex items-center space-x-1"
-          data-oid="p0km2_k"
+          data-oid="tgc.7r2"
         >
-          <FiRefreshCw data-oid="wwozrlp" />
-          <span data-oid="d9_z9z:">重试</span>
+          <FiRefreshCw data-oid="7p-j9.q" />
+          <span data-oid="5wzjl66">重试</span>
         </button>
       </div>
     );
@@ -198,17 +198,17 @@ const InteractionStats: React.FC<InteractionStatsProps> = ({
     return (
       <div
         className={`bg-gradient-to-br from-gray-900 to-indigo-900 rounded-lg shadow-xl p-6 ${className}`}
-        data-oid="sgjjeaj"
+        data-oid="t2o6bny"
       >
-        <div className="text-center text-gray-400 py-8" data-oid="y31r79f">
-          <p data-oid="gcmsnte">暂无统计数据</p>
+        <div className="text-center text-gray-400 py-8" data-oid="0mqt5vr">
+          <p data-oid="i:nutf8">暂无统计数据</p>
           <button
             onClick={fetchStats}
             className="mt-4 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-lg text-white transition-colors inline-flex items-center space-x-1"
-            data-oid="lk:4no:"
+            data-oid="szv2nmz"
           >
-            <FiRefreshCw data-oid="2_q99mc" />
-            <span data-oid="r11p066">刷新</span>
+            <FiRefreshCw data-oid="o772u_b" />
+            <span data-oid="khgl.l5">刷新</span>
           </button>
         </div>
       </div>
@@ -218,23 +218,23 @@ const InteractionStats: React.FC<InteractionStatsProps> = ({
   return (
     <div
       className={`bg-gradient-to-br from-gray-900 to-indigo-900 rounded-lg shadow-xl p-6 ${className}`}
-      data-oid=":4_f3t_"
+      data-oid="vcb.vfn"
     >
       {/* 标题和刷新按钮 */}
       <div
         className="flex justify-between items-center mb-6"
-        data-oid="n694n6:"
+        data-oid="cte64la"
       >
         <h2
           className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600"
-          data-oid="ci8frzm"
+          data-oid="xzdvzkw"
         >
           交互统计
         </h2>
 
-        <div className="flex items-center space-x-3" data-oid="nuaw:ld">
+        <div className="flex items-center space-x-3" data-oid="covqv8l">
           {lastUpdated && (
-            <span className="text-xs text-gray-400" data-oid="aneugj_">
+            <span className="text-xs text-gray-400" data-oid="sz301m2">
               最后更新: {lastUpdated.toLocaleTimeString("zh-CN")}
             </span>
           )}
@@ -248,11 +248,11 @@ const InteractionStats: React.FC<InteractionStatsProps> = ({
                 : "bg-indigo-600 hover:bg-indigo-700"
             } text-white transition-colors`}
             title="刷新数据"
-            data-oid="t84.hxq"
+            data-oid="-j:e4rh"
           >
             <FiRefreshCw
               className={loading ? "animate-spin" : ""}
-              data-oid="::qe9ov"
+              data-oid="8vftzcg"
             />
           </button>
         </div>
@@ -261,22 +261,22 @@ const InteractionStats: React.FC<InteractionStatsProps> = ({
       {/* 总览卡片 */}
       <div
         className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6"
-        data-oid="k14t.oa"
+        data-oid="uzjn4u:"
       >
         <div
           className="bg-gray-800 bg-opacity-50 p-4 rounded-lg flex flex-col justify-between"
-          data-oid="tg7mnil"
+          data-oid="sn0m6lh"
         >
-          <div className="text-gray-400 text-xs" data-oid="lkjy2ms">
+          <div className="text-gray-400 text-xs" data-oid="75tmr6i">
             总交互数
           </div>
-          <div className="flex items-center space-x-2" data-oid="hjnzl-r">
+          <div className="flex items-center space-x-2" data-oid="808zdf7">
             <FiActivity
               className="text-indigo-400 text-2xl"
-              data-oid="dlq9oms"
+              data-oid="tl633_9"
             />
 
-            <span className="text-2xl font-bold text-white" data-oid="5yr34sx">
+            <span className="text-2xl font-bold text-white" data-oid="rkr5isi">
               {stats.totalInteractions}
             </span>
           </div>
@@ -284,14 +284,14 @@ const InteractionStats: React.FC<InteractionStatsProps> = ({
 
         <div
           className="bg-gray-800 bg-opacity-50 p-4 rounded-lg flex flex-col justify-between"
-          data-oid="qofwiwy"
+          data-oid="3aaioq7"
         >
-          <div className="text-gray-400 text-xs" data-oid="v-adup7">
+          <div className="text-gray-400 text-xs" data-oid="oz0uk.n">
             平均响应时间
           </div>
-          <div className="flex items-center space-x-2" data-oid="ia2n5c-">
-            <FiClock className="text-indigo-400 text-2xl" data-oid="odfeoxp" />
-            <span className="text-xl font-bold text-white" data-oid="76f2qlo">
+          <div className="flex items-center space-x-2" data-oid="xt4zaz4">
+            <FiClock className="text-indigo-400 text-2xl" data-oid="-vxcbca" />
+            <span className="text-xl font-bold text-white" data-oid="3v-oe5o">
               {formatResponseTime(stats.averageResponseTime)}
             </span>
           </div>
@@ -299,18 +299,18 @@ const InteractionStats: React.FC<InteractionStatsProps> = ({
 
         <div
           className="bg-gray-800 bg-opacity-50 p-4 rounded-lg flex flex-col justify-between"
-          data-oid="pw1.78_"
+          data-oid="uz63.jg"
         >
-          <div className="text-gray-400 text-xs" data-oid=".inszbr">
+          <div className="text-gray-400 text-xs" data-oid="rdw2yn2">
             消息类型数
           </div>
-          <div className="flex items-center space-x-2" data-oid="0rt03:a">
+          <div className="flex items-center space-x-2" data-oid="36cl97d">
             <FiPieChart
               className="text-indigo-400 text-2xl"
-              data-oid="e38aluc"
+              data-oid="k-:og2p"
             />
 
-            <span className="text-2xl font-bold text-white" data-oid="nd213fm">
+            <span className="text-2xl font-bold text-white" data-oid="aq1f1gu">
               {Object.keys(stats.byType).length}
             </span>
           </div>
@@ -318,14 +318,14 @@ const InteractionStats: React.FC<InteractionStatsProps> = ({
 
         <div
           className="bg-gray-800 bg-opacity-50 p-4 rounded-lg flex flex-col justify-between"
-          data-oid="eezmy81"
+          data-oid="uw9tvf1"
         >
-          <div className="text-gray-400 text-xs" data-oid="0pk3tyz">
+          <div className="text-gray-400 text-xs" data-oid="d7iqjtj">
             交互角色数
           </div>
-          <div className="flex items-center space-x-2" data-oid="f1ik7yn">
-            <FiUsers className="text-indigo-400 text-2xl" data-oid="3on.y.o" />
-            <span className="text-2xl font-bold text-white" data-oid=":6-z428">
+          <div className="flex items-center space-x-2" data-oid="ee8.vwr">
+            <FiUsers className="text-indigo-400 text-2xl" data-oid="po90.m4" />
+            <span className="text-2xl font-bold text-white" data-oid=":a53py_">
               {Object.keys(stats.byAgentRole).length}
             </span>
           </div>
@@ -333,41 +333,41 @@ const InteractionStats: React.FC<InteractionStatsProps> = ({
       </div>
 
       {/* 详细统计图表 */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-oid="t3lr8sh">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-oid="rpzznpm">
         {/* 按消息类型分布 */}
         <div
           className="bg-gray-800 bg-opacity-50 p-4 rounded-lg"
-          data-oid="y4qo1vo"
+          data-oid="_4jncl_"
         >
-          <h3 className="text-indigo-400 mb-4 font-medium" data-oid="efqyvs4">
+          <h3 className="text-indigo-400 mb-4 font-medium" data-oid="63tqrmz">
             按消息类型分布
           </h3>
 
-          <div className="space-y-3" data-oid="v-dmge-">
+          <div className="space-y-3" data-oid="lh1ya37">
             {Object.entries(stats.byType)
               .sort((a, b) => b[1] - a[1])
               .map(([type, count], index) => (
-                <div key={type} data-oid="llb4ti5">
+                <div key={type} data-oid="w79di_3">
                   <div
                     className="flex justify-between items-center mb-1"
-                    data-oid="_3zjbv."
+                    data-oid="z2n-sd0"
                   >
-                    <span className="text-gray-300" data-oid="7hw-nd1">
+                    <span className="text-gray-300" data-oid="9v98qeo">
                       {type}
                     </span>
                     <div
                       className="flex items-center space-x-2"
-                      data-oid="1.-x8lr"
+                      data-oid="jsocgjp"
                     >
                       <span
                         className="text-gray-400 text-sm"
-                        data-oid="xnknuo:"
+                        data-oid="ptqdba3"
                       >
                         {count}
                       </span>
                       <span
                         className="text-gray-500 text-xs"
-                        data-oid="_au:hjm"
+                        data-oid="q5pzsg."
                       >
                         ({calculatePercentage(count, stats.totalInteractions)})
                       </span>
@@ -375,7 +375,7 @@ const InteractionStats: React.FC<InteractionStatsProps> = ({
                   </div>
                   <div
                     className="w-full bg-gray-700 rounded-full h-2"
-                    data-oid="tz7gtl_"
+                    data-oid="g-q.civ"
                   >
                     <div
                       className={`${getColor(index)} h-2 rounded-full`}
@@ -385,7 +385,7 @@ const InteractionStats: React.FC<InteractionStatsProps> = ({
                           stats.totalInteractions,
                         ),
                       }}
-                      data-oid="15sb5u9"
+                      data-oid=":-kxz4e"
                     ></div>
                   </div>
                 </div>
@@ -396,37 +396,37 @@ const InteractionStats: React.FC<InteractionStatsProps> = ({
         {/* 按角色分布 */}
         <div
           className="bg-gray-800 bg-opacity-50 p-4 rounded-lg"
-          data-oid="nvm88d4"
+          data-oid="r-zbqs2"
         >
-          <h3 className="text-indigo-400 mb-4 font-medium" data-oid="e_t59g.">
+          <h3 className="text-indigo-400 mb-4 font-medium" data-oid="0kq7x.u">
             按角色分布
           </h3>
 
-          <div className="space-y-3" data-oid="5xfj0g8">
+          <div className="space-y-3" data-oid="-vkaeok">
             {Object.entries(stats.byAgentRole)
               .sort((a, b) => b[1] - a[1])
               .map(([role, count], index) => (
-                <div key={role} data-oid="zcxvz3g">
+                <div key={role} data-oid="qi4.gua">
                   <div
                     className="flex justify-between items-center mb-1"
-                    data-oid="4ap-5jc"
+                    data-oid="jqo3iz7"
                   >
-                    <span className="text-gray-300" data-oid="8lx_q.7">
+                    <span className="text-gray-300" data-oid="umn3:cf">
                       {role}
                     </span>
                     <div
                       className="flex items-center space-x-2"
-                      data-oid="9wi1guc"
+                      data-oid="297td6y"
                     >
                       <span
                         className="text-gray-400 text-sm"
-                        data-oid="u9k:95b"
+                        data-oid="lug.rgr"
                       >
                         {count}
                       </span>
                       <span
                         className="text-gray-500 text-xs"
-                        data-oid="u4p8t.-"
+                        data-oid="da.w5bc"
                       >
                         ({calculatePercentage(count, stats.totalInteractions)})
                       </span>
@@ -434,7 +434,7 @@ const InteractionStats: React.FC<InteractionStatsProps> = ({
                   </div>
                   <div
                     className="w-full bg-gray-700 rounded-full h-2"
-                    data-oid="rpgvw5."
+                    data-oid="5jdae65"
                   >
                     <div
                       className={`${getColor(index + 5)} h-2 rounded-full`}
@@ -444,7 +444,7 @@ const InteractionStats: React.FC<InteractionStatsProps> = ({
                           stats.totalInteractions,
                         ),
                       }}
-                      data-oid=".ycepmg"
+                      data-oid="-kn.7fu"
                     ></div>
                   </div>
                 </div>
@@ -455,20 +455,20 @@ const InteractionStats: React.FC<InteractionStatsProps> = ({
         {/* 按时间分布 */}
         <div
           className="bg-gray-800 bg-opacity-50 p-4 rounded-lg md:col-span-2"
-          data-oid="6k8:4u6"
+          data-oid="cj5c2rc"
         >
-          <h3 className="text-indigo-400 mb-4 font-medium" data-oid="9a2.zak">
+          <h3 className="text-indigo-400 mb-4 font-medium" data-oid="8-itohq">
             24小时活动分布
           </h3>
 
-          <div className="relative h-40 mt-2" data-oid="c16rmkc">
+          <div className="relative h-40 mt-2" data-oid="qcp3k6s">
             {/* 时间轴 */}
             <div
               className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-gray-500"
-              data-oid="05rkt3c"
+              data-oid="ie5x71:"
             >
               {[0, 6, 12, 18, 23].map((hour) => (
-                <div key={hour} className="text-center" data-oid="__lpmel">
+                <div key={hour} className="text-center" data-oid="a2o:fxi">
                   {hour}:00
                 </div>
               ))}
@@ -477,7 +477,7 @@ const InteractionStats: React.FC<InteractionStatsProps> = ({
             {/* 柱状图 */}
             <div
               className="absolute bottom-6 left-0 right-0 flex items-end h-32"
-              data-oid="omlp0e-"
+              data-oid="v1qi5ov"
             >
               {Array.from({ length: 24 }).map((_, hour) => {
                 const hourKey = `${hour}:00`;
@@ -491,7 +491,7 @@ const InteractionStats: React.FC<InteractionStatsProps> = ({
                   <div
                     key={hour}
                     className="flex-1 mx-px group relative"
-                    data-oid="5j1rf6i"
+                    data-oid="x0p1g83"
                   >
                     <div
                       className={`${
@@ -500,13 +500,13 @@ const InteractionStats: React.FC<InteractionStatsProps> = ({
                           : "bg-purple-600"
                       } rounded-t hover:bg-opacity-90 transition-all duration-200`}
                       style={{ height: `${height}%` }}
-                      data-oid="g-3g0p_"
+                      data-oid="uj959is"
                     ></div>
 
                     {/* 悬停提示 */}
                     <div
                       className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap"
-                      data-oid="5n:u5h8"
+                      data-oid="0m3l4il"
                     >
                       {hourKey}: {count}次
                     </div>

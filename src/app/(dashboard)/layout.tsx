@@ -25,10 +25,10 @@ export default function DashboardLayout({
     return (
       <div
         className="min-h-screen flex flex-col items-center justify-center"
-        data-oid="sebp4q2"
+        data-oid="bt4px5i"
       >
-        <div className="space-card p-6 animate-pulse-light" data-oid="jtkg_t-">
-          <p className="text-indigo-300" data-oid="zcw3suk">
+        <div className="space-card p-6 animate-pulse-light" data-oid="mg99cwj">
+          <p className="text-indigo-300" data-oid="8x3vfbl">
             加载中...
           </p>
         </div>
@@ -37,11 +37,11 @@ export default function DashboardLayout({
   }
 
   return (
-    <div className="min-h-screen flex flex-col" data-oid="o59eukq">
-      <Navbar data-oid="hrp173k" />
+    <div className="min-h-screen flex flex-col" data-oid="rdbkeu:">
+      <Navbar data-oid="g9z2_m." />
       <main
         className="flex-1 container mx-auto px-4 pt-16 pb-8"
-        data-oid="llr5a_o"
+        data-oid="txpf1ga"
       >
         {children}
       </main>

@@ -65,7 +65,7 @@ export function Modal({
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
       onClick={handleBackdropClick}
-      data-oid="9_h_eu-"
+      data-oid="h3lvn2c"
     >
       <div
         className={cn(
@@ -73,23 +73,23 @@ export function Modal({
           className,
         )}
         onClick={(e) => e.stopPropagation()}
-        data-oid="-rcxy1w"
+        data-oid="39il5ri"
       >
         {/* 头部 */}
         <div
           className="flex items-center justify-between p-4 border-b border-indigo-800/30"
-          data-oid="81n0sz8"
+          data-oid="afy_wi9"
         >
           <h3
             className="text-xl font-semibold text-indigo-100"
-            data-oid="_8g43v:"
+            data-oid="bqqb48v"
           >
             {title}
           </h3>
           <button
             className="text-indigo-300/70 hover:text-white"
             onClick={onClose}
-            data-oid="8kc6i4i"
+            data-oid="lcfm40x"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -97,14 +97,14 @@ export function Modal({
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              data-oid="byib7in"
+              data-oid="_137edd"
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
                 d="M6 18L18 6M6 6l12 12"
-                data-oid="e2asxfb"
+                data-oid="y5s0b_p"
               />
             </svg>
           </button>
@@ -113,7 +113,7 @@ export function Modal({
         {/* 内容 */}
         <div
           className="p-6 overflow-y-auto max-h-[calc(90vh-10rem)]"
-          data-oid="o5d-6u3"
+          data-oid="921jghs"
         >
           {children}
         </div>
@@ -122,19 +122,19 @@ export function Modal({
         {footer ? (
           <div
             className="p-4 border-t border-indigo-800/30 bg-indigo-950/50"
-            data-oid="rohx19v"
+            data-oid="bwn234g"
           >
             {footer}
           </div>
         ) : (
           <div
             className="p-4 border-t border-indigo-800/30 bg-indigo-950/50 flex justify-end space-x-3"
-            data-oid="v.g4glk"
+            data-oid="6-r3lp4"
           >
-            <Button variant="outline" onClick={onClose} data-oid="kr_9es:">
+            <Button variant="outline" onClick={onClose} data-oid="fjq6s2b">
               取消
             </Button>
-            <Button data-oid="orr6qza">确认</Button>
+            <Button data-oid="y6316a6">确认</Button>
           </div>
         )}
       </div>

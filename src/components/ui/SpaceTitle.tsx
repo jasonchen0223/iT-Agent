@@ -71,7 +71,7 @@ export function SpaceTitle({
         className,
       )}
       {...animationProps}
-      data-oid="sicak_n"
+      data-oid="x0vs6ia"
     >
       {children}
 
@@ -94,7 +94,7 @@ export function SpaceTitle({
             delay: 0.2,
             ease: "easeOut",
           }}
-          data-oid="7ok:9t:"
+          data-oid="7f1618l"
         />
       )}
 
@@ -114,7 +114,7 @@ export function SpaceTitle({
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            data-oid="bsk_b07"
+            data-oid="3g9iit4"
           />
 
           <motion.div
@@ -135,7 +135,7 @@ export function SpaceTitle({
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            data-oid="uje29hh"
+            data-oid="qx3frzf"
           />
         </>
       )}

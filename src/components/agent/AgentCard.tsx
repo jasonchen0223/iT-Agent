@@ -108,15 +108,15 @@ export const AgentCard: React.FC<IAgentCardProps> = ({ agent, onClick }) => {
     <div
       onClick={onClick}
       className="cursor-pointer transition-all duration-300"
-      data-oid="u9y4bf7"
+      data-oid="k8oh:lm"
     >
       <Card
         className="bg-indigo-950/30 backdrop-blur-sm hover:border-indigo-500/50"
-        data-oid="16:uz:6"
+        data-oid="0hdk-bu"
       >
-        <div className="p-4 space-y-3" data-oid="6sol7gs">
-          <div className="flex items-center justify-between" data-oid="7pz:g_i">
-            <div className="flex items-center space-x-3" data-oid="tufqkl.">
+        <div className="p-4 space-y-3" data-oid="9vegh0s">
+          <div className="flex items-center justify-between" data-oid="3je77vh">
+            <div className="flex items-center space-x-3" data-oid="o4xk29x">
               {icon ? (
                 <Image
                   src={icon}
@@ -124,34 +124,34 @@ export const AgentCard: React.FC<IAgentCardProps> = ({ agent, onClick }) => {
                   width={40}
                   height={40}
                   className="rounded-full bg-indigo-900/20 p-1"
-                  data-oid="c5hebzg"
+                  data-oid="va00zag"
                 />
               ) : (
                 <div
                   className="w-10 h-10 rounded-full flex items-center justify-center text-white"
                   style={{ backgroundColor: color }}
-                  data-oid="uhb5zct"
+                  data-oid="zec:mmy"
                 >
-                  <span className="text-xl font-medium" data-oid="r1lxkfg">
+                  <span className="text-xl font-medium" data-oid="nkf9q6g">
                     {name.substring(0, 2)}
                   </span>
                 </div>
               )}
-              <div data-oid="7c.kfpt">
+              <div data-oid="si72vfs">
                 <h3
                   className="text-lg font-medium text-indigo-100"
-                  data-oid="cmj7ul9"
+                  data-oid="uw7qp93"
                 >
                   {name}
                 </h3>
-                <p className="text-sm text-indigo-300/70" data-oid=":942ji_">
+                <p className="text-sm text-indigo-300/70" data-oid="64jq8y7">
                   {roleDisplayNames[role] || role}
                 </p>
               </div>
             </div>
             <span
               className={`px-2 py-1 rounded-full text-xs ${getStatusColor()}`}
-              data-oid=":je9a-8"
+              data-oid="r.:n3vr"
             >
               {getStatusText()}
             </span>
@@ -159,18 +159,18 @@ export const AgentCard: React.FC<IAgentCardProps> = ({ agent, onClick }) => {
 
           <p
             className="text-indigo-300/70 text-sm line-clamp-3"
-            data-oid="949thuv"
+            data-oid="gwykzez"
           >
             {description}
           </p>
 
           {agent.capability && agent.capability.length > 0 && (
-            <div className="flex flex-wrap gap-1 pt-1" data-oid="_bugqvc">
+            <div className="flex flex-wrap gap-1 pt-1" data-oid=".tpyeey">
               {agent.capability.slice(0, 2).map((cap) => (
                 <span
                   key={cap}
                   className="px-2 py-0.5 bg-indigo-900/30 text-indigo-300/70 text-xs rounded-full"
-                  data-oid="i16qo32"
+                  data-oid="ui6d6tr"
                 >
                   {cap}
                 </span>
@@ -178,7 +178,7 @@ export const AgentCard: React.FC<IAgentCardProps> = ({ agent, onClick }) => {
               {agent.capability.length > 2 && (
                 <span
                   className="px-2 py-0.5 bg-indigo-900/20 text-indigo-300/50 text-xs rounded-full"
-                  data-oid="4x41rwn"
+                  data-oid="22kv-48"
                 >
                   +{agent.capability.length - 2}
                 </span>
@@ -186,12 +186,12 @@ export const AgentCard: React.FC<IAgentCardProps> = ({ agent, onClick }) => {
             </div>
           )}
 
-          <div className="pt-2 flex justify-end" data-oid="olg8p2b">
+          <div className="pt-2 flex justify-end" data-oid="unjxg3v">
             <Link
               href={`/agents/${id}`}
               className="text-xs text-indigo-400 hover:text-indigo-300"
               onClick={(e) => e.stopPropagation()}
-              data-oid="e_o8ynl"
+              data-oid="v-lmdqz"
             >
               查看详情
             </Link>

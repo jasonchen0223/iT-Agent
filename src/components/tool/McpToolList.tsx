@@ -54,9 +54,9 @@ export const McpToolList: React.FC<IMcpToolListProps> = ({
   }, [tools, searchQuery]);
 
   return (
-    <div className="space-y-6" data-oid="h83jxp6">
+    <div className="space-y-6" data-oid="k--jav:">
       {/* 搜索栏 */}
-      <div className="relative" data-oid=":n545_t">
+      <div className="relative" data-oid="sk0crj7">
         <Input
           type="search"
           placeholder="搜索MCP工具..."
@@ -64,29 +64,29 @@ export const McpToolList: React.FC<IMcpToolListProps> = ({
           onChange={(e) => setSearchQuery(e.target.value)}
           className="bg-slate-900/50 border-purple-500/30 text-white placeholder:text-slate-400
                              focus:border-purple-400/50 focus:ring-purple-400/20"
-          data-oid="7rn51zl"
+          data-oid="wweto1:"
         />
       </div>
 
       {/* 工具列表网格 */}
       <div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        data-oid="e4:8a91"
+        data-oid="kxri8q0"
       >
         {filteredTools.map((tool) => (
           <McpToolCard
             key={tool.id}
             tool={tool}
             onClick={onToolSelect}
-            data-oid="9ithb_v"
+            data-oid="7q3nzel"
           />
         ))}
       </div>
 
       {/* 无结果提示 */}
       {filteredTools.length === 0 && (
-        <div className="text-center py-8" data-oid="29zox4w">
-          <p className="text-slate-400" data-oid="mnx8ud3">
+        <div className="text-center py-8" data-oid="mx5snwh">
+          <p className="text-slate-400" data-oid="u:u4qfe">
             没有找到匹配的MCP工具
           </p>
         </div>

@@ -123,16 +123,16 @@ export const ToolList: React.FC<IToolListProps> = ({ initialTools = [] }) => {
   };
 
   return (
-    <div className="space-y-6" data-oid="ccw1ci3">
+    <div className="space-y-6" data-oid="flo-zy5">
       {/* 搜索框 */}
-      <div className="relative" data-oid="y9_7jch">
+      <div className="relative" data-oid="hw5vpkw">
         <Input
           type="text"
           placeholder="搜索工具..."
           value={searchQuery}
           onChange={handleSearch}
           className="bg-slate-800/40 border-slate-700 text-white placeholder:text-gray-400 focus-visible:ring-indigo-500"
-          data-oid="wy8181l"
+          data-oid="_r7sgz8"
         />
       </div>
 
@@ -140,11 +140,11 @@ export const ToolList: React.FC<IToolListProps> = ({ initialTools = [] }) => {
       {isLoading && (
         <div
           className="flex justify-center items-center py-20"
-          data-oid="vecv8cw"
+          data-oid="-o8e-1c"
         >
           <div
             className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-500"
-            data-oid="pcjm:lw"
+            data-oid="ll56rng"
           ></div>
         </div>
       )}
@@ -153,9 +153,9 @@ export const ToolList: React.FC<IToolListProps> = ({ initialTools = [] }) => {
       {error && !isLoading && (
         <div
           className="bg-red-900/30 border border-red-800 rounded-lg p-4 text-red-300"
-          data-oid="e4_1k52"
+          data-oid="3vip10m"
         >
-          <p className="text-center" data-oid=".v.hdbn">
+          <p className="text-center" data-oid="kshta26">
             {error}
           </p>
         </div>
@@ -167,20 +167,20 @@ export const ToolList: React.FC<IToolListProps> = ({ initialTools = [] }) => {
           {filteredTools.length > 0 ? (
             <div
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
-              data-oid="6hgetq5"
+              data-oid="_qnzmkc"
             >
               {filteredTools.map((tool) => (
                 <ToolCard
                   key={tool.id}
                   tool={tool}
                   onClick={handleToolClick}
-                  data-oid=":a052i5"
+                  data-oid="6w30_t6"
                 />
               ))}
             </div>
           ) : (
-            <div className="text-center py-10" data-oid="gylxcnd">
-              <p className="text-gray-400" data-oid="wyf2z_1">
+            <div className="text-center py-10" data-oid="2s49e79">
+              <p className="text-gray-400" data-oid="g22y4cb">
                 没有找到匹配的工具
               </p>
             </div>

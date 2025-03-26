@@ -126,22 +126,22 @@ const ConversationChat: React.FC<IConversationChatProps> = ({
       <div
         key={message.id}
         className={`flex ${isUserMessage ? "justify-end" : "justify-start"} mb-4`}
-        data-oid="c6jhgth"
+        data-oid="r2ghhvq"
       >
         <div
           className={`max-w-[80%] ${isUserMessage ? "order-2" : "order-1"}`}
-          data-oid="_od95y3"
+          data-oid="59emlgd"
         >
-          <div className="flex items-center mb-1" data-oid="-2-2a29">
+          <div className="flex items-center mb-1" data-oid="7bw:rga">
             {!isUserMessage && (
               <span
                 className={`text-xs px-2 py-1 rounded-full mr-2 ${color}`}
-                data-oid="51m-mq_"
+                data-oid="qn5mwz1"
               >
                 {message.senderName}
               </span>
             )}
-            <span className="text-xs text-gray-400" data-oid="rn0:a4f">
+            <span className="text-xs text-gray-400" data-oid="iv:8fsr">
               {typeof message.timestamp === "string"
                 ? message.timestamp
                 : message.timestamp.toLocaleTimeString("zh-CN")}
@@ -154,13 +154,13 @@ const ConversationChat: React.FC<IConversationChatProps> = ({
                 ? "bg-indigo-900/60 text-white rounded-tr-none"
                 : "bg-gray-800/80 text-white rounded-tl-none"
             }`}
-            data-oid="sbgehhm"
+            data-oid="wlwlfgs"
           >
             {message.content}
             {message.isGenerating && (
               <span
                 className="inline-block ml-1 w-2 h-4 bg-indigo-500 animate-pulse"
-                data-oid="j57e96r"
+                data-oid="91smsz7"
               ></span>
             )}
           </div>
@@ -170,57 +170,57 @@ const ConversationChat: React.FC<IConversationChatProps> = ({
   };
 
   return (
-    <div className="flex flex-col h-full" data-oid="p.x2kkq">
+    <div className="flex flex-col h-full" data-oid=":h7u5jw">
       {/* 消息列表 */}
       <div
         ref={chatContainerRef}
         className="flex-grow overflow-y-auto px-4 py-6 bg-gray-900/50 rounded-lg"
-        data-oid="2:coi65"
+        data-oid="xb4itvc"
       >
         {isLoading ? (
           <div
             className="flex items-center justify-center h-full"
-            data-oid="-qq6l_x"
+            data-oid="vd3sw-c"
           >
             <div
               className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-indigo-500"
-              data-oid="d5_db2q"
+              data-oid="45q-jhn"
             ></div>
           </div>
         ) : messages.length === 0 ? (
           <div
             className="flex items-center justify-center h-full"
-            data-oid="d7anq3:"
+            data-oid="icfgqg7"
           >
-            <div className="text-center" data-oid="sx:6v59">
-              <p className="text-gray-400 mb-3" data-oid="javr:sf">
+            <div className="text-center" data-oid="kteu:wx">
+              <p className="text-gray-400 mb-3" data-oid="-snjieo">
                 没有消息
               </p>
-              <p className="text-sm text-gray-500" data-oid="m7ha9w0">
+              <p className="text-sm text-gray-500" data-oid="c1dp1c6">
                 发送消息开始对话
               </p>
             </div>
           </div>
         ) : (
-          <div className="space-y-4" data-oid="kgnlyi1">
+          <div className="space-y-4" data-oid="tyn1chd">
             {messages.map(renderMessage)}
-            <div ref={messagesEndRef} data-oid="u9bw8mz" />
+            <div ref={messagesEndRef} data-oid="rh__p:z" />
           </div>
         )}
       </div>
 
       {/* 消息输入区域 */}
-      <div className="mt-4" data-oid="j54boot">
+      <div className="mt-4" data-oid="_kglidq">
         <form
           onSubmit={handleSubmit}
           className="flex items-end gap-2"
-          data-oid="t83mx7v"
+          data-oid="63jm1fz"
         >
-          <div className="flex-grow" data-oid="k-v9_j1">
+          <div className="flex-grow" data-oid="oh3hto9">
             <label
               htmlFor="message-input"
               className="block text-sm text-gray-400 mb-1"
-              data-oid="0a:6dvo"
+              data-oid="x2orbly"
             >
               发送消息
             </label>
@@ -238,21 +238,21 @@ const ConversationChat: React.FC<IConversationChatProps> = ({
               rows={3}
               disabled={isGenerating}
               className="w-full p-3 bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 disabled:opacity-60"
-              data-oid="d-hkaat"
+              data-oid="k044mod"
             />
 
-            <p className="text-xs text-gray-500 mt-1" data-oid="6m-ilj9">
+            <p className="text-xs text-gray-500 mt-1" data-oid="7_lpb2x">
               按 Enter 发送, Shift + Enter 换行
             </p>
           </div>
 
-          <div className="flex gap-2" data-oid="lu:jq__">
+          <div className="flex gap-2" data-oid="vp1el5a">
             {isGenerating && onStopGeneration && (
               <Button
                 type="button"
                 variant="secondary"
                 onClick={onStopGeneration}
-                data-oid="3q.0v9z"
+                data-oid=":.y4:ad"
               >
                 停止生成
               </Button>
@@ -262,7 +262,7 @@ const ConversationChat: React.FC<IConversationChatProps> = ({
               type="submit"
               variant="primary"
               disabled={!inputMessage.trim() || isGenerating}
-              data-oid="0mw._i:"
+              data-oid="t0-n2ux"
             >
               发送
             </Button>

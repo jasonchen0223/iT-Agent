@@ -14,23 +14,23 @@ import ToolLogFilter from "@/components/tool-log/ToolLogFilter";
  */
 export default function ToolLogsPage() {
   return (
-    <div className="container mx-auto px-4 py-8" data-oid="73290bu">
+    <div className="container mx-auto px-4 py-8" data-oid="rq1st1u">
       <h1
         className="text-3xl font-bold mb-8 text-center text-blue-400"
-        data-oid="81.abzg"
+        data-oid="h6kr5bi"
       >
         工具调用日志
       </h1>
 
-      <div className="grid grid-cols-12 gap-6" data-oid="zj1.y9p">
+      <div className="grid grid-cols-12 gap-6" data-oid="2hhn-62">
         {/* 左侧过滤面板 */}
-        <div className="col-span-12 md:col-span-3" data-oid="gd:wn4j">
-          <ToolLogFilter data-oid="foimgo1" />
+        <div className="col-span-12 md:col-span-3" data-oid="tidlfyr">
+          <ToolLogFilter data-oid="mph-1ax" />
         </div>
 
         {/* 右侧日志列表 */}
-        <div className="col-span-12 md:col-span-9" data-oid="jel.07_">
-          <ToolLogList data-oid="n1fxou0" />
+        <div className="col-span-12 md:col-span-9" data-oid="bmh71a0">
+          <ToolLogList data-oid="zfbaal0" />
         </div>
       </div>
     </div>

@@ -281,7 +281,7 @@ export function Starfield({
       ref={canvasRef}
       className={`w-full h-full ${className}`}
       style={{ position: "absolute", left: 0, top: 0 }}
-      data-oid="a82q8u-"
+      data-oid="0d5p0h6"
     />
   );
 }

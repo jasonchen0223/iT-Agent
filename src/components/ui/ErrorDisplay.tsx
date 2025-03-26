@@ -68,7 +68,7 @@ export const ErrorDisplay: React.FC<ErrorDisplayProps> = ({
     switch (severity) {
       case "critical":
         return {
-          icon: <XCircle className="w-6 h-6 text-red-500" data-oid="oflq4t9" />,
+          icon: <XCircle className="w-6 h-6 text-red-500" data-oid="p016gnr" />,
           containerStyle: "bg-red-50 dark:bg-red-950",
           borderStyle: "border-red-500",
           titleStyle: "text-red-700 dark:text-red-300",
@@ -78,7 +78,7 @@ export const ErrorDisplay: React.FC<ErrorDisplayProps> = ({
           icon: (
             <AlertCircle
               className="w-6 h-6 text-orange-500"
-              data-oid="m_b8bzv"
+              data-oid="00igiur"
             />
           ),
 
@@ -91,7 +91,7 @@ export const ErrorDisplay: React.FC<ErrorDisplayProps> = ({
           icon: (
             <AlertTriangle
               className="w-6 h-6 text-amber-500"
-              data-oid="uv38chz"
+              data-oid="6kgk1m6"
             />
           ),
 
@@ -101,7 +101,7 @@ export const ErrorDisplay: React.FC<ErrorDisplayProps> = ({
         };
       case "low":
         return {
-          icon: <Info className="w-6 h-6 text-blue-500" data-oid="zyzn:9o" />,
+          icon: <Info className="w-6 h-6 text-blue-500" data-oid="5o_jcue" />,
           containerStyle: "bg-blue-50 dark:bg-blue-950",
           borderStyle: "border-blue-500",
           titleStyle: "text-blue-700 dark:text-blue-300",
@@ -109,7 +109,7 @@ export const ErrorDisplay: React.FC<ErrorDisplayProps> = ({
       case "info":
       default:
         return {
-          icon: <Info className="w-6 h-6 text-indigo-500" data-oid="tm.h7.a" />,
+          icon: <Info className="w-6 h-6 text-indigo-500" data-oid="liwa4xz" />,
           containerStyle: "bg-indigo-50 dark:bg-indigo-950",
           borderStyle: "border-indigo-500",
           titleStyle: "text-indigo-700 dark:text-indigo-300",
@@ -131,60 +131,60 @@ export const ErrorDisplay: React.FC<ErrorDisplayProps> = ({
   return (
     <div
       className={`relative rounded-lg border ${borderStyle} p-4 ${containerStyle} ${className}`}
-      data-oid="werqyzu"
+      data-oid="ff6dnnu"
     >
-      <div className="flex items-start" data-oid="14nn8j8">
-        <div className="flex-shrink-0 mr-3" data-oid="wm2gda1">
+      <div className="flex items-start" data-oid="l83yksc">
+        <div className="flex-shrink-0 mr-3" data-oid="wliisxi">
           {icon}
         </div>
-        <div className="flex-1" data-oid="zhhf-b7">
+        <div className="flex-1" data-oid="fn40v.n">
           <h3
             className={`text-sm font-medium ${titleStyle}`}
-            data-oid="f-xagf2"
+            data-oid="s6_ffmk"
           >
             {title}{" "}
             {code && (
-              <span className="font-mono" data-oid="lbg6sfu">
+              <span className="font-mono" data-oid="ui0ohzm">
                 ({code})
               </span>
             )}
           </h3>
           <div
             className="mt-2 text-sm text-gray-700 dark:text-gray-300"
-            data-oid="7:sdvqi"
+            data-oid="ufqsu4d"
           >
-            <p data-oid="ndp8kr8">{message}</p>
+            <p data-oid="6zgzfz3">{message}</p>
 
             {suggestion && (
               <div
                 className="mt-2 text-sm text-gray-600 dark:text-gray-400"
-                data-oid="uee:o4p"
+                data-oid="okd3qcd"
               >
-                <p data-oid="7t_r8q8">
-                  <strong data-oid="hemky0m">建议:</strong> {suggestion}
+                <p data-oid="bjemivy">
+                  <strong data-oid="3j2ana-">建议:</strong> {suggestion}
                 </p>
               </div>
             )}
 
             {details && Object.keys(details).length > 0 && (
-              <div className="mt-2" data-oid="jixoktk">
+              <div className="mt-2" data-oid="7_1rpn6">
                 <button
                   type="button"
                   className="flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
                   onClick={() => setShowDetails(!showDetails)}
-                  data-oid="i1eg2t6"
+                  data-oid="mjqgqqc"
                 >
-                  <span data-oid="b2rli4y">错误详情</span>
+                  <span data-oid="teg9q:w">错误详情</span>
                   {showDetails ? (
-                    <ChevronUp className="ml-1 w-4 h-4" data-oid="9stevwa" />
+                    <ChevronUp className="ml-1 w-4 h-4" data-oid="8y:pylg" />
                   ) : (
-                    <ChevronDown className="ml-1 w-4 h-4" data-oid="h4io0qe" />
+                    <ChevronDown className="ml-1 w-4 h-4" data-oid="4._-2qr" />
                   )}
                 </button>
                 {showDetails && (
                   <pre
                     className="mt-2 p-2 bg-gray-100 dark:bg-gray-800 rounded text-xs font-mono overflow-x-auto"
-                    data-oid="a.vcdnk"
+                    data-oid="z6nl-a7"
                   >
                     {formatDetails(details)}
                   </pre>
@@ -194,12 +194,12 @@ export const ErrorDisplay: React.FC<ErrorDisplayProps> = ({
           </div>
 
           {onRetry && (
-            <div className="mt-3" data-oid="ojofy2-">
+            <div className="mt-3" data-oid="5y1m8za">
               <button
                 type="button"
                 onClick={onRetry}
                 className="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                data-oid="eznfioa"
+                data-oid="6.q4vvf"
               >
                 重试
               </button>
@@ -208,17 +208,17 @@ export const ErrorDisplay: React.FC<ErrorDisplayProps> = ({
         </div>
 
         {dismissible && (
-          <div className="flex-shrink-0 ml-3" data-oid="aqkvw9n">
+          <div className="flex-shrink-0 ml-3" data-oid="zmo:sm7">
             <button
               type="button"
               className="inline-flex text-gray-400 hover:text-gray-500 focus:outline-none"
               onClick={onDismiss}
-              data-oid="iohv9vb"
+              data-oid="av:kxnj"
             >
-              <span className="sr-only" data-oid="z4hn0n-">
+              <span className="sr-only" data-oid="fi5-ix2">
                 关闭
               </span>
-              <X className="h-5 w-5" data-oid="wia17c-" />
+              <X className="h-5 w-5" data-oid="ct-4w.p" />
             </button>
           </div>
         )}

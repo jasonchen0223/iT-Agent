@@ -22,7 +22,7 @@ export function Card({
         hoverable && "hover:border-indigo-500 transition-colors",
         className,
       )}
-      data-oid="7n-crmg"
+      data-oid="qxvxtl7"
     >
       {children}
     </div>
@@ -40,7 +40,7 @@ export function CardTitle({
   return (
     <h3
       className={cn("text-xl font-semibold text-indigo-100 mb-4", className)}
-      data-oid="kelwxwr"
+      data-oid="2cwwo.d"
     >
       {children}
     </h3>
@@ -56,7 +56,7 @@ export function CardContent({
   className?: string;
 }) {
   return (
-    <div className={cn("text-indigo-300/70", className)} data-oid="kkf8lf9">
+    <div className={cn("text-indigo-300/70", className)} data-oid="lejuvlq">
       {children}
     </div>
   );
@@ -73,7 +73,7 @@ export function CardFooter({
   return (
     <div
       className={cn("mt-4 pt-4 border-t border-indigo-800/30", className)}
-      data-oid="jo0z:kb"
+      data-oid="fgj-d8a"
     >
       {children}
     </div>

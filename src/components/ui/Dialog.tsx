@@ -78,7 +78,7 @@ export function Dialog({
         )}
         onClick={handleBackdropClick}
         aria-hidden="true"
-        data-oid="4.ur30x"
+        data-oid="u2rxf:4"
       />
 
       {/* 对话框内容 */}
@@ -87,32 +87,32 @@ export function Dialog({
           "fixed left-[50%] top-[50%] z-50 w-full max-w-md translate-x-[-50%] translate-y-[-50%] transition-all duration-150",
           open && !isClosing ? "scale-100 opacity-100" : "scale-95 opacity-0",
         )}
-        data-oid="o:kfi7q"
+        data-oid="lnk8qrm"
       >
         <div
           className="bg-gradient-to-b from-indigo-950/90 to-black/90 border border-indigo-800/30 rounded-lg shadow-xl overflow-hidden"
-          data-oid="mo_40s4"
+          data-oid="a2lst7q"
         >
           {/* 对话框标题 */}
           <div
             className="flex flex-col space-y-1.5 p-6 border-b border-indigo-800/30"
-            data-oid="1kwrmfd"
+            data-oid="wjsrcp8"
           >
             <h2
               className="text-xl font-semibold text-indigo-100"
-              data-oid=":upgar1"
+              data-oid="-s-:7r7"
             >
               {title}
             </h2>
             {description && (
-              <p className="text-sm text-indigo-300/70" data-oid="h7w.k2s">
+              <p className="text-sm text-indigo-300/70" data-oid="ohbq9uc">
                 {description}
               </p>
             )}
           </div>
 
           {/* 对话框内容 */}
-          <div className="p-6" data-oid="xvvj0xy">
+          <div className="p-6" data-oid="h9_vr:0">
             {children}
           </div>
 
@@ -120,23 +120,23 @@ export function Dialog({
           {footer ? (
             <div
               className="flex items-center justify-end space-x-3 p-6 border-t border-indigo-800/30 bg-indigo-950/50"
-              data-oid="8gicvxa"
+              data-oid="ge497.a"
             >
               {footer}
             </div>
           ) : (
             <div
               className="flex items-center justify-end space-x-3 p-6 border-t border-indigo-800/30 bg-indigo-950/50"
-              data-oid="aex5mm5"
+              data-oid="ej0ijwu"
             >
               <Button
                 variant="outline"
                 onClick={handleClose}
-                data-oid="taddl:f"
+                data-oid="_ub.:-d"
               >
                 取消
               </Button>
-              <Button onClick={handleClose} data-oid="5j6nnqw">
+              <Button onClick={handleClose} data-oid=".2cojc.">
                 确认
               </Button>
             </div>
@@ -186,7 +186,7 @@ export function useDialog() {
               dialogProps.onCancel?.();
               closeDialog();
             }}
-            data-oid="lfzrh.x"
+            data-oid="j6zckyi"
           >
             取消
           </Button>
@@ -195,13 +195,13 @@ export function useDialog() {
               dialogProps.onConfirm?.();
               closeDialog();
             }}
-            data-oid="2te1x9l"
+            data-oid="e9d.ax6"
           >
             确认
           </Button>
         </>
       }
-      data-oid="9zcrs9l"
+      data-oid="cnbtgdr"
     />
   );
 

@@ -93,28 +93,28 @@ const CapabilityDetail: React.FC<CapabilityDetailProps> = ({
   const getCapabilityIcon = (type: string) => {
     switch (type) {
       case "tool":
-        return <FiTool className="text-blue-400 text-2xl" data-oid="xklnb16" />;
+        return <FiTool className="text-blue-400 text-2xl" data-oid="3-3fj1n" />;
       case "reasoning":
         return (
-          <FiBrain className="text-purple-400 text-2xl" data-oid="m48:cnq" />
+          <FiBrain className="text-purple-400 text-2xl" data-oid="n8mjyr6" />
         );
 
       case "knowledge":
         return (
-          <FiDatabase className="text-green-400 text-2xl" data-oid=".wn72dz" />
+          <FiDatabase className="text-green-400 text-2xl" data-oid="yy7a93w" />
         );
 
       case "communication":
         return (
           <FiMessageCircle
             className="text-yellow-400 text-2xl"
-            data-oid="fupmse6"
+            data-oid=".66:cs-"
           />
         );
 
       default:
         return (
-          <FiPlusCircle className="text-gray-400 text-2xl" data-oid="o.t::c-" />
+          <FiPlusCircle className="text-gray-400 text-2xl" data-oid="ppalhgt" />
         );
     }
   };
@@ -140,22 +140,22 @@ const CapabilityDetail: React.FC<CapabilityDetailProps> = ({
     return (
       <div
         className={`bg-gray-900 rounded-lg p-6 border border-gray-700 animate-pulse ${className}`}
-        data-oid="jp::k38"
+        data-oid="xzl.gie"
       >
         <div
           className="h-6 bg-gray-700 rounded w-3/4 mb-4"
-          data-oid="4tgfjh3"
+          data-oid="b_r4w3i"
         ></div>
         <div
           className="h-4 bg-gray-700 rounded w-full mb-3"
-          data-oid="4u5zuy7"
+          data-oid="eedyjs1"
         ></div>
         <div
           className="h-4 bg-gray-700 rounded w-5/6 mb-6"
-          data-oid="jy_s.az"
+          data-oid="s6mbif0"
         ></div>
-        <div className="h-20 bg-gray-800 rounded mb-4" data-oid="syf3tnm"></div>
-        <div className="h-5 bg-gray-700 rounded w-1/4" data-oid="hgiz9cl"></div>
+        <div className="h-20 bg-gray-800 rounded mb-4" data-oid="jhcb5ot"></div>
+        <div className="h-5 bg-gray-700 rounded w-1/4" data-oid="8h-8atq"></div>
       </div>
     );
   }
@@ -165,18 +165,18 @@ const CapabilityDetail: React.FC<CapabilityDetailProps> = ({
     return (
       <div
         className={`bg-gray-900 rounded-lg p-6 border border-red-700 ${className}`}
-        data-oid="anaumne"
+        data-oid="_mi4ukb"
       >
         <div
           className="flex items-center justify-between mb-4"
-          data-oid="q.j5edh"
+          data-oid="da50ysm"
         >
           <div
             className="flex items-center space-x-2 text-red-400"
-            data-oid="zd7extw"
+            data-oid="2o4lnvu"
           >
-            <FiAlertCircle data-oid="xcoys:q" />
-            <h2 className="font-bold" data-oid="-mm.hks">
+            <FiAlertCircle data-oid="83zb9z:" />
+            <h2 className="font-bold" data-oid="s6ws69c">
               加载失败
             </h2>
           </div>
@@ -184,13 +184,13 @@ const CapabilityDetail: React.FC<CapabilityDetailProps> = ({
             <button
               onClick={onClose}
               className="text-gray-400 hover:text-white"
-              data-oid="f3042xc"
+              data-oid="5dlssfs"
             >
-              <FiX data-oid="p8x:fe5" />
+              <FiX data-oid="9buydln" />
             </button>
           )}
         </div>
-        <p className="text-gray-300 mb-3" data-oid="zqi22q7">
+        <p className="text-gray-300 mb-3" data-oid="64g-iar">
           {error}
         </p>
       </div>
@@ -202,26 +202,26 @@ const CapabilityDetail: React.FC<CapabilityDetailProps> = ({
     return (
       <div
         className={`bg-gray-900 rounded-lg p-6 border border-gray-700 ${className}`}
-        data-oid="tkf9j-v"
+        data-oid="0:-:k0g"
       >
         <div
           className="flex justify-between items-center mb-4"
-          data-oid=".uy:2i4"
+          data-oid="r1j0od_"
         >
-          <h2 className="text-lg font-bold text-white" data-oid="4apwf5-">
+          <h2 className="text-lg font-bold text-white" data-oid="6nkupx3">
             未找到能力
           </h2>
           {onClose && (
             <button
               onClick={onClose}
               className="text-gray-400 hover:text-white"
-              data-oid="5af1pik"
+              data-oid="r9s8s66"
             >
-              <FiX data-oid="uyhnht3" />
+              <FiX data-oid=":--c07w" />
             </button>
           )}
         </div>
-        <p className="text-gray-400" data-oid="fwdxluw">
+        <p className="text-gray-400" data-oid="4:10tvq">
           无法加载指定的代理能力信息
         </p>
       </div>
@@ -231,16 +231,16 @@ const CapabilityDetail: React.FC<CapabilityDetailProps> = ({
   return (
     <div
       className={`bg-gray-900 rounded-lg p-6 border border-gray-700 ${className}`}
-      data-oid="mp2fka9"
+      data-oid="bi.p80p"
     >
       {/* 标题和关闭按钮 */}
       <div
         className="flex justify-between items-center mb-4"
-        data-oid="tls0okh"
+        data-oid="d6wdge4"
       >
-        <div className="flex items-center space-x-3" data-oid=":hq4_z8">
+        <div className="flex items-center space-x-3" data-oid="pbedbx4">
           {getCapabilityIcon(capability.type)}
-          <h2 className="text-xl font-bold text-white" data-oid="2n1p2mt">
+          <h2 className="text-xl font-bold text-white" data-oid="tf:vqlp">
             {capability.name}
           </h2>
         </div>
@@ -248,51 +248,51 @@ const CapabilityDetail: React.FC<CapabilityDetailProps> = ({
           <button
             onClick={onClose}
             className="text-gray-400 hover:text-white p-1 rounded-full hover:bg-gray-800"
-            data-oid=".04-31a"
+            data-oid=".._tw1u"
           >
-            <FiX data-oid="5b.n3d9" />
+            <FiX data-oid="plqqw4." />
           </button>
         )}
       </div>
 
       {/* 能力类型标签 */}
-      <div className="mb-4" data-oid="qfb5onv">
+      <div className="mb-4" data-oid=".ep3ss:">
         <span
           className={`text-xs px-3 py-1 rounded-full border ${getTypeStyle(capability.type)}`}
-          data-oid="nmxxsxi"
+          data-oid="hy25wvq"
         >
           {capability.type}
         </span>
       </div>
 
       {/* 能力描述 */}
-      <div className="mb-4" data-oid="jnd88w7">
+      <div className="mb-4" data-oid="aq27543">
         <h3
           className="text-sm font-medium text-gray-400 mb-1"
-          data-oid="xt:u67_"
+          data-oid="1x8ibm6"
         >
           描述
         </h3>
-        <p className="text-white" data-oid="zbt64z6">
+        <p className="text-white" data-oid="47dy0tt">
           {capability.description}
         </p>
       </div>
 
       {/* 标签信息 */}
       {capability.params?.tags && capability.params.tags.length > 0 && (
-        <div className="mb-4" data-oid="-t:kul6">
+        <div className="mb-4" data-oid="qp:jfln">
           <h3
             className="text-sm font-medium text-gray-400 mb-2"
-            data-oid="fo335id"
+            data-oid="nlu8csw"
           >
             标签
           </h3>
-          <div className="flex flex-wrap gap-2" data-oid="d_cn:f.">
+          <div className="flex flex-wrap gap-2" data-oid=":mc1vg.">
             {capability.params.tags.map((tag: string, index: number) => (
               <span
                 key={index}
                 className="text-xs px-2 py-1 rounded-full bg-gray-800 text-gray-300"
-                data-oid="q2v:1:m"
+                data-oid="aop__q5"
               >
                 {tag}
               </span>
@@ -303,18 +303,18 @@ const CapabilityDetail: React.FC<CapabilityDetailProps> = ({
 
       {/* 工具相关信息 */}
       {capability.type === "tool" && capability.params?.toolId && (
-        <div className="mb-4" data-oid="otdiuk2">
+        <div className="mb-4" data-oid="xs-k4x7">
           <h3
             className="text-sm font-medium text-gray-400 mb-1"
-            data-oid="tfkf6s_"
+            data-oid="q0uwrrv"
           >
             关联工具
           </h3>
           <div
             className="bg-gray-800 bg-opacity-50 p-3 rounded"
-            data-oid="e7z2x44"
+            data-oid="xw8.qgf"
           >
-            <div className="text-white font-mono text-sm" data-oid="l:8d:yj">
+            <div className="text-white font-mono text-sm" data-oid="x4-jv94">
               {capability.params.toolId}
             </div>
           </div>
@@ -323,26 +323,26 @@ const CapabilityDetail: React.FC<CapabilityDetailProps> = ({
 
       {/* 参数详情 */}
       {capability.params && Object.keys(capability.params).length > 0 && (
-        <div className="mb-2" data-oid="b2dgooa">
+        <div className="mb-2" data-oid="w83u95f">
           <button
             className="flex items-center justify-between w-full text-sm font-medium text-gray-400 hover:text-white mb-2"
             onClick={() => setParamsExpanded(!paramsExpanded)}
-            data-oid="z0sn7pi"
+            data-oid="ul_p3s1"
           >
-            <span data-oid="1xij-9u">详细参数</span>
+            <span data-oid="aa7c-_9">详细参数</span>
             {paramsExpanded ? (
-              <FiChevronUp data-oid="376m-qj" />
+              <FiChevronUp data-oid="cl4ocfz" />
             ) : (
-              <FiChevronDown data-oid="-vcz2ay" />
+              <FiChevronDown data-oid="vh_p3i2" />
             )}
           </button>
 
           {paramsExpanded && (
             <div
               className="bg-gray-800 bg-opacity-50 p-3 rounded font-mono text-sm text-gray-300 overflow-auto max-h-40"
-              data-oid="eos1bfz"
+              data-oid="ee3hqq0"
             >
-              <pre data-oid="-zhh9.q">
+              <pre data-oid="hd_6dt1">
                 {JSON.stringify(capability.params, null, 2)}
               </pre>
             </div>
@@ -351,13 +351,13 @@ const CapabilityDetail: React.FC<CapabilityDetailProps> = ({
       )}
 
       {/* 能力ID */}
-      <div className="mt-4 pt-4 border-t border-gray-800" data-oid=".hf3d6l">
+      <div className="mt-4 pt-4 border-t border-gray-800" data-oid="747pk2z">
         <div
           className="flex items-center justify-between text-xs text-gray-500"
-          data-oid="e2do2a:"
+          data-oid="ehol34r"
         >
-          <span data-oid="xixnmm4">能力 ID</span>
-          <span className="font-mono" data-oid="1_lm-v_">
+          <span data-oid="6:x2l-m">能力 ID</span>
+          <span className="font-mono" data-oid="0c:lsd:">
             {capability.id}
           </span>
         </div>

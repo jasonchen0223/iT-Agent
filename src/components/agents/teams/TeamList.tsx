@@ -220,7 +220,7 @@ const TeamList: React.FC<TeamListProps> = ({
         return (
           <span
             className="space-badge text-xs px-2 py-1 bg-blue-900/40 text-blue-300 border border-blue-500"
-            data-oid="e.7-f03"
+            data-oid="vqhceu3"
           >
             工作流
           </span>
@@ -230,7 +230,7 @@ const TeamList: React.FC<TeamListProps> = ({
         return (
           <span
             className="space-badge text-xs px-2 py-1 bg-green-900/40 text-green-300 border border-green-500"
-            data-oid="krgq6db"
+            data-oid="cp-yo9z"
           >
             会话
           </span>
@@ -240,7 +240,7 @@ const TeamList: React.FC<TeamListProps> = ({
         return (
           <span
             className="space-badge text-xs px-2 py-1 bg-purple-900/40 text-purple-300 border border-purple-500"
-            data-oid="snpflz4"
+            data-oid=":kuokj:"
           >
             并行
           </span>
@@ -250,7 +250,7 @@ const TeamList: React.FC<TeamListProps> = ({
         return (
           <span
             className="space-badge text-xs px-2 py-1 bg-gray-800 text-gray-300 border border-gray-600"
-            data-oid="v2uaac_"
+            data-oid="k__e-81"
           >
             {type}
           </span>
@@ -265,7 +265,7 @@ const TeamList: React.FC<TeamListProps> = ({
         return (
           <span
             className="space-badge text-xs px-2 py-1 bg-green-900/40 text-green-300"
-            data-oid="if.stie"
+            data-oid="v9iz07r"
           >
             活跃
           </span>
@@ -275,7 +275,7 @@ const TeamList: React.FC<TeamListProps> = ({
         return (
           <span
             className="space-badge text-xs px-2 py-1 bg-gray-800 text-gray-300"
-            data-oid=".rex-o4"
+            data-oid="d_n64f3"
           >
             非活跃
           </span>
@@ -285,7 +285,7 @@ const TeamList: React.FC<TeamListProps> = ({
         return (
           <span
             className="space-badge text-xs px-2 py-1 bg-amber-900/40 text-amber-300"
-            data-oid="ih.r7oj"
+            data-oid=".51rysy"
           >
             已归档
           </span>
@@ -295,7 +295,7 @@ const TeamList: React.FC<TeamListProps> = ({
         return (
           <span
             className="space-badge text-xs px-2 py-1 bg-gray-800 text-gray-300"
-            data-oid="8fs1b1s"
+            data-oid="xdwe15i"
           >
             {status}
           </span>
@@ -317,11 +317,11 @@ const TeamList: React.FC<TeamListProps> = ({
   const totalPages = Math.ceil(pagination.total / pagination.limit);
 
   return (
-    <div className={`${className}`} data-oid="mk0.55u">
+    <div className={`${className}`} data-oid="vacg27y">
       {/* 筛选栏 */}
-      <div className="space-card p-4 mb-5" data-oid="p6rg7q1">
-        <div className="flex flex-wrap gap-3" data-oid="1:phrfc">
-          <div className="flex-1 min-w-[200px]" data-oid=":jobea_">
+      <div className="space-card p-4 mb-5" data-oid="-0p3-f1">
+        <div className="flex flex-wrap gap-3" data-oid="h-2dcf.">
+          <div className="flex-1 min-w-[200px]" data-oid="6lf1oxb">
             <input
               type="text"
               value={filter.search}
@@ -331,67 +331,67 @@ const TeamList: React.FC<TeamListProps> = ({
               placeholder="搜索团队..."
               className="space-input w-full"
               onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-              data-oid="2557riz"
+              data-oid="7b6u6kz"
             />
           </div>
-          <div className="w-40" data-oid="72p_q6:">
+          <div className="w-40" data-oid="s14qtmy">
             <select
               value={filter.type}
               onChange={(e) =>
                 setFilter((prev) => ({ ...prev, type: e.target.value }))
               }
               className="space-select w-full"
-              data-oid="iwqzqr:"
+              data-oid="1kxgq38"
             >
-              <option value="" data-oid="4m.vget">
+              <option value="" data-oid="bkjqs12">
                 所有类型
               </option>
-              <option value={TeamType.WORKFLOW} data-oid="45hmcye">
+              <option value={TeamType.WORKFLOW} data-oid="bc229q-">
                 工作流
               </option>
-              <option value={TeamType.CONVERSATION} data-oid="dvfa1hh">
+              <option value={TeamType.CONVERSATION} data-oid=":g5qdja">
                 会话
               </option>
-              <option value={TeamType.PARALLEL} data-oid="50hjbom">
+              <option value={TeamType.PARALLEL} data-oid="pbzdsk2">
                 并行
               </option>
             </select>
           </div>
-          <div className="w-40" data-oid="tdm.90a">
+          <div className="w-40" data-oid="n9xpmh0">
             <select
               value={filter.status}
               onChange={(e) =>
                 setFilter((prev) => ({ ...prev, status: e.target.value }))
               }
               className="space-select w-full"
-              data-oid=":tip8c5"
+              data-oid="r4qlzih"
             >
-              <option value="" data-oid="-scif:m">
+              <option value="" data-oid="4vf:twf">
                 所有状态
               </option>
-              <option value={TeamStatus.ACTIVE} data-oid="72vqcv0">
+              <option value={TeamStatus.ACTIVE} data-oid="e6042e4">
                 活跃
               </option>
-              <option value={TeamStatus.INACTIVE} data-oid="9.2u45c">
+              <option value={TeamStatus.INACTIVE} data-oid="0wzl:_1">
                 非活跃
               </option>
-              <option value={TeamStatus.ARCHIVED} data-oid="cjb7h8p">
+              <option value={TeamStatus.ARCHIVED} data-oid="h6jcoin">
                 已归档
               </option>
             </select>
           </div>
-          <div className="flex gap-2" data-oid="d08ocmj">
+          <div className="flex gap-2" data-oid="pktsgr0">
             <button
               onClick={handleSearch}
               className="space-button bg-indigo-600 text-white"
-              data-oid="mrgf7x1"
+              data-oid="qd402b4"
             >
               搜索
             </button>
             <button
               onClick={resetFilters}
               className="space-button bg-slate-700 text-white"
-              data-oid="ewq-enx"
+              data-oid="o1y5trs"
             >
               重置
             </button>
@@ -401,8 +401,8 @@ const TeamList: React.FC<TeamListProps> = ({
 
       {/* 错误显示 */}
       {error && (
-        <div className="space-card p-4 mb-5 border-red-500" data-oid="5a0w7to">
-          <p className="text-red-400" data-oid="dpr916x">
+        <div className="space-card p-4 mb-5 border-red-500" data-oid="27s8f7:">
+          <p className="text-red-400" data-oid="gaw2i:3">
             {error}
           </p>
         </div>
@@ -410,46 +410,46 @@ const TeamList: React.FC<TeamListProps> = ({
 
       {/* 团队列表 */}
       {loading ? (
-        <div className="space-card p-8 text-center" data-oid="-086q3w">
-          <div className="flex items-center justify-center" data-oid="hfke1b1">
+        <div className="space-card p-8 text-center" data-oid="4ezhiyl">
+          <div className="flex items-center justify-center" data-oid="z47sikh">
             <div
               className="w-6 h-6 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin"
-              data-oid="c2k0pnv"
+              data-oid="alei:9."
             ></div>
-            <span className="ml-2" data-oid="76rga1e">
+            <span className="ml-2" data-oid="m.wsnr3">
               加载中...
             </span>
           </div>
         </div>
       ) : teams.length === 0 ? (
-        <div className="space-card p-8 text-center" data-oid="cjftw_h">
-          <p className="text-slate-400" data-oid="m8yu4lu">
+        <div className="space-card p-8 text-center" data-oid="65k5t5k">
+          <p className="text-slate-400" data-oid="0mxxdz6">
             暂无团队数据
           </p>
         </div>
       ) : (
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
-          data-oid="bu5sa3f"
+          data-oid="hywc:ru"
         >
           {teams.map((team) => (
             <div
               key={team.id}
               className="space-card relative group"
-              data-oid="az1o2kr"
+              data-oid="q6xut5f"
             >
-              <div className="p-5" data-oid="5dcmrmb">
+              <div className="p-5" data-oid="z--bu8b">
                 <div
                   className="flex justify-between items-start mb-3"
-                  data-oid="hsdmxrn"
+                  data-oid="-wuzhuz"
                 >
                   <h3
                     className="text-lg font-semibold text-indigo-300 truncate"
-                    data-oid="5sg.ywv"
+                    data-oid="4t-8d4u"
                   >
                     {team.name}
                   </h3>
-                  <div className="flex space-x-1" data-oid="8flfw5k">
+                  <div className="flex space-x-1" data-oid="488s0o8">
                     {getTeamTypeLabel(team.type)}
                     {getTeamStatusLabel(team.status)}
                   </div>
@@ -457,35 +457,35 @@ const TeamList: React.FC<TeamListProps> = ({
 
                 <p
                   className="text-sm text-slate-300 mb-4 line-clamp-2"
-                  data-oid="qda6xxd"
+                  data-oid="qkpkuau"
                 >
                   {team.description || "没有描述"}
                 </p>
 
                 <div
                   className="flex items-center text-xs text-slate-400 mb-4"
-                  data-oid="h-pnpbh"
+                  data-oid="hmlooof"
                 >
-                  <FiCalendar className="mr-1" data-oid="vw0x.5k" />
-                  <span data-oid="x-h9g0q">
+                  <FiCalendar className="mr-1" data-oid="8ge.wjd" />
+                  <span data-oid="nwggx6n">
                     创建于: {new Date(team.createdAt).toLocaleString("zh-CN")}
                   </span>
                 </div>
 
                 {team.members && team.members.length > 0 && (
-                  <div className="mb-4" data-oid=":p.rv2v">
+                  <div className="mb-4" data-oid="-:_9eft">
                     <div
                       className="text-xs text-slate-400 mb-2 flex items-center"
-                      data-oid="-8cwkfe"
+                      data-oid="vy5wj0i"
                     >
-                      <FiUsers className="mr-1" data-oid="enn5e:t" />
-                      <span data-oid="oj:vgu5">
+                      <FiUsers className="mr-1" data-oid="x04n.d4" />
+                      <span data-oid="dj_vqu-">
                         成员 ({team.members.length})
                       </span>
                     </div>
                     <div
                       className="flex -space-x-2 overflow-hidden"
-                      data-oid="p4g7yub"
+                      data-oid="m.c.v_-"
                     >
                       {team.members.slice(0, 5).map((member) => (
                         <div
@@ -496,7 +496,7 @@ const TeamList: React.FC<TeamListProps> = ({
                             backgroundColor: member.config.color || "#374151",
                             color: "white",
                           }}
-                          data-oid="atcgkfn"
+                          data-oid="b0d-_pp"
                         >
                           {member.config.name.slice(0, 1).toUpperCase()}
                         </div>
@@ -504,7 +504,7 @@ const TeamList: React.FC<TeamListProps> = ({
                       {team.members.length > 5 && (
                         <div
                           className="w-8 h-8 rounded-full flex items-center justify-center text-xs bg-slate-600 border-2 border-space-dark"
-                          data-oid="zc2vbzx"
+                          data-oid="0bucl7:"
                         >
                           +{team.members.length - 5}
                         </div>
@@ -513,23 +513,23 @@ const TeamList: React.FC<TeamListProps> = ({
                   </div>
                 )}
 
-                <div className="flex space-x-2 mt-4" data-oid="j9jlc4-">
+                <div className="flex space-x-2 mt-4" data-oid="1lxjr81">
                   <button
                     onClick={() => startTeam(team.id)}
                     className="space-button text-xs px-3 py-1.5 bg-indigo-600 text-white flex items-center"
                     disabled={loading}
-                    data-oid="jberqfi"
+                    data-oid="3mq5z1o"
                   >
-                    <FiPlay className="mr-1" data-oid="y0sbt_k" />
+                    <FiPlay className="mr-1" data-oid="o134-61" />
                     启动
                   </button>
 
                   <Link
                     href={`/agents/teams/${team.id}`}
                     className="space-button text-xs px-3 py-1.5 bg-slate-700 text-white flex items-center"
-                    data-oid="29r1v5e"
+                    data-oid=".7l4jxl"
                   >
-                    <FiEdit className="mr-1" data-oid="twauxfo" />
+                    <FiEdit className="mr-1" data-oid="8nxc_rd" />
                     编辑
                   </Link>
 
@@ -537,9 +537,9 @@ const TeamList: React.FC<TeamListProps> = ({
                     onClick={() => setDeleteConfirm(team.id)}
                     className="space-button text-xs px-3 py-1.5 bg-red-800 text-white flex items-center"
                     disabled={loading}
-                    data-oid="u-xsgl:"
+                    data-oid="c636gkx"
                   >
-                    <FiTrash2 className="mr-1" data-oid="jcez3s-" />
+                    <FiTrash2 className="mr-1" data-oid="tb.nz.c" />
                     删除
                   </button>
                 </div>
@@ -549,24 +549,24 @@ const TeamList: React.FC<TeamListProps> = ({
               {deleteConfirm === team.id && (
                 <div
                   className="absolute inset-0 bg-space-dark/90 backdrop-blur-sm flex flex-col items-center justify-center p-4 z-10"
-                  data-oid="9tba1f9"
+                  data-oid="3gq5.ns"
                 >
-                  <p className="text-center mb-4" data-oid="rfoyhiv">
+                  <p className="text-center mb-4" data-oid="pvuo27t">
                     确定要删除"{team.name}"团队吗？
                   </p>
-                  <div className="flex space-x-3" data-oid="1_rho0v">
+                  <div className="flex space-x-3" data-oid="uu8eqpe">
                     <button
                       onClick={() => deleteTeam(team.id)}
                       className="space-button bg-red-600 text-white"
                       disabled={loading}
-                      data-oid=".p4:kt6"
+                      data-oid="jfi-52w"
                     >
                       确认删除
                     </button>
                     <button
                       onClick={() => setDeleteConfirm(null)}
                       className="space-button bg-slate-700 text-white"
-                      data-oid="q4pgrie"
+                      data-oid="_6qls-q"
                     >
                       取消
                     </button>
@@ -582,12 +582,12 @@ const TeamList: React.FC<TeamListProps> = ({
       {teams.length > 0 && (
         <div
           className="space-card p-4 mt-5 flex items-center justify-between"
-          data-oid="aa8ban0"
+          data-oid="7pot5k:"
         >
-          <div className="text-sm text-slate-400" data-oid="8--gyns">
+          <div className="text-sm text-slate-400" data-oid="4kh1o3:">
             共 {pagination.total} 个团队
           </div>
-          <div className="flex space-x-2" data-oid="2ooj519">
+          <div className="flex space-x-2" data-oid="rixyaal">
             <button
               onClick={() =>
                 setPagination((prev) => ({
@@ -597,13 +597,13 @@ const TeamList: React.FC<TeamListProps> = ({
               }
               disabled={pagination.page <= 1}
               className="space-button bg-slate-700 text-white disabled:opacity-50"
-              data-oid="0cegdd5"
+              data-oid="zeqmj9e"
             >
               上一页
             </button>
             <span
               className="space-card px-4 py-2 inline-flex items-center"
-              data-oid="34ejg3s"
+              data-oid="-nh-wkx"
             >
               第 {pagination.page} 页
             </span>
@@ -613,7 +613,7 @@ const TeamList: React.FC<TeamListProps> = ({
               }
               disabled={pagination.page * pagination.limit >= pagination.total}
               className="space-button bg-slate-700 text-white disabled:opacity-50"
-              data-oid="t7i1ulj"
+              data-oid="v.0asap"
             >
               下一页
             </button>

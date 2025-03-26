@@ -67,17 +67,17 @@ export function Chart({
   }, [data, type, height, showLabels]);
 
   return (
-    <Card className={className} data-oid="s4i_xfq">
-      <div className="flex justify-between items-start mb-4" data-oid="fjf2aoj">
-        <div data-oid="phy2v-y">
+    <Card className={className} data-oid="zf3nl.y">
+      <div className="flex justify-between items-start mb-4" data-oid="_apt10m">
+        <div data-oid="dh87ig5">
           <h3
             className="text-lg font-semibold text-indigo-100"
-            data-oid="ooiv.yx"
+            data-oid="lizlltb"
           >
             {title}
           </h3>
           {description && (
-            <p className="text-sm text-indigo-300/70" data-oid="kyqb021">
+            <p className="text-sm text-indigo-300/70" data-oid="1rvlnwr">
               {description}
             </p>
           )}
@@ -87,30 +87,30 @@ export function Chart({
       <div
         className="relative"
         style={{ height: `${height}px` }}
-        data-oid="9u04s95"
+        data-oid="oga_62t"
       >
         <canvas
           ref={canvasRef}
           style={{ width: "100%", height: `${height}px` }}
           className="absolute inset-0"
-          data-oid="_0s7kmn"
+          data-oid="m--fzd2"
         />
       </div>
 
       {showLabels && (
-        <div className="mt-4 flex flex-wrap gap-3" data-oid="1yl:gjc">
+        <div className="mt-4 flex flex-wrap gap-3" data-oid="-abaxb6">
           {data.map((item, index) => (
-            <div key={index} className="flex items-center" data-oid=":2nyag5">
+            <div key={index} className="flex items-center" data-oid="hicl2k3">
               <span
                 className="block w-3 h-3 rounded-full mr-2"
                 style={{
                   backgroundColor:
                     item.color || DEFAULT_COLORS[index % DEFAULT_COLORS.length],
                 }}
-                data-oid="lnngqod"
+                data-oid="e6zl1ta"
               />
 
-              <span className="text-sm text-indigo-300/70" data-oid="xkuxxmm">
+              <span className="text-sm text-indigo-300/70" data-oid="6jnliui">
                 {item.label}
               </span>
             </div>

@@ -58,29 +58,29 @@ export default function Navbar() {
   return (
     <nav
       className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-space-darker via-space-dark to-space-darker border-b border-indigo-950/50 backdrop-blur-md shadow-lg"
-      data-oid="19eunyg"
+      data-oid="aj44yz."
     >
       <div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-        data-oid="2bs5k81"
+        data-oid="ya-r.49"
       >
-        <div className="flex justify-between h-16" data-oid="_0exs:e">
+        <div className="flex justify-between h-16" data-oid="jfa66vt">
           {/* 品牌标志和标题 */}
-          <div className="flex items-center" data-oid="vq7o:vv">
+          <div className="flex items-center" data-oid="jqg._hk">
             <Link
               href="/"
               className="flex items-center space-glow group"
-              data-oid="jgj0vai"
+              data-oid="yh3.dso"
             >
               <div
                 className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center text-white font-bold group-hover:shadow-glow transition-all duration-300"
-                data-oid="xfgm3ja"
+                data-oid="-9bnbto"
               >
                 iT
               </div>
               <span
                 className="ml-2 text-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-indigo-100 to-indigo-300"
-                data-oid="r7sh8vj"
+                data-oid="ruf1489"
               >
                 智能代理协作系统
               </span>
@@ -90,7 +90,7 @@ export default function Navbar() {
           {/* 桌面端导航链接 */}
           <div
             className="hidden md:flex md:items-center md:space-x-4"
-            data-oid="ji_v_pw"
+            data-oid="l94x5gl"
           >
             {navItems.map((item) => (
               <Link
@@ -101,7 +101,7 @@ export default function Navbar() {
                     ? "bg-indigo-900/50 text-white shadow-inner"
                     : "text-indigo-200 hover:bg-indigo-900/30 hover:text-white"
                 }`}
-                data-oid="l0z1nz4"
+                data-oid="cc5jo8u"
               >
                 {item.title}
               </Link>
@@ -109,14 +109,14 @@ export default function Navbar() {
           </div>
 
           {/* 移动端菜单按钮 */}
-          <div className="flex md:hidden items-center" data-oid="abt5x02">
+          <div className="flex md:hidden items-center" data-oid="v6gkj0:">
             <button
               className="inline-flex items-center justify-center p-2 rounded-md text-indigo-300 hover:text-white hover:bg-indigo-900/30 focus:outline-none transition-colors duration-200"
               onClick={toggleMobileMenu}
               aria-expanded={mobileMenuOpen}
-              data-oid="gywlvrt"
+              data-oid="epxm:up"
             >
-              <span className="sr-only" data-oid="pf9t2y:">
+              <span className="sr-only" data-oid="va8rguh">
                 打开主菜单
               </span>
               <svg
@@ -126,14 +126,14 @@ export default function Navbar() {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 aria-hidden="true"
-                data-oid="md2wqbm"
+                data-oid="me0cj0i"
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M4 6h16M4 12h16M4 18h16"
-                  data-oid="l1magv."
+                  data-oid="7tfgit1"
                 />
               </svg>
               <svg
@@ -143,14 +143,14 @@ export default function Navbar() {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 aria-hidden="true"
-                data-oid="56ccf5n"
+                data-oid="1-updcr"
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M6 18L18 6M6 6l12 12"
-                  data-oid="r:dgdc6"
+                  data-oid="dlkdcp8"
                 />
               </svg>
             </button>
@@ -163,22 +163,22 @@ export default function Navbar() {
         className={`${mobileMenuOpen ? "fixed" : "hidden"} inset-0 z-40 md:hidden`}
         style={{ top: "64px" }}
         aria-label="移动菜单"
-        data-oid=":995zuh"
+        data-oid=":c1evw8"
       >
         {/* 背景遮罩 */}
         <div
           className="absolute inset-0 bg-space-darker/80 backdrop-blur-md"
           onClick={toggleMobileMenu}
           aria-hidden="true"
-          data-oid="84nz8-g"
+          data-oid="lb3uc6t"
         ></div>
 
         {/* 菜单内容 */}
         <div
           className="relative h-full flex flex-col bg-space-dark bg-opacity-95 shadow-xl"
-          data-oid="qcanx8w"
+          data-oid="x6t.0.i"
         >
-          <div className="pt-5 pb-4 px-4 space-y-1" data-oid="3ozngp9">
+          <div className="pt-5 pb-4 px-4 space-y-1" data-oid="gob4igk">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -189,7 +189,7 @@ export default function Navbar() {
                     : "text-indigo-200 hover:bg-indigo-900/30 hover:text-white"
                 }`}
                 onClick={toggleMobileMenu}
-                data-oid="hokhn.n"
+                data-oid="ymfyqdh"
               >
                 {item.title}
               </Link>
@@ -197,12 +197,12 @@ export default function Navbar() {
           </div>
           <div
             className="mt-auto p-4 border-t border-indigo-950/50"
-            data-oid="tol:o0e"
+            data-oid="d6xuar."
           >
             <button
               className="space-button w-full py-3"
               onClick={toggleMobileMenu}
-              data-oid="p1_67k9"
+              data-oid="kkb8wo7"
             >
               关闭菜单
             </button>

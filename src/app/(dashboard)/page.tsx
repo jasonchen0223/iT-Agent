@@ -24,7 +24,7 @@ export default function DashboardPage() {
       icon: (
         <HiOutlineUsers
           className="w-6 h-6 text-indigo-400"
-          data-oid="r87l8hv"
+          data-oid="0.fepy0"
         />
       ),
 
@@ -36,7 +36,7 @@ export default function DashboardPage() {
       description:
         "设计高效的代理协作工作流，自定义每个步骤和决策点，实现自动化处理。",
       icon: (
-        <HiOutlineCog className="w-6 h-6 text-violet-400" data-oid="n2w:fnb" />
+        <HiOutlineCog className="w-6 h-6 text-violet-400" data-oid="_xvqrdw" />
       ),
 
       href: "/workflows",
@@ -46,7 +46,7 @@ export default function DashboardPage() {
       title: "会话与对话",
       description: "查看和管理智能代理之间的对话历史，分析交互模式和协作效果。",
       icon: (
-        <HiOutlineChat className="w-6 h-6 text-indigo-400" data-oid="t-kp_0:" />
+        <HiOutlineChat className="w-6 h-6 text-indigo-400" data-oid="1eiao.e" />
       ),
 
       href: "/conversations",
@@ -59,7 +59,7 @@ export default function DashboardPage() {
       icon: (
         <HiOutlineDocumentText
           className="w-6 h-6 text-violet-400"
-          data-oid="t10i44a"
+          data-oid="r0qwenm"
         />
       ),
 
@@ -69,20 +69,20 @@ export default function DashboardPage() {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-8" data-oid="c:z5-_d">
-      <div className="mb-16 text-center" data-oid="2gxd48v">
+    <div className="container mx-auto px-4 py-8" data-oid="mibs-6h">
+      <div className="mb-16 text-center" data-oid="tq26lj_">
         <SpaceTitle
           as="h1"
           size="xl"
           align="center"
           className="mb-4"
-          data-oid="q-qu.:f"
+          data-oid="f6yj9px"
         >
           iT-Agent 智能代理协作系统
         </SpaceTitle>
         <p
           className="text-lg text-gray-300 max-w-2xl mx-auto"
-          data-oid="k510t34"
+          data-oid="qgm2epr"
         >
           欢迎使用智能代理协作系统，在这里你可以创建和管理多个AI代理，让它们协同工作，解决复杂问题。
         </p>
@@ -91,28 +91,28 @@ export default function DashboardPage() {
       {/* 主要功能区 */}
       <div
         className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12"
-        data-oid="z4ap-ug"
+        data-oid="52rwhgw"
       >
         {features.map((feature, index) => (
-          <Link href={feature.href} key={index} data-oid="_:-:n6m">
+          <Link href={feature.href} key={index} data-oid="8xvozpb">
             <GlowCard
               className="p-6 h-full cursor-pointer"
               glowColor={feature.color}
               glowSize="md"
-              data-oid="zy09e8x"
+              data-oid="ibz90ee"
             >
-              <div className="flex items-start" data-oid="q-7_:o7">
-                <div className="mr-4 mt-1" data-oid=".lxxzon">
+              <div className="flex items-start" data-oid="jgg6vqj">
+                <div className="mr-4 mt-1" data-oid="ww-t:mi">
                   {feature.icon}
                 </div>
-                <div data-oid="9zob9zx">
+                <div data-oid="oqkpfih">
                   <h3
                     className="text-xl font-semibold mb-2 text-white"
-                    data-oid="weoph.e"
+                    data-oid="-bp5c-z"
                   >
                     {feature.title}
                   </h3>
-                  <p className="text-gray-300" data-oid="i6d4t-k">
+                  <p className="text-gray-300" data-oid="sfya5n2">
                     {feature.description}
                   </p>
                 </div>
@@ -123,52 +123,52 @@ export default function DashboardPage() {
       </div>
 
       {/* 活动状态区 */}
-      <div className="mb-12" data-oid="w54.-oc">
-        <SpaceTitle as="h2" size="lg" className="mb-6" data-oid="-8un4lp">
+      <div className="mb-12" data-oid="lw43xsc">
+        <SpaceTitle as="h2" size="lg" className="mb-6" data-oid="ejqmt9o">
           系统状态
         </SpaceTitle>
         <GlowCard
           className="p-6"
           glowColor="rgba(77, 109, 255, 0.7)"
           pulsating
-          data-oid="fz20lqk"
+          data-oid="hpgmmn8"
         >
           <div
             className="flex flex-col md:flex-row justify-between"
-            data-oid="735d5.n"
+            data-oid="g4ys3ce"
           >
-            <div className="mb-4 md:mb-0" data-oid="6-o2dh2">
+            <div className="mb-4 md:mb-0" data-oid="6gb::xs">
               <h3
                 className="text-xl font-semibold mb-2 text-white"
-                data-oid="cfhsojd"
+                data-oid="arip5ip"
               >
                 活动状态
               </h3>
-              <div className="space-y-2" data-oid="om0g1qp">
-                <div className="flex items-center" data-oid="dhz_p-v">
+              <div className="space-y-2" data-oid="_o8u0_o">
+                <div className="flex items-center" data-oid="6t:af9x">
                   <div
                     className="w-3 h-3 rounded-full bg-green-400 mr-2 animate-pulse"
-                    data-oid="uu.5ryo"
+                    data-oid="196xrdw"
                   ></div>
-                  <span className="text-gray-300" data-oid="nb4qx1p">
+                  <span className="text-gray-300" data-oid="j1dea53">
                     系统正常运行中
                   </span>
                 </div>
-                <div className="flex items-center" data-oid="nsckxz.">
+                <div className="flex items-center" data-oid="oeujo-f">
                   <div
                     className="w-3 h-3 rounded-full bg-blue-400 mr-2"
-                    data-oid="a5lc1j5"
+                    data-oid="evk1f_-"
                   ></div>
-                  <span className="text-gray-300" data-oid=":d4jela">
+                  <span className="text-gray-300" data-oid="lfcn9lw">
                     已连接API服务: 3/3
                   </span>
                 </div>
-                <div className="flex items-center" data-oid=":ymxbz6">
+                <div className="flex items-center" data-oid="dtso26x">
                   <div
                     className="w-3 h-3 rounded-full bg-yellow-400 mr-2"
-                    data-oid="phvly4d"
+                    data-oid="b5r0oi:"
                   ></div>
-                  <span className="text-gray-300" data-oid="oh_3f70">
+                  <span className="text-gray-300" data-oid="yabjqi1">
                     当前活跃工作流: 0
                   </span>
                 </div>
@@ -176,43 +176,43 @@ export default function DashboardPage() {
             </div>
             <div
               className="flex flex-col justify-center items-center"
-              data-oid="ht6v36f"
+              data-oid="x:d136n"
             >
               <div
                 className="text-5xl font-bold text-white mb-2"
-                data-oid="zvl67jw"
+                data-oid="21hn9ut"
               >
                 0
               </div>
-              <div className="text-sm text-gray-400" data-oid="m3ln7zx">
+              <div className="text-sm text-gray-400" data-oid="bv9x4n-">
                 活跃代理
               </div>
             </div>
             <div
               className="flex flex-col justify-center items-center"
-              data-oid="d0yii6y"
+              data-oid="xkbshc9"
             >
               <div
                 className="text-5xl font-bold text-white mb-2"
-                data-oid="ffn.eh4"
+                data-oid="7xixna1"
               >
                 0
               </div>
-              <div className="text-sm text-gray-400" data-oid="g9uosal">
+              <div className="text-sm text-gray-400" data-oid="mkztkdm">
                 今日会话
               </div>
             </div>
             <div
               className="flex flex-col justify-center items-center"
-              data-oid="2gfx92x"
+              data-oid="s41bb1c"
             >
               <div
                 className="text-5xl font-bold text-white mb-2"
-                data-oid="6t:s:8c"
+                data-oid="bqxuy9c"
               >
                 0
               </div>
-              <div className="text-sm text-gray-400" data-oid="jvdjjmn">
+              <div className="text-sm text-gray-400" data-oid="fpi07ex">
                 已完成任务
               </div>
             </div>
@@ -221,102 +221,102 @@ export default function DashboardPage() {
       </div>
 
       {/* 快速操作区 */}
-      <div data-oid="xekcjsx">
-        <SpaceTitle as="h2" size="lg" className="mb-6" data-oid="3hnq.5b">
+      <div data-oid="0rapdfa">
+        <SpaceTitle as="h2" size="lg" className="mb-6" data-oid="2la6vft">
           快速操作
         </SpaceTitle>
         <div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
-          data-oid="hn5myhr"
+          data-oid="v4z3sc."
         >
-          <Link href="/agents/new" data-oid="5a9xe42">
+          <Link href="/agents/new" data-oid="-kbg:os">
             <GlowCard
               className="p-4 text-center h-full hover:bg-opacity-30"
               glowSize="sm"
-              data-oid="1zh0w-y"
+              data-oid="n1wsta:"
             >
               <div
                 className="inline-flex justify-center items-center w-12 h-12 rounded-full bg-indigo-500 bg-opacity-20 mb-3"
-                data-oid="sz5g4ke"
+                data-oid="sfzkme_"
               >
                 <HiOutlineUsers
                   className="w-6 h-6 text-indigo-400"
-                  data-oid="3eb98ho"
+                  data-oid="hbm6v--"
                 />
               </div>
-              <h3 className="text-lg font-medium mb-1" data-oid="dorc5p_">
+              <h3 className="text-lg font-medium mb-1" data-oid="0_s.uq_">
                 创建新代理
               </h3>
-              <p className="text-sm text-gray-400" data-oid="v0k:_ei">
+              <p className="text-sm text-gray-400" data-oid="v_1xwxo">
                 配置新的智能代理
               </p>
             </GlowCard>
           </Link>
-          <Link href="/workflows/new" data-oid="xkop5gk">
+          <Link href="/workflows/new" data-oid="mlg0w3a">
             <GlowCard
               className="p-4 text-center h-full hover:bg-opacity-30"
               glowSize="sm"
-              data-oid=".ty_-b8"
+              data-oid="_aggftz"
             >
               <div
                 className="inline-flex justify-center items-center w-12 h-12 rounded-full bg-violet-500 bg-opacity-20 mb-3"
-                data-oid=".8t6d-v"
+                data-oid="uq.55sf"
               >
                 <HiOutlineCog
                   className="w-6 h-6 text-violet-400"
-                  data-oid="3hm68_3"
+                  data-oid="v-bb23_"
                 />
               </div>
-              <h3 className="text-lg font-medium mb-1" data-oid="7.xufv4">
+              <h3 className="text-lg font-medium mb-1" data-oid="etqdn05">
                 创建工作流
               </h3>
-              <p className="text-sm text-gray-400" data-oid="1nzmeh:">
+              <p className="text-sm text-gray-400" data-oid="j9__8g_">
                 设计代理协作流程
               </p>
             </GlowCard>
           </Link>
-          <Link href="/conversations/new" data-oid="35xd-fd">
+          <Link href="/conversations/new" data-oid="7lan5l-">
             <GlowCard
               className="p-4 text-center h-full hover:bg-opacity-30"
               glowSize="sm"
-              data-oid="b_ebolz"
+              data-oid=":s8cehd"
             >
               <div
                 className="inline-flex justify-center items-center w-12 h-12 rounded-full bg-indigo-500 bg-opacity-20 mb-3"
-                data-oid="ru8dmkj"
+                data-oid=":-4-2:6"
               >
                 <HiOutlineChat
                   className="w-6 h-6 text-indigo-400"
-                  data-oid="jk_-8cf"
+                  data-oid=":lkgxdb"
                 />
               </div>
-              <h3 className="text-lg font-medium mb-1" data-oid="rx0gr-b">
+              <h3 className="text-lg font-medium mb-1" data-oid="wei_nnl">
                 开始对话
               </h3>
-              <p className="text-sm text-gray-400" data-oid="z0jvnqw">
+              <p className="text-sm text-gray-400" data-oid="2fewalk">
                 与智能代理团队交流
               </p>
             </GlowCard>
           </Link>
-          <Link href="/knowledge/new" data-oid="676.l7k">
+          <Link href="/knowledge/new" data-oid="fh242sl">
             <GlowCard
               className="p-4 text-center h-full hover:bg-opacity-30"
               glowSize="sm"
-              data-oid="h31wvoe"
+              data-oid="1ntzi4g"
             >
               <div
                 className="inline-flex justify-center items-center w-12 h-12 rounded-full bg-violet-500 bg-opacity-20 mb-3"
-                data-oid="1uio5co"
+                data-oid="49:qrz5"
               >
                 <HiOutlineDocumentText
                   className="w-6 h-6 text-violet-400"
-                  data-oid="s06nrox"
+                  data-oid="gk2-2ip"
                 />
               </div>
-              <h3 className="text-lg font-medium mb-1" data-oid="rhf3uyu">
+              <h3 className="text-lg font-medium mb-1" data-oid="sszw.fw">
                 添加知识
               </h3>
-              <p className="text-sm text-gray-400" data-oid="vavb-4:">
+              <p className="text-sm text-gray-400" data-oid="78uedl2">
                 扩充代理知识库
               </p>
             </GlowCard>

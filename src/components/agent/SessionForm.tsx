@@ -137,25 +137,25 @@ const SessionForm: React.FC<ISessionFormProps> = ({
   };
 
   return (
-    <Card className="max-w-2xl mx-auto" data-oid="ic2b98c">
-      <form onSubmit={handleSubmit} className="space-y-6" data-oid="qyrlncj">
+    <Card className="max-w-2xl mx-auto" data-oid="2o_-u6l">
+      <form onSubmit={handleSubmit} className="space-y-6" data-oid="mkb21:6">
         <h2
           className="text-xl font-semibold text-indigo-300 mb-4"
-          data-oid="k6f1yko"
+          data-oid="4txgawf"
         >
           {initialData.name ? "编辑会话" : "创建新会话"}
         </h2>
 
         {/* 会话基本信息 */}
-        <div className="space-y-4" data-oid="_umbs74">
-          <div data-oid="f2.muqs">
+        <div className="space-y-4" data-oid="aia9gv3">
+          <div data-oid="h:o.1cm">
             <label
               htmlFor="name"
               className="block text-sm font-medium text-gray-300 mb-1"
-              data-oid="--pd:5-"
+              data-oid="ayebknj"
             >
               会话名称{" "}
-              <span className="text-red-500" data-oid="q27tpgp">
+              <span className="text-red-500" data-oid="e1bx2s-">
                 *
               </span>
             </label>
@@ -167,15 +167,15 @@ const SessionForm: React.FC<ISessionFormProps> = ({
               onChange={handleChange}
               className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
               placeholder="输入会话名称"
-              data-oid=".r4ndjb"
+              data-oid="wzdn6j_"
             />
           </div>
 
-          <div data-oid="rdgaguy">
+          <div data-oid="71f88zq">
             <label
               htmlFor="description"
               className="block text-sm font-medium text-gray-300 mb-1"
-              data-oid="e5bzr35"
+              data-oid="za4c1tu"
             >
               会话描述
             </label>
@@ -187,20 +187,20 @@ const SessionForm: React.FC<ISessionFormProps> = ({
               rows={3}
               className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
               placeholder="描述这个会话的目的和功能"
-              data-oid="-e4o-qv"
+              data-oid="n2lbo8_"
             />
           </div>
         </div>
 
         {/* 代理配置 */}
-        <div data-oid="6v69lpc">
+        <div data-oid="e-ms0d1">
           <div
             className="flex justify-between items-center mb-3"
-            data-oid="-n928tl"
+            data-oid="ypk8i-z"
           >
             <h3
               className="text-md font-medium text-gray-300"
-              data-oid="tq_0nei"
+              data-oid="5kz4gm:"
             >
               代理配置
             </h3>
@@ -209,23 +209,23 @@ const SessionForm: React.FC<ISessionFormProps> = ({
               variant="outline"
               size="sm"
               onClick={addAgentConfig}
-              data-oid="0sfmmev"
+              data-oid="sl41x.x"
             >
               添加代理
             </Button>
           </div>
 
-          <div className="space-y-3" data-oid="6apohxd">
+          <div className="space-y-3" data-oid="juyy0iu">
             {formData.agentConfigs.map((config, index) => (
               <div
                 key={index}
                 className="flex items-center gap-3 p-3 bg-gray-800 rounded-md"
-                data-oid="t8w9.ce"
+                data-oid="31rcdle"
               >
-                <div className="flex-grow" data-oid="_22x6x_">
+                <div className="flex-grow" data-oid=":9axstu">
                   <label
                     className="block text-xs text-gray-400 mb-1"
-                    data-oid="bj7d718"
+                    data-oid="mhtv0x-"
                   >
                     代理类型
                   </label>
@@ -235,27 +235,27 @@ const SessionForm: React.FC<ISessionFormProps> = ({
                       handleAgentConfigChange(index, "type", e.target.value)
                     }
                     className="w-full px-2 py-1 bg-gray-700 border border-gray-600 rounded text-white text-sm"
-                    data-oid="9yqa6zz"
+                    data-oid="630rdcp"
                   >
-                    <option value="user" data-oid="imbhv3_">
+                    <option value="user" data-oid="6..:cc9">
                       用户代理
                     </option>
-                    <option value="assistant" data-oid="65ova8e">
+                    <option value="assistant" data-oid="-8wvq7v">
                       助手代理
                     </option>
-                    <option value="tool" data-oid="dajge7b">
+                    <option value="tool" data-oid="ah_h2:m">
                       工具代理
                     </option>
-                    <option value="executor" data-oid=".lmj9p7">
+                    <option value="executor" data-oid="7ay9tf.">
                       执行代理
                     </option>
                   </select>
                 </div>
 
-                <div className="w-24" data-oid="_lx2ydq">
+                <div className="w-24" data-oid="whysdr3">
                   <label
                     className="block text-xs text-gray-400 mb-1"
-                    data-oid="e3gld6z"
+                    data-oid="aq:i28p"
                   >
                     数量
                   </label>
@@ -268,7 +268,7 @@ const SessionForm: React.FC<ISessionFormProps> = ({
                       handleAgentConfigChange(index, "count", e.target.value)
                     }
                     className="w-full px-2 py-1 bg-gray-700 border border-gray-600 rounded text-white text-sm"
-                    data-oid="_:aiqpm"
+                    data-oid="e-z34hs"
                   />
                 </div>
 
@@ -277,20 +277,20 @@ const SessionForm: React.FC<ISessionFormProps> = ({
                   onClick={() => removeAgentConfig(index)}
                   className="p-1 text-gray-400 hover:text-red-400 self-end"
                   title="删除代理"
-                  data-oid="_pl-673"
+                  data-oid="vwd0ng6"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
                     viewBox="0 0 20 20"
                     fill="currentColor"
-                    data-oid="86m58rq"
+                    data-oid="xhqfxgh"
                   >
                     <path
                       fillRule="evenodd"
                       d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
                       clipRule="evenodd"
-                      data-oid="fgfdy12"
+                      data-oid="-0hqasi"
                     />
                   </svg>
                 </button>
@@ -301,19 +301,19 @@ const SessionForm: React.FC<ISessionFormProps> = ({
 
         {/* 错误信息 */}
         {error && (
-          <div className="text-red-500 text-sm" data-oid="0qyl0kq">
+          <div className="text-red-500 text-sm" data-oid="ud:8ok.">
             {error}
           </div>
         )}
 
         {/* 按钮组 */}
-        <div className="flex justify-end gap-3 pt-4" data-oid="3-04d6_">
+        <div className="flex justify-end gap-3 pt-4" data-oid="bzettwy">
           <Button
             type="button"
             variant="secondary"
             onClick={onCancel}
             disabled={isSubmitting}
-            data-oid="8gseysq"
+            data-oid="4qh0f:x"
           >
             取消
           </Button>
@@ -321,7 +321,7 @@ const SessionForm: React.FC<ISessionFormProps> = ({
             type="submit"
             variant="default"
             disabled={isSubmitting}
-            data-oid="77.ifbh"
+            data-oid="r-.y67d"
           >
             {isSubmitting
               ? "提交中..."

@@ -40,27 +40,7 @@ const nextConfig = {
   },
 
   // webpack配置优化
-  webpack: (config, { dev, isServer }) => {
-    // 生产环境优化
-    if (!dev) {
-      config.optimization = {
-        ...config.optimization,
-        minimize: true,
-        moduleIds: "deterministic",
-        runtimeChunk: {
-          name: "runtime",
-        },
-      };
-    }
-
-    // 开发环境优化
-    if (dev) {
-      config.watchOptions = {
-        ...config.watchOptions,
-        ignored: ["**/node_modules", "**/.git", "**/.next"],
-      };
-    }
-
+  webpack: (config) => {
     return config;
   },
 };

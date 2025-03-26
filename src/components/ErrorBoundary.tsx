@@ -111,7 +111,7 @@ export class ErrorBoundary extends Component<
 
     // 默认回退UI
     return (
-      <div className="p-4" data-oid="vn:_.jv">
+      <div className="p-4" data-oid="0bv:og1">
         <ErrorDisplay
           title="组件渲染错误"
           message={error?.message || "渲染过程中发生未知错误"}
@@ -119,7 +119,7 @@ export class ErrorBoundary extends Component<
           suggestion="请尝试刷新页面，或联系管理员"
           details={error ? { name: error.name, stack: error.stack } : undefined}
           onRetry={showRetry ? this.resetError : undefined}
-          data-oid="7ek0b43"
+          data-oid="ef.7ii0"
         />
       </div>
     );

@@ -6,41 +6,41 @@ import StarBackground from "@/components/ui/StarBackground";
 export default function IntegrationsPage() {
   return (
     <>
-      <StarBackground data-oid="fw7jl8-" />
-      <div className="min-h-screen flex flex-col" data-oid="3psejhq">
-        <Header data-oid="g7_qmzv" />
+      <StarBackground data-oid="wr8p5:l" />
+      <div className="min-h-screen flex flex-col" data-oid="z2_bf43">
+        <Header data-oid="7spbosw" />
 
         {/* 工具集成导航栏 */}
-        <div className="border-b border-indigo-800/20 py-4" data-oid="y3aez1j">
-          <div className="container mx-auto" data-oid="jfqu:ce">
+        <div className="border-b border-indigo-800/20 py-4" data-oid="7ce6snc">
+          <div className="container mx-auto" data-oid="ieum1kr">
             <h1
               className="text-2xl font-bold text-indigo-100"
-              data-oid="2ng2zzc"
+              data-oid="58x-gob"
             >
               工具集成
             </h1>
-            <div className="flex space-x-4 mt-2" data-oid="b4.kc5_">
+            <div className="flex space-x-4 mt-2" data-oid=".iwhaha">
               <button
                 className="px-4 py-1 bg-indigo-700/50 text-white rounded-md"
-                data-oid="cc9wrvs"
+                data-oid="f:hdvit"
               >
                 所有工具
               </button>
               <button
                 className="px-4 py-1 text-indigo-300 hover:bg-indigo-700/20 rounded-md"
-                data-oid="lmqs2am"
+                data-oid="rmh:q_w"
               >
                 开发工具
               </button>
               <button
                 className="px-4 py-1 text-indigo-300 hover:bg-indigo-700/20 rounded-md"
-                data-oid="6_lcmk0"
+                data-oid="huqgzoo"
               >
                 分析工具
               </button>
               <button
                 className="px-4 py-1 text-indigo-300 hover:bg-indigo-700/20 rounded-md"
-                data-oid="g6kmuri"
+                data-oid="epuo.m3"
               >
                 通信工具
               </button>
@@ -49,41 +49,41 @@ export default function IntegrationsPage() {
         </div>
 
         {/* 三列布局主体 */}
-        <main className="flex-1 container mx-auto py-6" data-oid="wij:7je">
+        <main className="flex-1 container mx-auto py-6" data-oid="-zqvowj">
           <div
             className="grid grid-cols-1 md:grid-cols-12 gap-6"
-            data-oid="wlzddn0"
+            data-oid="xm:vjy5"
           >
             {/* 左侧工具目录 */}
-            <div className="md:col-span-3 space-card" data-oid="kek-1d8">
+            <div className="md:col-span-3 space-card" data-oid="7.a0cfx">
               <h2
                 className="text-lg font-semibold text-indigo-100 mb-3"
-                data-oid="mu:8r25"
+                data-oid="c26.045"
               >
                 工具目录
               </h2>
-              <div className="space-y-1" data-oid="l2h:7d.">
+              <div className="space-y-1" data-oid="7ix:axn">
                 <div
                   className="p-2 bg-indigo-700/30 rounded-md text-white"
-                  data-oid="4u648y-"
+                  data-oid="cwx.i32"
                 >
                   MCP Agent
                 </div>
                 <div
                   className="p-2 text-indigo-300 hover:bg-indigo-700/20 rounded-md"
-                  data-oid="d1f_sss"
+                  data-oid="y1hcthm"
                 >
                   代码分析器
                 </div>
                 <div
                   className="p-2 text-indigo-300 hover:bg-indigo-700/20 rounded-md"
-                  data-oid="mts9pqv"
+                  data-oid="1jw7_oy"
                 >
                   文档生成器
                 </div>
                 <div
                   className="p-2 text-indigo-300 hover:bg-indigo-700/20 rounded-md"
-                  data-oid="fu_hbj_"
+                  data-oid="0-hdzr:"
                 >
                   API测试工具
                 </div>
@@ -91,31 +91,31 @@ export default function IntegrationsPage() {
             </div>
 
             {/* 中央工具详情 */}
-            <div className="md:col-span-6 space-card" data-oid="vuzi39m">
-              <div className="flex items-center mb-4" data-oid="91deodj">
+            <div className="md:col-span-6 space-card" data-oid="tz8ez:y">
+              <div className="flex items-center mb-4" data-oid="92ycfdo">
                 <div
                   className="w-10 h-10 rounded-md bg-purple-600 flex items-center justify-center mr-3"
-                  data-oid=":ead5_m"
+                  data-oid="36tmed_"
                 >
-                  <span className="text-white font-semibold" data-oid="o:fp1xg">
+                  <span className="text-white font-semibold" data-oid="qikj-gc">
                     M
                   </span>
                 </div>
-                <div data-oid="pg0v3hu">
+                <div data-oid="5u09j85">
                   <h2
                     className="text-xl font-semibold text-indigo-100"
-                    data-oid="h9z0:k5"
+                    data-oid="..ocjk:"
                   >
                     MCP Agent
                   </h2>
-                  <p className="text-indigo-300/70" data-oid="2qzmrhd">
+                  <p className="text-indigo-300/70" data-oid="gg3l88x">
                     Model Context Protocol 实现
                   </p>
                 </div>
-                <div className="ml-auto" data-oid="34gmh6z">
+                <div className="ml-auto" data-oid="fogjqsh">
                   <span
                     className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full"
-                    data-oid="jvy47h6"
+                    data-oid="5ftzeh5"
                   >
                     已连接
                   </span>
@@ -124,9 +124,9 @@ export default function IntegrationsPage() {
 
               <div
                 className="p-4 bg-indigo-900/20 rounded-md mb-4"
-                data-oid=".mknqa7"
+                data-oid=":sht6_v"
               >
-                <p className="text-indigo-100" data-oid=":mghphn">
+                <p className="text-indigo-100" data-oid="pzj5-5e">
                   MCP Agent
                   提供了丰富的工具集，帮助智能代理执行各种任务，包括代码操作、终端命令执行和外部API调用等。
                 </p>
@@ -134,16 +134,16 @@ export default function IntegrationsPage() {
 
               <h3
                 className="text-lg font-semibold text-indigo-100 mb-3"
-                data-oid="0z7vv2s"
+                data-oid="32_c0wd"
               >
                 工具配置
               </h3>
-              <div className="space-y-4" data-oid="frf0lt6">
-                <div className="grid grid-cols-2 gap-4" data-oid="sih7bc5">
-                  <div data-oid="6rmchid">
+              <div className="space-y-4" data-oid="u_3hcr5">
+                <div className="grid grid-cols-2 gap-4" data-oid="k0su_8f">
+                  <div data-oid="a_blvn9">
                     <label
                       className="text-indigo-100 block mb-1"
-                      data-oid="4-t8d_:"
+                      data-oid="ajzs28x"
                     >
                       API密钥
                     </label>
@@ -151,13 +151,13 @@ export default function IntegrationsPage() {
                       type="password"
                       defaultValue="********"
                       className="w-full bg-indigo-900/20 text-indigo-100 p-2 rounded-md border border-indigo-800/30"
-                      data-oid="bx-eq6:"
+                      data-oid="ft_p7ua"
                     />
                   </div>
-                  <div data-oid="6cl0sbo">
+                  <div data-oid="cejieio">
                     <label
                       className="text-indigo-100 block mb-1"
-                      data-oid="kr.egj1"
+                      data-oid="3rm066x"
                     >
                       超时设置(秒)
                     </label>
@@ -165,49 +165,49 @@ export default function IntegrationsPage() {
                       type="number"
                       defaultValue="60"
                       className="w-full bg-indigo-900/20 text-indigo-100 p-2 rounded-md border border-indigo-800/30"
-                      data-oid="zac60g1"
+                      data-oid="x_6r49t"
                     />
                   </div>
                 </div>
 
-                <div data-oid="o4yfu4z">
+                <div data-oid="5is0wjp">
                   <label
                     className="text-indigo-100 block mb-1"
-                    data-oid="411.zsd"
+                    data-oid="y69ia0-"
                   >
                     可用工具
                   </label>
                   <div
                     className="p-3 bg-indigo-900/30 rounded-md grid grid-cols-3 gap-2"
-                    data-oid="f7i5a8d"
+                    data-oid="-5br.x7"
                   >
                     <span
                       className="px-2 py-1 bg-purple-600/20 text-purple-300 text-xs rounded-full text-center"
-                      data-oid="zbv3dsx"
+                      data-oid="uku9:4_"
                     >
                       文件搜索
                     </span>
                     <span
                       className="px-2 py-1 bg-purple-600/20 text-purple-300 text-xs rounded-full text-center"
-                      data-oid="_0vak2k"
+                      data-oid="752tfq5"
                     >
                       代码编辑
                     </span>
                     <span
                       className="px-2 py-1 bg-purple-600/20 text-purple-300 text-xs rounded-full text-center"
-                      data-oid="4_k21cc"
+                      data-oid="zf52ih:"
                     >
                       终端命令
                     </span>
                     <span
                       className="px-2 py-1 bg-purple-600/20 text-purple-300 text-xs rounded-full text-center"
-                      data-oid="k-1n3v:"
+                      data-oid="61jbr8r"
                     >
                       网络搜索
                     </span>
                     <span
                       className="px-2 py-1 bg-purple-600/20 text-purple-300 text-xs rounded-full text-center"
-                      data-oid="99ffw26"
+                      data-oid="w9lcumm"
                     >
                       API调用
                     </span>
@@ -217,17 +217,17 @@ export default function IntegrationsPage() {
 
               <div
                 className="flex justify-end mt-4 space-x-3"
-                data-oid="yg8ayq9"
+                data-oid="r_eob_m"
               >
                 <button
                   className="px-4 py-2 border border-indigo-500 text-indigo-100 rounded-md"
-                  data-oid="b19ym6-"
+                  data-oid="2qtv8by"
                 >
                   测试连接
                 </button>
                 <button
                   className="px-4 py-2 bg-indigo-600 text-white rounded-md"
-                  data-oid="6au5fba"
+                  data-oid="5da19od"
                 >
                   保存配置
                 </button>
@@ -235,94 +235,94 @@ export default function IntegrationsPage() {
             </div>
 
             {/* 右侧状态监控 */}
-            <div className="md:col-span-3 space-card" data-oid="je-cq6:">
+            <div className="md:col-span-3 space-card" data-oid="cw-pabk">
               <h2
                 className="text-lg font-semibold text-indigo-100 mb-3"
-                data-oid="rd47-h7"
+                data-oid="ihigvo-"
               >
                 状态监控
               </h2>
 
               <div
                 className="p-3 bg-indigo-900/20 rounded-md mb-4"
-                data-oid="h_8tjn7"
+                data-oid="1gxptlo"
               >
                 <div
                   className="flex justify-between items-center mb-1"
-                  data-oid="g0m7kms"
+                  data-oid="xfgw5ix"
                 >
-                  <span className="text-indigo-100" data-oid="o7yfooa">
+                  <span className="text-indigo-100" data-oid="h0usdd7">
                     CPU使用率
                   </span>
-                  <span className="text-indigo-300" data-oid="60k_1di">
+                  <span className="text-indigo-300" data-oid="ug3vqxj">
                     23%
                   </span>
                 </div>
                 <div
                   className="w-full bg-indigo-900/30 h-2 rounded-full"
-                  data-oid="w9793te"
+                  data-oid="2yl5cn8"
                 >
                   <div
                     className="bg-green-500 h-2 rounded-full"
                     style={{ width: "23%" }}
-                    data-oid=".9jslm8"
+                    data-oid="kgiyap:"
                   ></div>
                 </div>
               </div>
 
               <div
                 className="p-3 bg-indigo-900/20 rounded-md mb-4"
-                data-oid="5er.n.3"
+                data-oid="m229c.q"
               >
                 <div
                   className="flex justify-between items-center mb-1"
-                  data-oid="oeqejgg"
+                  data-oid="7eqfxsr"
                 >
-                  <span className="text-indigo-100" data-oid="q5a46y8">
+                  <span className="text-indigo-100" data-oid="bo56glt">
                     内存使用率
                   </span>
-                  <span className="text-indigo-300" data-oid="gn.5ukb">
+                  <span className="text-indigo-300" data-oid="0:-g.m8">
                     45%
                   </span>
                 </div>
                 <div
                   className="w-full bg-indigo-900/30 h-2 rounded-full"
-                  data-oid="qlg3b9r"
+                  data-oid="rmr.0r_"
                 >
                   <div
                     className="bg-yellow-500 h-2 rounded-full"
                     style={{ width: "45%" }}
-                    data-oid="7_-_2:3"
+                    data-oid="r8hw:2u"
                   ></div>
                 </div>
               </div>
 
               <h3
                 className="text-sm font-semibold text-indigo-100 mb-2"
-                data-oid="v2mv_90"
+                data-oid="xc06uno"
               >
                 最近调用
               </h3>
-              <div className="space-y-2" data-oid="9v7wn9.">
+              <div className="space-y-2" data-oid="-:scjxe">
                 <div
                   className="p-2 bg-indigo-900/20 rounded-md text-xs"
-                  data-oid="i577:l5"
+                  data-oid="flitks1"
                 >
-                  <p className="text-indigo-100" data-oid="9szxr5w">
+                  <p className="text-indigo-100" data-oid="bd:mln5">
                     文件搜索: src/components/
                   </p>
-                  <p className="text-indigo-300/70" data-oid="rmi0goi">
+                  <p className="text-indigo-300/70" data-oid="v4plfwy">
                     2分钟前
                   </p>
                 </div>
                 <div
                   className="p-2 bg-indigo-900/20 rounded-md text-xs"
-                  data-oid="egobbe3"
+                  data-oid="xxt37u:"
                 >
-                  <p className="text-indigo-100" data-oid="3lkq4oo">
+                  <p className="text-indigo-100" data-oid=".enlqn_">
                     代码编辑: app/page.tsx
                   </p>
-                  <p className="text-indigo-300/70" data-oid="2p0nq2c">
+                  <p className="text-indigo-300/70" data-oid="o:nhwgu">
                     15分钟前
                   </p>
                 </div>
@@ -331,7 +331,7 @@ export default function IntegrationsPage() {
           </div>
         </main>
 
-        <Footer data-oid="t-_thvo" />
+        <Footer data-oid="ji610bb" />
       </div>
     </>
   );

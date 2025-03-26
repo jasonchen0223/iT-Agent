@@ -107,34 +107,34 @@ export default function AgentsPage() {
   };
 
   return (
-    <div className="container mx-auto py-8" data-oid="cr66bmm">
+    <div className="container mx-auto py-8" data-oid="u39v-k5">
       <div
         className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6"
-        data-oid="n:ykp:f"
+        data-oid="ndr37df"
       >
-        <div data-oid="itb:q36">
-          <h1 className="text-2xl font-bold text-indigo-100" data-oid="97u_qyt">
+        <div data-oid="ppl1pwe">
+          <h1 className="text-2xl font-bold text-indigo-100" data-oid="u31hcyl">
             智能代理
           </h1>
-          <p className="text-indigo-300/70 mt-1" data-oid="2xp7bu6">
+          <p className="text-indigo-300/70 mt-1" data-oid="bealdoz">
             管理您的多智能代理团队
           </p>
         </div>
 
         <div
           className="flex flex-col sm:flex-row gap-3 w-full md:w-auto"
-          data-oid="0c9pie5"
+          data-oid="wl4j2km"
         >
           <Search
             placeholder="搜索代理..."
             onSearch={handleSearch}
             className="w-full sm:w-64"
-            data-oid="3clmkdn"
+            data-oid="cib_603"
           />
 
           <Button
             onClick={() => router.push("/agents/create")}
-            data-oid="w.g0lvg"
+            data-oid="2s5yiy1"
           >
             创建代理
           </Button>
@@ -142,40 +142,40 @@ export default function AgentsPage() {
       </div>
 
       {/* 过滤器和状态指示器 */}
-      <Card className="mb-6 p-4" data-oid="3873x24">
-        <div className="flex flex-wrap items-center gap-3" data-oid="fddega8">
-          <span className="text-sm text-indigo-300/70" data-oid="bfzjn-.">
+      <Card className="mb-6 p-4" data-oid="lc4a-vp">
+        <div className="flex flex-wrap items-center gap-3" data-oid="x0uzeny">
+          <span className="text-sm text-indigo-300/70" data-oid="0zsc24x">
             过滤器:
           </span>
           <span
             className="px-3 py-1 bg-indigo-900/40 text-indigo-300 text-sm rounded-full cursor-pointer hover:bg-indigo-900/60"
-            data-oid="5pk76al"
+            data-oid="89bpxs2"
           >
             全部
           </span>
           <span
             className="px-3 py-1 bg-indigo-900/20 text-indigo-300 text-sm rounded-full cursor-pointer hover:bg-indigo-900/40"
-            data-oid="egivud0"
+            data-oid="de3gtca"
           >
             在线
           </span>
           <span
             className="px-3 py-1 bg-indigo-900/20 text-indigo-300 text-sm rounded-full cursor-pointer hover:bg-indigo-900/40"
-            data-oid=":loqdtk"
+            data-oid="k5iambk"
           >
             工作中
           </span>
           <span
             className="px-3 py-1 bg-indigo-900/20 text-indigo-300 text-sm rounded-full cursor-pointer hover:bg-indigo-900/40"
-            data-oid="uqth09x"
+            data-oid="n5x01ga"
           >
             错误
           </span>
 
-          <div className="ml-auto flex items-center" data-oid="3647qxc">
+          <div className="ml-auto flex items-center" data-oid="rtw1_ce">
             <span
               className="text-sm text-indigo-300/70 mr-2"
-              data-oid="iz.g2an"
+              data-oid="_4xg28p"
             >
               显示 {filteredAgents.length} 个代理
             </span>
@@ -188,25 +188,25 @@ export default function AgentsPage() {
         <AgentList
           agents={filteredAgents}
           onAgentClick={handleAgentClick}
-          data-oid="98:md7i"
+          data-oid="2hk5ps5"
         />
       ) : (
         <div
           className="bg-indigo-900/20 border border-indigo-800/30 rounded-lg p-8 text-center"
-          data-oid="0gf1yyh"
+          data-oid="xy:ean_"
         >
           <h3
             className="text-xl font-semibold text-indigo-100 mb-2"
-            data-oid="ce0yw8m"
+            data-oid=":u1m1k4"
           >
             未找到代理
           </h3>
-          <p className="text-indigo-300/70 mb-4" data-oid=".l3zt0q">
+          <p className="text-indigo-300/70 mb-4" data-oid="tyab9.a">
             尝试调整搜索条件或创建新的代理
           </p>
           <Button
             onClick={() => router.push("/agents/create")}
-            data-oid="g:pxch_"
+            data-oid="rsn93kb"
           >
             创建代理
           </Button>

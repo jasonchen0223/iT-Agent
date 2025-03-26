@@ -9,78 +9,78 @@ import React from "react";
  */
 export default function SettingsPage() {
   return (
-    <div className="container mx-auto px-4 py-8" data-oid="o7qsbfl">
+    <div className="container mx-auto px-4 py-8" data-oid="2i003aa">
       <h1
         className="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-100 to-indigo-300"
-        data-oid="g9a7xc2"
+        data-oid="9nr_ch_"
       >
         设置
       </h1>
 
-      <div className="space-card p-6" data-oid="aw6vb30">
+      <div className="space-card p-6" data-oid="7gumaat">
         <h2
           className="text-xl font-semibold mb-3 text-indigo-300"
-          data-oid="9emn07."
+          data-oid="szl2ram"
         >
           系统配置
         </h2>
-        <div className="space-between flex flex-col gap-4" data-oid="flbrid5">
-          <div className="flex items-center justify-between" data-oid="z.8po78">
-            <label className="text-white" data-oid="z2qt2zh">
+        <div className="space-between flex flex-col gap-4" data-oid="-e1w10v">
+          <div className="flex items-center justify-between" data-oid="yt6h7u5">
+            <label className="text-white" data-oid="-d-.mrv">
               深色模式
             </label>
             <div
               className="w-12 h-6 bg-indigo-900/40 rounded-full relative"
-              data-oid="y3x7w_b"
+              data-oid="yyhn8ee"
             >
               <div
                 className="absolute left-1 top-1 w-4 h-4 bg-indigo-400 rounded-full"
-                data-oid="7zl.-ic"
+                data-oid="ov-e83d"
               ></div>
             </div>
           </div>
 
-          <div className="flex items-center justify-between" data-oid="454w95n">
-            <label className="text-white" data-oid="cnmxnae">
+          <div className="flex items-center justify-between" data-oid="t0mvfum">
+            <label className="text-white" data-oid="dafq.a7">
               自动保存会话
             </label>
             <div
               className="w-12 h-6 bg-indigo-900/40 rounded-full relative"
-              data-oid="1bbio-e"
+              data-oid="5g87td3"
             >
               <div
                 className="absolute left-7 top-1 w-4 h-4 bg-indigo-400 rounded-full"
-                data-oid="akup4iq"
+                data-oid="ydq020a"
               ></div>
             </div>
           </div>
 
-          <div className="flex items-center justify-between" data-oid="6-:6i3e">
-            <label className="text-white" data-oid="85wu1l7">
+          <div className="flex items-center justify-between" data-oid="rn7k4v4">
+            <label className="text-white" data-oid="ixdr3mk">
               API密钥管理
             </label>
-            <button className="space-button text-sm py-1" data-oid="g-ueg4.">
+            <button className="space-button text-sm py-1" data-oid="h1_jddu">
               管理密钥
             </button>
           </div>
         </div>
       </div>
 
-      <div className="mt-10 space-card p-6" data-oid="vb22pg4">
+      <div className="mt-10 space-card p-6" data-oid="2ynl:8c">
         <h2
           className="text-xl font-semibold mb-3 text-indigo-300"
-          data-oid="lca3gzp"
+          data-oid="s:5omp-"
         >
           关于系统
         </h2>
-        <div className="text-slate-300" data-oid="w84bh78">
-          <p className="mb-2" data-oid="e2h2k5g">
+        <div className="text-slate-300" data-oid="qbdsj:h">
+          <p className="mb-2" data-oid="mvyrilb">
             版本: 0.1.0
           </p>
-          <p className="mb-2" data-oid="7o1n0lo">
+          <p className="mb-2" data-oid="73ruuwk">
             基于: Next.js + AutoGen
           </p>
-          <p data-oid="9jr5k6a">主题: 宇宙星空</p>
+          <p data-oid="kk0luk7">主题: 宇宙星空</p>
         </div>
       </div>
     </div>

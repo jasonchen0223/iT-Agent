@@ -83,7 +83,7 @@ export function GlowCard({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       {...props}
-      data-oid="n1aght1"
+      data-oid="a2511j8"
     >
       {/* 发光效果 */}
       <motion.div
@@ -102,7 +102,7 @@ export function GlowCard({
         animate={pulsating ? "pulsating" : isHovered ? "hover" : "default"}
         variants={variants}
         transition={{ duration: 0.2 }}
-        data-oid="3za8iwl"
+        data-oid="t:dzcq9"
       />
 
       {/* 静态发光边框效果 */}
@@ -125,11 +125,11 @@ export function GlowCard({
                 duration: 0.3,
               }
         }
-        data-oid="t1z_8ev"
+        data-oid="1ta.cwa"
       />
 
       {/* 内容 */}
-      <div className="relative z-10" data-oid="2q_:b:h">
+      <div className="relative z-10" data-oid="i7bv_o9">
         {children}
       </div>
     </div>

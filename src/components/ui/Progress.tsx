@@ -78,14 +78,14 @@ export function Progress({
   };
 
   return (
-    <div className="relative" data-oid="k1.t34a">
+    <div className="relative" data-oid=".gtt1ow">
       <div
         className={cn(
           "w-full overflow-hidden rounded-full bg-indigo-900/20",
           getHeight(),
           className,
         )}
-        data-oid="8sd9y-e"
+        data-oid="jlvzirx"
       >
         <div
           className={cn(
@@ -95,16 +95,16 @@ export function Progress({
             indicatorClassName,
           )}
           style={{ width: `${percent}%` }}
-          data-oid="1udcah6"
+          data-oid="wxan.wv"
         >
           {/* 添加闪光效果 */}
-          <div className="absolute inset-0 w-full h-full" data-oid=".bmkt:h">
+          <div className="absolute inset-0 w-full h-full" data-oid="qcysaxj">
             <div
               className={cn(
                 "h-full w-[50%] animate-pulse opacity-30 bg-gradient-to-r from-transparent via-white to-transparent",
                 animate && "animate-shimmer",
               )}
-              data-oid="u919h0r"
+              data-oid="a66a7yz"
             ></div>
           </div>
         </div>
@@ -113,7 +113,7 @@ export function Progress({
       {showValue && (
         <span
           className="text-xs text-indigo-300/70 absolute right-0 -top-5"
-          data-oid="_6lw3it"
+          data-oid="voz_c:6"
         >
           {displayValue}/{max}
         </span>

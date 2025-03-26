@@ -44,11 +44,11 @@ export default function StarBackground() {
       <div
         id="star-container"
         className="fixed inset-0 pointer-events-none z-0"
-        data-oid="f:yt90z"
+        data-oid="77l5b6-"
       ></div>
       <div
         className="stardust fixed inset-0 pointer-events-none z-0"
-        data-oid="syvu9_e"
+        data-oid="ele2sxf"
       ></div>
     </>
   );
