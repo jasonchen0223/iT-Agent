@@ -55,12 +55,12 @@ export const ToolCategoryFilter: React.FC = () => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          data-oid="yjcxvul"
+          data-oid="s0pp_7-"
         >
-          <rect x="3" y="3" width="7" height="7" data-oid="obtx.mc"></rect>
-          <rect x="14" y="3" width="7" height="7" data-oid="-he49bc"></rect>
-          <rect x="14" y="14" width="7" height="7" data-oid="hmzml9o"></rect>
-          <rect x="3" y="14" width="7" height="7" data-oid="76:8x6r"></rect>
+          <rect x="3" y="3" width="7" height="7" data-oid="f-kq:xe"></rect>
+          <rect x="14" y="3" width="7" height="7" data-oid="q8t46qc"></rect>
+          <rect x="14" y="14" width="7" height="7" data-oid="i:l5ro-"></rect>
+          <rect x="3" y="14" width="7" height="7" data-oid=":in269o"></rect>
         </svg>
       ),
     },
@@ -77,14 +77,14 @@ export const ToolCategoryFilter: React.FC = () => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          data-oid="m-ajrch"
+          data-oid="j4m91lt"
         >
           <path
             d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"
-            data-oid="2gkwmkf"
+            data-oid="81itqt4"
           ></path>
-          <path d="M19 10v2a7 7 0 0 1-14 0v-2" data-oid="6w14-l:"></path>
-          <line x1="12" y1="19" x2="12" y2="22" data-oid="jlvf8n."></line>
+          <path d="M19 10v2a7 7 0 0 1-14 0v-2" data-oid="2-02owu"></path>
+          <line x1="12" y1="19" x2="12" y2="22" data-oid=".kb7kkz"></line>
         </svg>
       ),
     },
@@ -101,10 +101,10 @@ export const ToolCategoryFilter: React.FC = () => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          data-oid=".kkzb47"
+          data-oid="f_01jtd"
         >
-          <polyline points="16 18 22 12 16 6" data-oid="bq5vmsc"></polyline>
-          <polyline points="8 6 2 12 8 18" data-oid="8xztucl"></polyline>
+          <polyline points="16 18 22 12 16 6" data-oid="53cn1xj"></polyline>
+          <polyline points="8 6 2 12 8 18" data-oid="e17cby7"></polyline>
         </svg>
       ),
     },
@@ -121,12 +121,12 @@ export const ToolCategoryFilter: React.FC = () => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          data-oid="6mf6cz."
+          data-oid="-13deka"
         >
-          <path d="M12 20h9" data-oid="i25t2ee"></path>
+          <path d="M12 20h9" data-oid="-9mb4vz"></path>
           <path
             d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"
-            data-oid="j2suj2z"
+            data-oid="h5rdwa9"
           ></path>
         </svg>
       ),
@@ -144,11 +144,11 @@ export const ToolCategoryFilter: React.FC = () => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          data-oid="7lmyf72"
+          data-oid="wmixe.b"
         >
           <path
             d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
-            data-oid="kpgdd1h"
+            data-oid="0:aj0d9"
           ></path>
         </svg>
       ),
@@ -166,17 +166,17 @@ export const ToolCategoryFilter: React.FC = () => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          data-oid="9k-6a:o"
+          data-oid="44sb27j"
         >
           <path
             d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
-            data-oid="j6ykc88"
+            data-oid=".6jm2ia"
           ></path>
           <polyline
             points="3.27 6.96 12 12.01 20.73 6.96"
-            data-oid="hpbzbpr"
+            data-oid=".1cj7t8"
           ></polyline>
-          <line x1="12" y1="22.08" x2="12" y2="12" data-oid="vfnt-dw"></line>
+          <line x1="12" y1="22.08" x2="12" y2="12" data-oid="3i3jcro"></line>
         </svg>
       ),
     },
@@ -193,12 +193,12 @@ export const ToolCategoryFilter: React.FC = () => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          data-oid="5ikbz91"
+          data-oid="6.noilm"
         >
-          <circle cx="12" cy="12" r="3" data-oid="hqinzo0"></circle>
+          <circle cx="12" cy="12" r="3" data-oid="bfu43tw"></circle>
           <path
             d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
-            data-oid="3beipzq"
+            data-oid="acu2v0z"
           ></path>
         </svg>
       ),
@@ -219,12 +219,12 @@ export const ToolCategoryFilter: React.FC = () => {
   return (
     <div
       className="bg-slate-800/50 rounded-lg p-4 border border-slate-700"
-      data-oid="e-en-v9"
+      data-oid="ah._m5z"
     >
-      <h3 className="text-lg font-medium text-white mb-4" data-oid="cq244zm">
+      <h3 className="text-lg font-medium text-white mb-4" data-oid="t:9c383">
         工具分类
       </h3>
-      <div className="space-y-2" data-oid="-s5wep-">
+      <div className="space-y-2" data-oid="t:z647t">
         {categoryOptions.map((option) => (
           <button
             key={option.value}
@@ -235,12 +235,12 @@ export const ToolCategoryFilter: React.FC = () => {
                 : "text-gray-300 hover:bg-slate-700/50 hover:text-white",
             )}
             onClick={() => handleCategoryChange(option.value)}
-            data-oid="jie9pd3"
+            data-oid="tcu3k94"
           >
-            <span className="mr-3 flex-shrink-0" data-oid="k745eg6">
+            <span className="mr-3 flex-shrink-0" data-oid="px9jhwi">
               {option.icon}
             </span>
-            <span data-oid="2ul2uko">{option.label}</span>
+            <span data-oid="rkmm9e8">{option.label}</span>
           </button>
         ))}
       </div>

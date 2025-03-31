@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
+import React, { useRef, useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 interface GlowCardProps extends React.HTMLAttributes<HTMLDivElement> {
   glowColor?: string;
-  glowSize?: "sm" | "md" | "lg";
+  glowSize?: 'sm' | 'md' | 'lg';
   glowIntensity?: number;
   children: React.ReactNode;
   pulsating?: boolean;
@@ -15,12 +15,12 @@ interface GlowCardProps extends React.HTMLAttributes<HTMLDivElement> {
 
 /**
  * 发光卡片组件
- *
+ * 
  * 一个带有鼠标悬停发光效果的卡片组件，可以设置发光颜色、大小和强度
  */
 export function GlowCard({
-  glowColor = "rgba(109, 77, 255, 0.7)",
-  glowSize = "md",
+  glowColor = 'rgba(109, 77, 255, 0.7)',
+  glowSize = 'md',
   glowIntensity = 1,
   children,
   pulsating = false,
@@ -33,9 +33,9 @@ export function GlowCard({
 
   // 计算发光效果尺寸
   const glowSizeValue = {
-    sm: "150px",
-    md: "200px",
-    lg: "300px",
+    sm: '150px',
+    md: '200px',
+    lg: '300px',
   }[glowSize];
 
   // 计算发光强度
@@ -61,29 +61,26 @@ export function GlowCard({
       opacity: intensityValue * 0.7,
     },
     pulsating: {
-      opacity: [
-        intensityValue * 0.4,
-        intensityValue * 0.7,
-        intensityValue * 0.4,
-      ],
-
+      opacity: [intensityValue * 0.4, intensityValue * 0.7, intensityValue * 0.4],
       transition: {
         duration: 2,
         repeat: Infinity,
-        ease: "easeInOut",
-      },
-    },
+        ease: "easeInOut"
+      }
+    }
   };
 
   return (
     <div
-      className={cn("space-card relative overflow-hidden", className)}
+      className={cn(
+        'space-card relative overflow-hidden',
+        className
+      )}
       ref={cardRef}
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       {...props}
-      data-oid="a2511j8"
     >
       {/* 发光效果 */}
       <motion.div
@@ -91,7 +88,7 @@ export function GlowCard({
         style={{
           width: glowSizeValue,
           height: glowSizeValue,
-          borderRadius: "50%",
+          borderRadius: '50%',
           background: `radial-gradient(circle, ${glowColor} 0%, rgba(255,255,255,0) 70%)`,
           transform: `translate(-50%, -50%)`,
           left: position.x,
@@ -102,36 +99,30 @@ export function GlowCard({
         animate={pulsating ? "pulsating" : isHovered ? "hover" : "default"}
         variants={variants}
         transition={{ duration: 0.2 }}
-        data-oid="t:dzcq9"
       />
 
       {/* 静态发光边框效果 */}
       <motion.div
         className="absolute inset-0 pointer-events-none rounded-xl"
         style={{
-          boxShadow: `0 0 ${glowSize === "sm" ? "8" : glowSize === "lg" ? "25" : "15"}px ${glowColor}`,
+          boxShadow: `0 0 ${glowSize === 'sm' ? '8' : glowSize === 'lg' ? '25' : '15'}px ${glowColor}`,
           opacity: 0,
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: pulsating ? [0.2, 0.4, 0.2] : isHovered ? 0.4 : 0 }}
-        transition={
-          pulsating
-            ? {
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }
-            : {
-                duration: 0.3,
-              }
-        }
-        data-oid="1ta.cwa"
+        transition={pulsating ? { 
+          duration: 2, 
+          repeat: Infinity, 
+          ease: "easeInOut" 
+        } : { 
+          duration: 0.3 
+        }}
       />
 
       {/* 内容 */}
-      <div className="relative z-10" data-oid="i7bv_o9">
+      <div className="relative z-10">
         {children}
       </div>
     </div>
   );
-}
+} 

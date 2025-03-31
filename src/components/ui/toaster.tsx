@@ -1,31 +1,8 @@
+/**
+ * Toast通知呈现组件
+ * 
+ * 重新导出统一的Toaster组件，保持与原代码的兼容性
+ */
 "use client"
 
-import {
-  Toast,
-  ToastViewport,
-} from "@/components/ui/toast"
-import { useToast } from "@/components/ui/use-toast"
-
-/**
- * Toaster组件
- * 
- * 用于显示应用中的所有Toast通知
- * 
- * @returns {React.ReactElement} Toaster组件
- */
-export function Toaster() {
-  const { toasts } = useToast()
-
-  return (
-    <ToastViewport>
-      {toasts.map(function (toast) {
-        return (
-          <Toast
-            key={toast.id}
-            toast={toast}
-          />
-        )
-      })}
-    </ToastViewport>
-  )
-} 
+export { Toaster } from './toast-unified'; 

@@ -125,15 +125,15 @@ export default function ToolLogList({ initialLogs }: IToolLogListProps) {
   const renderStatusBadge = (status: "success" | "error") => {
     if (status === "success") {
       return (
-        <Badge className="bg-green-500" data-oid="c1ply-.">
-          <CheckCircle className="w-3 h-3 mr-1" data-oid="6q5x_z7" />
+        <Badge className="bg-green-500" data-oid="s8tw_8w">
+          <CheckCircle className="w-3 h-3 mr-1" data-oid="40_odv5" />
           成功
         </Badge>
       );
     } else {
       return (
-        <Badge className="bg-red-500" data-oid="lg:m-q2">
-          <AlertCircle className="w-3 h-3 mr-1" data-oid="upi_:_i" />
+        <Badge className="bg-red-500" data-oid="rvbgvuc">
+          <AlertCircle className="w-3 h-3 mr-1" data-oid="v:i18tl" />
           失败
         </Badge>
       );
@@ -143,10 +143,10 @@ export default function ToolLogList({ initialLogs }: IToolLogListProps) {
   // 渲染内容
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-64" data-oid="bm_z6d-">
+      <div className="flex justify-center items-center h-64" data-oid="x9gjq_i">
         <div
           className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"
-          data-oid="7zna167"
+          data-oid="to_ya0l"
         ></div>
       </div>
     );
@@ -157,12 +157,12 @@ export default function ToolLogList({ initialLogs }: IToolLogListProps) {
       <div
         className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
         role="alert"
-        data-oid="_vm11f1"
+        data-oid="70v_yb3"
       >
-        <strong className="font-bold" data-oid="w0n20n_">
+        <strong className="font-bold" data-oid="bx.ptp9">
           加载失败！
         </strong>
-        <span className="block sm:inline" data-oid="ia8imv_">
+        <span className="block sm:inline" data-oid="1f9pv1-">
           {" "}
           {error}
         </span>
@@ -174,9 +174,9 @@ export default function ToolLogList({ initialLogs }: IToolLogListProps) {
     return (
       <div
         className="text-center py-12 bg-gray-800 rounded-lg"
-        data-oid="hj0omfa"
+        data-oid="n:hvmf:"
       >
-        <p className="text-gray-400" data-oid="jkowt76">
+        <p className="text-gray-400" data-oid="1e-npky">
           暂无工具调用日志
         </p>
       </div>
@@ -184,21 +184,21 @@ export default function ToolLogList({ initialLogs }: IToolLogListProps) {
   }
 
   return (
-    <div className="space-y-4" data-oid="3qs49lq">
+    <div className="space-y-4" data-oid="tf2nufx">
       {/* 日志列表 */}
-      <div className="space-y-3" data-oid="vtw8_dk">
+      <div className="space-y-3" data-oid="v0olkq2">
         {currentPageLogs.map((log) => (
           <Link
             href={`/tool-logs/${log.id}`}
             key={log.id}
             className="block hover:bg-gray-800 rounded-lg p-4 border border-gray-700 transition duration-300"
-            data-oid="-tlo:-l"
+            data-oid=":_ebwcf"
           >
             <div
               className="flex justify-between items-start mb-2"
-              data-oid="ned_0ue"
+              data-oid="1rit-tx"
             >
-              <div className="font-semibold text-lg" data-oid="hkkk5m3">
+              <div className="font-semibold text-lg" data-oid="d6lsyzy">
                 {log.toolId}
               </div>
               {renderStatusBadge(log.status)}
@@ -206,41 +206,41 @@ export default function ToolLogList({ initialLogs }: IToolLogListProps) {
 
             <div
               className="flex text-sm text-gray-400 space-x-4 mb-2"
-              data-oid="mq7wv6b"
+              data-oid="y85j5uy"
             >
-              <span className="flex items-center" data-oid="vn4yne7">
-                <Clock className="w-3 h-3 mr-1" data-oid="6y7md1v" />
+              <span className="flex items-center" data-oid="1bzt2pm">
+                <Clock className="w-3 h-3 mr-1" data-oid="-_372a:" />
                 {formatDate(log.startTime)}
               </span>
-              <span data-oid="9qkvw7f">执行时间: {log.executionTime}ms</span>
+              <span data-oid="q-dc_rr">执行时间: {log.executionTime}ms</span>
             </div>
 
             <div
               className="grid grid-cols-12 gap-2 text-sm mb-2"
-              data-oid="6nf3jqo"
+              data-oid="fzcubqh"
             >
               <div
                 className="col-span-3 md:col-span-2 text-gray-500"
-                data-oid="a8w9qjx"
+                data-oid="f_n6bcn"
               >
                 会话ID:
               </div>
               <div
                 className="col-span-9 md:col-span-10 truncate"
-                data-oid="568_az3"
+                data-oid="fdh.3p9"
               >
                 {log.sessionId}
               </div>
 
               <div
                 className="col-span-3 md:col-span-2 text-gray-500"
-                data-oid="v.5lw3t"
+                data-oid="gi3_08w"
               >
                 代理ID:
               </div>
               <div
                 className="col-span-9 md:col-span-10 truncate"
-                data-oid="jgnp6vv"
+                data-oid="_9w9wvl"
               >
                 {log.agentId}
               </div>
@@ -248,16 +248,16 @@ export default function ToolLogList({ initialLogs }: IToolLogListProps) {
 
             <div
               className="flex justify-between items-center mt-2"
-              data-oid="qrkc.oy"
+              data-oid="f2smyy2"
             >
-              <div className="text-xs text-gray-500" data-oid="j134.z7">
+              <div className="text-xs text-gray-500" data-oid="noms8ro">
                 {log.error
                   ? `错误: ${log.error.substring(0, 50)}...`
                   : "执行成功"}
               </div>
               <ChevronRight
                 className="w-5 h-5 text-gray-500"
-                data-oid="1-tibsx"
+                data-oid="vugk8d3"
               />
             </div>
           </Link>
@@ -268,18 +268,18 @@ export default function ToolLogList({ initialLogs }: IToolLogListProps) {
       {totalPages > 1 && (
         <div
           className="flex justify-center items-center space-x-2 mt-6"
-          data-oid="pof.va2"
+          data-oid="gb7x8:m"
         >
           <button
             onClick={() => handlePageChange(page - 1)}
             disabled={page === 1}
             className="px-3 py-1 rounded bg-gray-700 text-white disabled:opacity-50"
-            data-oid="d2bnmc:"
+            data-oid="230yj-r"
           >
             上一页
           </button>
 
-          <span className="text-gray-400" data-oid="hw4_udn">
+          <span className="text-gray-400" data-oid="35vvbsx">
             第 {page} 页 / 共 {totalPages} 页
           </span>
 
@@ -287,7 +287,7 @@ export default function ToolLogList({ initialLogs }: IToolLogListProps) {
             onClick={() => handlePageChange(page + 1)}
             disabled={page === totalPages}
             className="px-3 py-1 rounded bg-gray-700 text-white disabled:opacity-50"
-            data-oid="q7m5kst"
+            data-oid="._2msw6"
           >
             下一页
           </button>

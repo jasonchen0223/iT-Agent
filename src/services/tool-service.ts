@@ -7,6 +7,18 @@ import { TTool, TToolCategory, TToolParameter } from '@/types/tool-types';
 import { fileTools, readFile, writeFile, appendFile, deleteFile, createDirectory, listDirectory, getFileInfo } from '@/tools/file-tools';
 import { httpTools, httpGet, httpPost, httpPut, httpDelete, httpUploadFile } from '@/tools/http-tools';
 import { dataTools, parseJson, stringifyJson, formatDate, calculateStats, getObjectValue, csvToJson, jsonToCsv } from '@/tools/data-tools';
+import { 
+  ITool, 
+  IToolExecuteRequest, 
+  IToolExecuteResult, 
+  IToolRegisterRequest, 
+  IToolUpdateRequest,
+  IToolConfig,
+  IToolExecutionHistory,
+  TToolStatus,
+  IMcpToolWrapper
+} from '@/types/tool';
+import { ApiError } from '@/lib/errors';
 
 /**
  * 工具调用参数验证错误
@@ -19,201 +31,466 @@ class ToolParameterValidationError extends Error {
 }
 
 /**
- * 工具服务类
+ * 工具服务接口
  * 
- * 管理工具注册、获取和调用
+ * 提供工具注册、配置、执行和管理功能
  */
-class ToolService {
-    private tools: Map<string, TTool> = new Map();
-    private toolHandlers: Map<string, Function> = new Map();
+export interface IToolService {
+  /**
+   * 获取所有工具
+   * 
+   * @returns {Promise<ITool[]>} 工具列表
+   */
+  getAllTools(): Promise<ITool[]>;
+  
+  /**
+   * 获取可用工具
+   * 
+   * @returns {Promise<ITool[]>} 可用工具列表
+   */
+  getAvailableTools(): Promise<ITool[]>;
+  
+  /**
+   * 根据ID获取工具
+   * 
+   * @param {string} id - 工具ID
+   * @returns {Promise<ITool | null>} 工具详情或null
+   */
+  getToolById(id: string): Promise<ITool | null>;
+  
+  /**
+   * 根据类型获取工具
+   * 
+   * @param {string} type - 工具类型
+   * @returns {Promise<ITool[]>} 工具列表
+   */
+  getToolsByType(type: string): Promise<ITool[]>;
+  
+  /**
+   * 注册新工具
+   * 
+   * @param {IToolRegisterRequest} request - 工具注册请求
+   * @returns {Promise<ITool>} 注册后的工具
+   */
+  registerTool(request: IToolRegisterRequest): Promise<ITool>;
+  
+  /**
+   * 更新工具信息
+   * 
+   * @param {string} id - 工具ID
+   * @param {IToolUpdateRequest} request - 工具更新请求
+   * @returns {Promise<ITool>} 更新后的工具
+   */
+  updateTool(id: string, request: IToolUpdateRequest): Promise<ITool>;
+  
+  /**
+   * 更新工具状态
+   * 
+   * @param {string} id - 工具ID
+   * @param {TToolStatus} status - 新状态
+   * @returns {Promise<ITool>} 更新后的工具
+   */
+  updateToolStatus(id: string, status: TToolStatus): Promise<ITool>;
+  
+  /**
+   * 删除工具
+   * 
+   * @param {string} id - 工具ID
+   * @returns {Promise<boolean>} 是否删除成功
+   */
+  deleteTool(id: string): Promise<boolean>;
+  
+  /**
+   * 执行工具
+   * 
+   * @param {IToolExecuteRequest} request - 执行请求
+   * @returns {Promise<IToolExecuteResult>} 执行结果
+   */
+  executeTool(request: IToolExecuteRequest): Promise<IToolExecuteResult>;
+  
+  /**
+   * 获取工具配置
+   * 
+   * @param {string} toolId - 工具ID
+   * @returns {Promise<IToolConfig | null>} 工具配置或null
+   */
+  getToolConfig(toolId: string): Promise<IToolConfig | null>;
+  
+  /**
+   * 更新工具配置
+   * 
+   * @param {string} toolId - 工具ID
+   * @param {Record<string, any>} parameters - 配置参数
+   * @returns {Promise<IToolConfig>} 更新后的配置
+   */
+  updateToolConfig(toolId: string, parameters: Record<string, any>): Promise<IToolConfig>;
+  
+  /**
+   * 获取工具执行历史
+   * 
+   * @param {string} toolId - 工具ID
+   * @param {number} limit - 限制数量
+   * @returns {Promise<IToolExecutionHistory[]>} 执行历史记录
+   */
+  getToolExecutionHistory(toolId: string, limit?: number): Promise<IToolExecutionHistory[]>;
+  
+  /**
+   * 安装MCP工具
+   * 
+   * @param {string} mcpToolId - MCP工具ID
+   * @returns {Promise<ITool>} 安装后的工具
+   */
+  installMcpTool(mcpToolId: string): Promise<ITool>;
+  
+  /**
+   * 检查工具更新
+   * 
+   * @param {string} toolId - 工具ID
+   * @returns {Promise<{hasUpdate: boolean, latestVersion?: string}>} 更新信息
+   */
+  checkToolUpdate(toolId: string): Promise<{hasUpdate: boolean, latestVersion?: string}>;
+  
+  /**
+   * 获取工具的完整权限列表
+   * 
+   * @param {string} toolId - 工具ID
+   * @returns {Promise<string[]>} 权限列表
+   */
+  getToolPermissions(toolId: string): Promise<string[]>;
+}
 
-    /**
-     * 构造函数
-     * 
-     * 初始化工具服务，注册内置工具
-     */
-    constructor() {
-        // 注册文件操作工具
-        this.registerToolHandlers({
-            'file-read': readFile,
-            'file-write': writeFile,
-            'file-append': appendFile,
-            'file-delete': deleteFile,
-            'dir-create': createDirectory,
-            'dir-list': listDirectory,
-            'file-info': getFileInfo
-        });
-
-        // 注册网络请求工具
-        this.registerToolHandlers({
-            'http-get': httpGet,
-            'http-post': httpPost,
-            'http-put': httpPut,
-            'http-delete': httpDelete,
-            'http-upload': httpUploadFile
-        });
-
-        // 注册数据处理工具
-        this.registerToolHandlers({
-            'data-parse-json': parseJson,
-            'data-stringify-json': stringifyJson,
-            'data-format-date': formatDate,
-            'data-calculate-stats': calculateStats,
-            'data-get-object-value': getObjectValue,
-            'data-csv-to-json': csvToJson,
-            'data-json-to-csv': jsonToCsv
-        });
-
-        // 注册工具定义
-        this.registerTools([
-            ...fileTools,
-            ...httpTools,
-            ...dataTools
-        ]);
+/**
+ * 工具服务实现类
+ * 
+ * 提供工具注册、配置、执行和管理功能的实现
+ */
+export class ToolService implements IToolService {
+  /**
+   * API 基础路径
+   */
+  private baseUrl = '/api/tools';
+  
+  /**
+   * 对API进行GET请求
+   * 
+   * @param {string} endpoint - API端点
+   * @returns {Promise<any>} 响应数据
+   * @private
+   */
+  private async get<T>(endpoint: string): Promise<T> {
+    const response = await fetch(`${this.baseUrl}${endpoint}`);
+    
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      throw new ApiError(
+        response.status,
+        errorData.error || '请求工具API失败',
+        errorData
+      );
     }
-
-    /**
-     * 注册工具
-     * 
-     * @param {TTool[]} tools - 要注册的工具数组
-     * @returns {boolean} 是否成功注册
-     */
-    registerTools(tools: TTool[]): boolean {
-        try {
-            tools.forEach(tool => {
-                this.tools.set(tool.id, tool);
-            });
-            return true;
-        } catch (error) {
-            console.error('注册工具错误:', error);
-            return false;
-        }
+    
+    const data = await response.json();
+    return data.data;
+  }
+  
+  /**
+   * 对API进行POST请求
+   * 
+   * @param {string} endpoint - API端点
+   * @param {any} body - 请求体
+   * @returns {Promise<any>} 响应数据
+   * @private
+   */
+  private async post<T>(endpoint: string, body: any): Promise<T> {
+    const response = await fetch(`${this.baseUrl}${endpoint}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    });
+    
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      throw new ApiError(
+        response.status,
+        errorData.error || '请求工具API失败',
+        errorData
+      );
     }
-
-    /**
-     * 注册工具处理函数
-     * 
-     * @param {Record<string, Function>} handlers - 工具ID和处理函数的映射
-     * @returns {boolean} 是否成功注册
-     */
-    registerToolHandlers(handlers: Record<string, Function>): boolean {
-        try {
-            Object.entries(handlers).forEach(([toolId, handler]) => {
-                this.toolHandlers.set(toolId, handler);
-            });
-            return true;
-        } catch (error) {
-            console.error('注册工具处理函数错误:', error);
-            return false;
-        }
+    
+    const data = await response.json();
+    return data.data;
+  }
+  
+  /**
+   * 对API进行PUT请求
+   * 
+   * @param {string} endpoint - API端点
+   * @param {any} body - 请求体
+   * @returns {Promise<any>} 响应数据
+   * @private
+   */
+  private async put<T>(endpoint: string, body: any): Promise<T> {
+    const response = await fetch(`${this.baseUrl}${endpoint}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    });
+    
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      throw new ApiError(
+        response.status,
+        errorData.error || '请求工具API失败',
+        errorData
+      );
     }
-
-    /**
-     * 获取所有工具
-     * 
-     * @param {TToolCategory} [category] - 可选的工具类别过滤
-     * @returns {Promise<TTool[]>} 工具数组
-     */
-    async getAllTools(category?: TToolCategory): Promise<TTool[]> {
-        try {
-            const allTools = Array.from(this.tools.values());
-            
-            if (category) {
-                return allTools.filter(tool => tool.category === category);
-            }
-            
-            return allTools;
-        } catch (error) {
-            console.error('获取工具列表错误:', error);
-            return [];
-        }
+    
+    const data = await response.json();
+    return data.data;
+  }
+  
+  /**
+   * 对API进行DELETE请求
+   * 
+   * @param {string} endpoint - API端点
+   * @returns {Promise<any>} 响应数据
+   * @private
+   */
+  private async delete<T>(endpoint: string): Promise<T> {
+    const response = await fetch(`${this.baseUrl}${endpoint}`, {
+      method: 'DELETE'
+    });
+    
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      throw new ApiError(
+        response.status,
+        errorData.error || '请求工具API失败',
+        errorData
+      );
     }
-
-    /**
-     * 根据ID获取工具
-     * 
-     * @param {string} id - 工具ID
-     * @returns {Promise<TTool | null>} 工具对象或null（如果未找到）
-     */
-    async getToolById(id: string): Promise<TTool | null> {
-        try {
-            // 目前只返回测试数据，后续将从数据库获取
-            const allTools = await this.getAllTools();
-            const tool = allTools.find(tool => tool.id === id);
-            
-            return tool || null;
-        } catch (error) {
-            console.error('根据ID获取工具错误:', error);
-            return null;
-        }
+    
+    const data = await response.json();
+    return data.data;
+  }
+  
+  /**
+   * 获取所有工具
+   * 
+   * @returns {Promise<ITool[]>} 工具列表
+   */
+  public async getAllTools(): Promise<ITool[]> {
+    return this.get<ITool[]>('');
+  }
+  
+  /**
+   * 获取可用工具
+   * 
+   * @returns {Promise<ITool[]>} 可用工具列表
+   */
+  public async getAvailableTools(): Promise<ITool[]> {
+    return this.get<ITool[]>('/available');
+  }
+  
+  /**
+   * 根据ID获取工具
+   * 
+   * @param {string} id - 工具ID
+   * @returns {Promise<ITool | null>} 工具详情或null
+   */
+  public async getToolById(id: string): Promise<ITool | null> {
+    try {
+      return await this.get<ITool>(`/${id}`);
+    } catch (error) {
+      if (error instanceof ApiError && error.statusCode === 404) {
+        return null;
+      }
+      throw error;
     }
-
-    /**
-     * 验证工具参数
-     * 
-     * @param {TTool} tool - 工具定义
-     * @param {any} params - 调用参数
-     * @throws {ToolParameterValidationError} 参数验证错误
-     */
-    private validateParameters(tool: TTool, params: any): void {
-        if (!tool.parameters || tool.parameters.length === 0) {
-            return;
-        }
-
-        for (const param of tool.parameters) {
-            if (param.required && (params[param.name] === undefined || params[param.name] === null)) {
-                throw new ToolParameterValidationError(`缺少必需参数: ${param.name}`);
-            }
-        }
+  }
+  
+  /**
+   * 根据类型获取工具
+   * 
+   * @param {string} type - 工具类型
+   * @returns {Promise<ITool[]>} 工具列表
+   */
+  public async getToolsByType(type: string): Promise<ITool[]> {
+    return this.get<ITool[]>(`/type/${type}`);
+  }
+  
+  /**
+   * 注册新工具
+   * 
+   * @param {IToolRegisterRequest} request - 工具注册请求
+   * @returns {Promise<ITool>} 注册后的工具
+   */
+  public async registerTool(request: IToolRegisterRequest): Promise<ITool> {
+    return this.post<ITool>('/register', request);
+  }
+  
+  /**
+   * 更新工具信息
+   * 
+   * @param {string} id - 工具ID
+   * @param {IToolUpdateRequest} request - 工具更新请求
+   * @returns {Promise<ITool>} 更新后的工具
+   */
+  public async updateTool(id: string, request: IToolUpdateRequest): Promise<ITool> {
+    return this.put<ITool>(`/${id}`, request);
+  }
+  
+  /**
+   * 更新工具状态
+   * 
+   * @param {string} id - 工具ID
+   * @param {TToolStatus} status - 新状态
+   * @returns {Promise<ITool>} 更新后的工具
+   */
+  public async updateToolStatus(id: string, status: TToolStatus): Promise<ITool> {
+    return this.put<ITool>(`/${id}/status`, { status });
+  }
+  
+  /**
+   * 删除工具
+   * 
+   * @param {string} id - 工具ID
+   * @returns {Promise<boolean>} 是否删除成功
+   */
+  public async deleteTool(id: string): Promise<boolean> {
+    return this.delete<boolean>(`/${id}`);
+  }
+  
+  /**
+   * 执行工具
+   * 
+   * @param {IToolExecuteRequest} request - 执行请求
+   * @returns {Promise<IToolExecuteResult>} 执行结果
+   */
+  public async executeTool(request: IToolExecuteRequest): Promise<IToolExecuteResult> {
+    return this.post<IToolExecuteResult>('/execute', request);
+  }
+  
+  /**
+   * 获取工具配置
+   * 
+   * @param {string} toolId - 工具ID
+   * @returns {Promise<IToolConfig | null>} 工具配置或null
+   */
+  public async getToolConfig(toolId: string): Promise<IToolConfig | null> {
+    try {
+      return await this.get<IToolConfig>(`/${toolId}/config`);
+    } catch (error) {
+      if (error instanceof ApiError && error.statusCode === 404) {
+        return null;
+      }
+      throw error;
     }
-
-    /**
-     * 调用工具
-     * 
-     * @param {string} toolId - 工具ID
-     * @param {any} params - 调用参数
-     * @param {string} sessionId - 会话ID
-     * @param {string} agentId - 代理ID
-     * @returns {Promise<any>} 工具调用结果
-     * @throws {Error} 工具调用错误
-     */
-    async callTool(toolId: string, params: any, sessionId: string, agentId: string): Promise<any> {
-        try {
-            const tool = this.tools.get(toolId);
-            
-            if (!tool) {
-                throw new Error(`未找到工具: ${toolId}`);
-            }
-            
-            const handler = this.toolHandlers.get(toolId);
-            
-            if (!handler) {
-                throw new Error(`未找到工具处理函数: ${toolId}`);
-            }
-            
-            // 验证参数
-            this.validateParameters(tool, params);
-            
-            // 提取参数值
-            const paramValues = tool.parameters?.map(param => params[param.name]) || [];
-            
-            // 调用工具处理函数
-            const result = await handler(...paramValues);
-            
-            // 记录工具调用（可扩展为写入数据库）
-            console.log(`工具调用: ${toolId}`, {
-                sessionId,
-                agentId,
-                params,
-                timestamp: new Date().toISOString()
-            });
-            
-            return result;
-        } catch (error) {
-            console.error(`工具调用错误 (${toolId}):`, error);
-            throw error;
-        }
+  }
+  
+  /**
+   * 更新工具配置
+   * 
+   * @param {string} toolId - 工具ID
+   * @param {Record<string, any>} parameters - 配置参数
+   * @returns {Promise<IToolConfig>} 更新后的配置
+   */
+  public async updateToolConfig(toolId: string, parameters: Record<string, any>): Promise<IToolConfig> {
+    return this.put<IToolConfig>(`/${toolId}/config`, { parameters });
+  }
+  
+  /**
+   * 获取工具执行历史
+   * 
+   * @param {string} toolId - 工具ID
+   * @param {number} limit - 限制数量
+   * @returns {Promise<IToolExecutionHistory[]>} 执行历史记录
+   */
+  public async getToolExecutionHistory(toolId: string, limit = 10): Promise<IToolExecutionHistory[]> {
+    return this.get<IToolExecutionHistory[]>(`/${toolId}/history?limit=${limit}`);
+  }
+  
+  /**
+   * 安装MCP工具
+   * 
+   * @param {string} mcpToolId - MCP工具ID
+   * @returns {Promise<ITool>} 安装后的工具
+   */
+  public async installMcpTool(mcpToolId: string): Promise<ITool> {
+    return this.post<ITool>('/mcp/install', { mcpToolId });
+  }
+  
+  /**
+   * 检查工具更新
+   * 
+   * @param {string} toolId - 工具ID
+   * @returns {Promise<{hasUpdate: boolean, latestVersion?: string}>} 更新信息
+   */
+  public async checkToolUpdate(toolId: string): Promise<{hasUpdate: boolean, latestVersion?: string}> {
+    return this.get<{hasUpdate: boolean, latestVersion?: string}>(`/${toolId}/check-update`);
+  }
+  
+  /**
+   * 获取工具的完整权限列表
+   * 
+   * @param {string} toolId - 工具ID
+   * @returns {Promise<string[]>} 权限列表
+   */
+  public async getToolPermissions(toolId: string): Promise<string[]> {
+    return this.get<string[]>(`/${toolId}/permissions`);
+  }
+  
+  /**
+   * 获取MCP工具包装器
+   * 
+   * @param {string} wrapperId - 包装器ID
+   * @returns {Promise<IMcpToolWrapper | null>} 包装器详情或null
+   */
+  public async getMcpToolWrapper(wrapperId: string): Promise<IMcpToolWrapper | null> {
+    try {
+      return await this.get<IMcpToolWrapper>(`/mcp/wrapper/${wrapperId}`);
+    } catch (error) {
+      if (error instanceof ApiError && error.statusCode === 404) {
+        return null;
+      }
+      throw error;
     }
+  }
+  
+  /**
+   * 创建MCP工具包装器
+   * 
+   * @param {IMcpToolWrapper} wrapper - 包装器详情
+   * @returns {Promise<IMcpToolWrapper>} 创建后的包装器
+   */
+  public async createMcpToolWrapper(wrapper: Omit<IMcpToolWrapper, 'id' | 'createdAt' | 'updatedAt'>): Promise<IMcpToolWrapper> {
+    return this.post<IMcpToolWrapper>('/mcp/wrapper', wrapper);
+  }
+  
+  /**
+   * 更新MCP工具包装器
+   * 
+   * @param {string} wrapperId - 包装器ID
+   * @param {Partial<IMcpToolWrapper>} updates - 更新内容
+   * @returns {Promise<IMcpToolWrapper>} 更新后的包装器
+   */
+  public async updateMcpToolWrapper(wrapperId: string, updates: Partial<Omit<IMcpToolWrapper, 'id' | 'createdAt' | 'updatedAt'>>): Promise<IMcpToolWrapper> {
+    return this.put<IMcpToolWrapper>(`/mcp/wrapper/${wrapperId}`, updates);
+  }
+  
+  /**
+   * 删除MCP工具包装器
+   * 
+   * @param {string} wrapperId - 包装器ID
+   * @returns {Promise<boolean>} 是否删除成功
+   */
+  public async deleteMcpToolWrapper(wrapperId: string): Promise<boolean> {
+    return this.delete<boolean>(`/mcp/wrapper/${wrapperId}`);
+  }
 }
 
 // 创建工具服务实例

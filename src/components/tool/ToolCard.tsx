@@ -66,34 +66,34 @@ export const ToolCard: React.FC<IToolCardProps> = ({ tool, onClick }) => {
     <div
       className="bg-slate-800 border border-slate-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
       onClick={handleClick}
-      data-oid="w.3qr5k"
+      data-oid="tai70m8"
     >
-      <div className="p-5" data-oid="xtj-gqh">
+      <div className="p-5" data-oid="mfl_s0l">
         <div
           className="flex items-center justify-between mb-3"
-          data-oid="k_3mkzw"
+          data-oid="s6mt6_-"
         >
           <h3
             className="text-lg font-semibold text-white truncate"
-            data-oid="9e5znwd"
+            data-oid="3isymdo"
           >
             {tool.name}
           </h3>
-          <Badge data-oid="m4oari3">{tool.category}</Badge>
+          <Badge data-oid="vkrfnn2">{tool.category}</Badge>
         </div>
 
         <p
           className="text-slate-300 text-sm mb-4 line-clamp-2"
-          data-oid="yz.u1tn"
+          data-oid="kr-95lv"
         >
           {tool.description}
         </p>
 
-        <div className="flex justify-between items-center" data-oid="g46atg_">
-          <div className="flex space-x-2" data-oid="_mlrcyt">
+        <div className="flex justify-between items-center" data-oid="feguh95">
+          <div className="flex space-x-2" data-oid="bj11lt5">
             {tool.tags &&
               tool.tags.map((tag, index) => (
-                <Badge key={index} variant="outline" data-oid="xxwlo9r">
+                <Badge key={index} variant="outline" data-oid="pdkn696">
                   {tag}
                 </Badge>
               ))}
@@ -103,7 +103,7 @@ export const ToolCard: React.FC<IToolCardProps> = ({ tool, onClick }) => {
             href={`/tools/${tool.id}`}
             className="text-indigo-400 hover:text-indigo-300 text-sm font-medium"
             onClick={(e) => e.stopPropagation()}
-            data-oid=":uhfx7d"
+            data-oid="aa.:ho:"
           >
             详情
           </Link>

@@ -101,7 +101,7 @@ const InteractionDetail: React.FC<InteractionDetailProps> = ({
         // 尝试从内容中检测语言，或默认为javascript
         const lang = detectLanguage(interaction.content);
         return (
-          <div className="rounded-lg overflow-hidden" data-oid="9rer52n">
+          <div className="rounded-lg overflow-hidden" data-oid="-tousil">
             <SyntaxHighlighter
               language={lang}
               style={vscDarkPlus}
@@ -113,7 +113,7 @@ const InteractionDetail: React.FC<InteractionDetailProps> = ({
                 fontSize: "0.9rem",
                 backgroundColor: "#1e1e2e",
               }}
-              data-oid="r.j--cd"
+              data-oid="uqcufp9"
             >
               {interaction.content}
             </SyntaxHighlighter>
@@ -134,7 +134,7 @@ const InteractionDetail: React.FC<InteractionDetailProps> = ({
           return (
             <div
               className="bg-gray-800 rounded-lg p-4 overflow-auto"
-              data-oid=".538_em"
+              data-oid="-8batkw"
             >
               <SyntaxHighlighter
                 language="json"
@@ -145,7 +145,7 @@ const InteractionDetail: React.FC<InteractionDetailProps> = ({
                   fontSize: "0.9rem",
                   backgroundColor: "transparent",
                 }}
-                data-oid="9_j69i3"
+                data-oid="zcvgcc_"
               >
                 {JSON.stringify(toolData, null, 2)}
               </SyntaxHighlighter>
@@ -156,7 +156,7 @@ const InteractionDetail: React.FC<InteractionDetailProps> = ({
           return (
             <div
               className="bg-gray-800 rounded-lg p-4 whitespace-pre-wrap overflow-auto"
-              data-oid="m2bsvse"
+              data-oid="zyba8xx"
             >
               {interaction.content}
             </div>
@@ -167,7 +167,7 @@ const InteractionDetail: React.FC<InteractionDetailProps> = ({
         return (
           <div
             className="bg-red-900 bg-opacity-30 border border-red-700 rounded-lg p-4 text-red-300 whitespace-pre-wrap overflow-auto"
-            data-oid="2dx9cj6"
+            data-oid="py5el3j"
           >
             {interaction.content}
           </div>
@@ -177,7 +177,7 @@ const InteractionDetail: React.FC<InteractionDetailProps> = ({
         return (
           <div
             className="bg-gray-800 rounded-lg p-4 whitespace-pre-wrap overflow-auto"
-            data-oid="r01xiet"
+            data-oid="rai2s-r"
           >
             {interaction.content}
           </div>
@@ -245,26 +245,26 @@ const InteractionDetail: React.FC<InteractionDetailProps> = ({
     return (
       <div
         className="bg-gradient-to-br from-gray-900 to-indigo-900 rounded-lg shadow-xl p-6 w-full animate-pulse"
-        data-oid="0d9sgol"
+        data-oid="na38h2f"
       >
         <div
           className="h-6 bg-gray-700 rounded w-1/4 mb-4"
-          data-oid="0.m:zez"
+          data-oid="-8upymf"
         ></div>
         <div
           className="h-4 bg-gray-700 rounded w-1/2 mb-2"
-          data-oid="5:ds:m_"
+          data-oid="_ezs_-b"
         ></div>
         <div
           className="h-4 bg-gray-700 rounded w-3/4 mb-6"
-          data-oid="-drnwpq"
+          data-oid="l3-l_mz"
         ></div>
-        <div className="h-48 bg-gray-800 rounded mb-4" data-oid=":gpalxj"></div>
+        <div className="h-48 bg-gray-800 rounded mb-4" data-oid="fh0p:jw"></div>
         <div
           className="h-4 bg-gray-700 rounded w-full mb-2"
-          data-oid="_dub70l"
+          data-oid="hp4ejjq"
         ></div>
-        <div className="h-4 bg-gray-700 rounded w-5/6" data-oid="k13f1:q"></div>
+        <div className="h-4 bg-gray-700 rounded w-5/6" data-oid="y0fthwi"></div>
       </div>
     );
   }
@@ -274,31 +274,31 @@ const InteractionDetail: React.FC<InteractionDetailProps> = ({
     return (
       <div
         className="bg-gradient-to-br from-gray-900 to-indigo-900 rounded-lg shadow-xl p-6 w-full"
-        data-oid="uuelplg"
+        data-oid="d86rz8b"
       >
         <div
           className="p-4 text-red-400 bg-red-900 bg-opacity-30 rounded-lg"
-          data-oid="uanl3hl"
+          data-oid="lkrjpr5"
         >
-          <p className="font-medium" data-oid="kn.nxu1">
+          <p className="font-medium" data-oid="6hnhpa:">
             {error}
           </p>
           <button
             onClick={fetchInteractionDetail}
             className="mt-2 px-3 py-1 bg-red-700 hover:bg-red-600 rounded text-white"
-            data-oid="e88hwfh"
+            data-oid="5vp_l:d"
           >
             重试
           </button>
         </div>
-        <div className="mt-4" data-oid="vfp4vyi">
+        <div className="mt-4" data-oid="hcd-c43">
           <Link
             href={`/agents/${agentId}/interactions`}
             className="flex items-center space-x-1 text-indigo-400 hover:text-indigo-300"
-            data-oid="3b11871"
+            data-oid="nzsu8u7"
           >
-            <FiArrowLeft size={16} data-oid="0-:ete3" />
-            <span data-oid="6lzwi1-">返回交互历史列表</span>
+            <FiArrowLeft size={16} data-oid="ib99adf" />
+            <span data-oid="7juklid">返回交互历史列表</span>
           </Link>
         </div>
       </div>
@@ -310,19 +310,19 @@ const InteractionDetail: React.FC<InteractionDetailProps> = ({
     return (
       <div
         className="bg-gradient-to-br from-gray-900 to-indigo-900 rounded-lg shadow-xl p-6 w-full"
-        data-oid="sxr6py2"
+        data-oid="ly3rrvo"
       >
-        <p className="text-center text-gray-400" data-oid="bn.n:-0">
+        <p className="text-center text-gray-400" data-oid="mx_cr:c">
           无法加载交互数据
         </p>
-        <div className="mt-4" data-oid="nzf24ek">
+        <div className="mt-4" data-oid="sllm9fn">
           <Link
             href={`/agents/${agentId}/interactions`}
             className="flex items-center space-x-1 text-indigo-400 hover:text-indigo-300"
-            data-oid="y8q.9ds"
+            data-oid="cgsm.5i"
           >
-            <FiArrowLeft size={16} data-oid="1dhl.zg" />
-            <span data-oid="qcx2r3n">返回交互历史列表</span>
+            <FiArrowLeft size={16} data-oid="8a..b3k" />
+            <span data-oid="sepra:_">返回交互历史列表</span>
           </Link>
         </div>
       </div>
@@ -332,35 +332,35 @@ const InteractionDetail: React.FC<InteractionDetailProps> = ({
   return (
     <div
       className="bg-gradient-to-br from-gray-900 to-indigo-900 rounded-lg shadow-xl p-6 w-full"
-      data-oid="ngfj07x"
+      data-oid="qun1ud5"
     >
       {/* 顶部导航 */}
       <div
         className="flex justify-between items-center mb-6"
-        data-oid="py-1op3"
+        data-oid="b5bovvi"
       >
         <Link
           href={`/agents/${agentId}/interactions`}
           className="flex items-center space-x-1 text-indigo-400 hover:text-indigo-300"
-          data-oid="i-o8a74"
+          data-oid="9-ffm_w"
         >
-          <FiArrowLeft size={16} data-oid="xf1ck38" />
-          <span data-oid="t6-py_9">返回列表</span>
+          <FiArrowLeft size={16} data-oid="-oo1ec2" />
+          <span data-oid="5sf9s6q">返回列表</span>
         </Link>
 
         <button
           onClick={downloadRawData}
           className="flex items-center space-x-1 px-3 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white transition-colors"
-          data-oid="oa8tfsf"
+          data-oid="kwi7p84"
         >
-          <FiDownload size={16} data-oid="759kgn9" />
-          <span data-oid="l129n.h">下载原始数据</span>
+          <FiDownload size={16} data-oid="b00jb8i" />
+          <span data-oid="llv992j">下载原始数据</span>
         </button>
       </div>
 
       {/* 交互标题 */}
-      <div className="mb-6" data-oid="0ixhtd3">
-        <div className="flex items-center space-x-2 mb-1" data-oid="bi42ur9">
+      <div className="mb-6" data-oid="t.wcpz7">
+        <div className="flex items-center space-x-2 mb-1" data-oid="rngbosy">
           <span
             className={`text-xs px-2 py-1 rounded ${
               {
@@ -371,15 +371,15 @@ const InteractionDetail: React.FC<InteractionDetailProps> = ({
                 error: "bg-red-500 text-white",
               }[interaction.type] || "bg-gray-500 text-white"
             }`}
-            data-oid="d_3kf0s"
+            data-oid="-l3.re8"
           >
             {interaction.type}
           </span>
-          <span className="text-gray-400 text-xs" data-oid="r3f3grw">
+          <span className="text-gray-400 text-xs" data-oid="fcepsg3">
             ID: {interaction.id}
           </span>
         </div>
-        <h1 className="text-2xl font-bold text-white" data-oid="xmhfyjh">
+        <h1 className="text-2xl font-bold text-white" data-oid="-:f.ey5">
           交互详情
         </h1>
       </div>
@@ -387,47 +387,47 @@ const InteractionDetail: React.FC<InteractionDetailProps> = ({
       {/* 元数据面板 */}
       <div
         className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6"
-        data-oid="thag3a:"
+        data-oid="55i.wk3"
       >
         <div
           className="bg-gray-800 bg-opacity-50 p-4 rounded-lg"
-          data-oid="8okg9:h"
+          data-oid="c14tobd"
         >
           <h3
             className="flex items-center text-indigo-400 mb-3"
-            data-oid="4uqz3r1"
+            data-oid=":kxjus:"
           >
-            <FiUser className="mr-2" data-oid="p2378o4" />
-            <span data-oid=":y0fblw">参与代理</span>
+            <FiUser className="mr-2" data-oid="cswgq.e" />
+            <span data-oid="-yhke0l">参与代理</span>
           </h3>
-          <div className="space-y-3" data-oid="tmwgprf">
-            <div data-oid="d_cz08r">
-              <div className="text-gray-400 text-sm" data-oid="6u-eh5f">
+          <div className="space-y-3" data-oid="qief0ge">
+            <div data-oid="bhit-j6">
+              <div className="text-gray-400 text-sm" data-oid="1-5q52n">
                 发送方
               </div>
-              <div className="flex items-center space-x-2" data-oid=":4.eut4">
-                <span className="text-teal-400 font-medium" data-oid="rb8t66o">
+              <div className="flex items-center space-x-2" data-oid="c:3drp8">
+                <span className="text-teal-400 font-medium" data-oid="p8ea2cb">
                   {interaction.sender.name}
                 </span>
                 <span
                   className="text-xs bg-teal-900 bg-opacity-50 text-teal-300 px-2 py-1 rounded"
-                  data-oid="z-w29ig"
+                  data-oid="bt8vhz6"
                 >
                   {interaction.sender.role}
                 </span>
               </div>
             </div>
-            <div data-oid="wp1rf:7">
-              <div className="text-gray-400 text-sm" data-oid="je22n5i">
+            <div data-oid="tcxjbzt">
+              <div className="text-gray-400 text-sm" data-oid="e1_l3fa">
                 接收方
               </div>
-              <div className="flex items-center space-x-2" data-oid="ohc52f9">
-                <span className="text-pink-400 font-medium" data-oid="kpa6l.:">
+              <div className="flex items-center space-x-2" data-oid="f_mlz72">
+                <span className="text-pink-400 font-medium" data-oid="orlw153">
                   {interaction.receiver.name}
                 </span>
                 <span
                   className="text-xs bg-pink-900 bg-opacity-50 text-pink-300 px-2 py-1 rounded"
-                  data-oid=":8zk7pi"
+                  data-oid="-y.c54g"
                 >
                   {interaction.receiver.role}
                 </span>
@@ -438,29 +438,29 @@ const InteractionDetail: React.FC<InteractionDetailProps> = ({
 
         <div
           className="bg-gray-800 bg-opacity-50 p-4 rounded-lg"
-          data-oid="h4nfsl8"
+          data-oid="x4fxv5c"
         >
           <h3
             className="flex items-center text-indigo-400 mb-3"
-            data-oid="8fi5x_3"
+            data-oid="7l5f8o8"
           >
-            <FiClock className="mr-2" data-oid="20mspw7" />
-            <span data-oid="t9rmthg">会话信息</span>
+            <FiClock className="mr-2" data-oid="ox1mi77" />
+            <span data-oid="_ebx6i6">会话信息</span>
           </h3>
-          <div className="space-y-3" data-oid="enq_.eh">
-            <div data-oid="pj:1_:q">
-              <div className="text-gray-400 text-sm" data-oid="dpezw9x">
+          <div className="space-y-3" data-oid="w5rtci3">
+            <div data-oid="ce6ou:7">
+              <div className="text-gray-400 text-sm" data-oid="1h4ib_t">
                 会话名称
               </div>
-              <div className="text-blue-400 font-medium" data-oid="073fi1s">
+              <div className="text-blue-400 font-medium" data-oid="cj-371x">
                 {interaction.session.name}
               </div>
             </div>
-            <div data-oid="azdtvmv">
-              <div className="text-gray-400 text-sm" data-oid="l:2mwnr">
+            <div data-oid="ur5jl1_">
+              <div className="text-gray-400 text-sm" data-oid=":-iy4c_">
                 时间戳
               </div>
-              <div className="text-white" data-oid="sa-zdfu">
+              <div className="text-white" data-oid="-bmrj_o">
                 {formatTime(interaction.timestamp)}
               </div>
             </div>
@@ -469,30 +469,30 @@ const InteractionDetail: React.FC<InteractionDetailProps> = ({
       </div>
 
       {/* 内容区域 */}
-      <div className="mb-6" data-oid="0ldguk8">
+      <div className="mb-6" data-oid="jkwf4bj">
         <h3
           className="flex items-center text-indigo-400 mb-3"
-          data-oid="yd:2wtl"
+          data-oid="y:65px9"
         >
-          <FiMessageCircle className="mr-2" data-oid=":h.9p47" />
-          <span data-oid="k3:wqce">消息内容</span>
+          <FiMessageCircle className="mr-2" data-oid="-i22p_x" />
+          <span data-oid="zk.dskk">消息内容</span>
         </h3>
         {renderContent()}
       </div>
 
       {/* 元数据区域 */}
       {interaction.metadata && (
-        <div data-oid="gqpjp7j">
+        <div data-oid="xbj_lcq">
           <h3
             className="flex items-center text-indigo-400 mb-3"
-            data-oid=".e20dnf"
+            data-oid="_cxz-ct"
           >
-            <FiTag className="mr-2" data-oid="h104jc9" />
-            <span data-oid="u2271s4">元数据</span>
+            <FiTag className="mr-2" data-oid="k-j0pqk" />
+            <span data-oid="l.b8uco">元数据</span>
           </h3>
           <div
             className="bg-gray-800 bg-opacity-50 p-4 rounded-lg"
-            data-oid="762z-3s"
+            data-oid="d91vmkd"
           >
             <SyntaxHighlighter
               language="json"
@@ -503,7 +503,7 @@ const InteractionDetail: React.FC<InteractionDetailProps> = ({
                 fontSize: "0.9rem",
                 backgroundColor: "transparent",
               }}
-              data-oid="pvj.kne"
+              data-oid="62is.kq"
             >
               {JSON.stringify(interaction.metadata, null, 2)}
             </SyntaxHighlighter>

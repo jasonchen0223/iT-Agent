@@ -1,3 +1,5 @@
+"use client";
+
 // components/ui/Button.tsx
 import { ButtonHTMLAttributes, forwardRef } from "react";
 import { cn } from "@/lib/utils";
@@ -12,7 +14,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <button
         className={cn(
-          "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 disabled:opacity-50",
+          "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500",
           // 各种变体样式
           {
             "bg-indigo-600 text-white hover:bg-indigo-700":
@@ -30,11 +32,16 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             "h-12 px-6 text-lg": size === "lg",
             "h-10 w-10 p-0": size === "icon",
           },
+          // 改进禁用状态样式
+          {
+            "opacity-50 cursor-not-allowed hover:!bg-indigo-600 hover:!from-purple-600 hover:!to-indigo-600 hover:!bg-none":
+              props.disabled,
+          },
           className,
         )}
         ref={ref}
         {...props}
-        data-oid="bbxjwt7"
+        data-oid="w.77:bi"
       />
     );
   },

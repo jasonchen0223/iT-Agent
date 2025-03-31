@@ -1,23 +1,23 @@
 // app/collaboration/history/page.tsx
-import { Button } from "@/components/ui/Button";
+import { Button } from '@/components/ui/button';
 
 export default function CollaborationHistoryPage() {
   return (
-    <div className="container mx-auto py-8" data-oid="-ac._gl">
+    <div className="container mx-auto py-8" data-oid="krzobw-">
       <div
         className="flex justify-between items-center mb-6"
-        data-oid="7jg849k"
+        data-oid="gci3kpe"
       >
-        <h1 className="text-2xl font-bold text-indigo-100" data-oid="2.k7e:s">
+        <h1 className="text-2xl font-bold text-indigo-100" data-oid=":zhquwt">
           协作历史
         </h1>
-        <div className="flex space-x-3" data-oid="wtnh24u">
-          <div className="relative" data-oid="1vj6:92">
+        <div className="flex space-x-3" data-oid="kpg6lnu">
+          <div className="relative" data-oid=".08ajpb">
             <input
               type="text"
               className="pl-10 pr-4 py-2 bg-indigo-900/20 text-indigo-100 rounded-md border border-indigo-800/30 focus:outline-none focus:border-indigo-500 w-64"
               placeholder="搜索会话..."
-              data-oid="0fot8k6"
+              data-oid="he:t80:"
             />
 
             <svg
@@ -26,205 +26,205 @@ export default function CollaborationHistoryPage() {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              data-oid="z84:k_r"
+              data-oid="0k_1107"
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                data-oid="nv6:5v7"
+                data-oid="hbup0ks"
               />
             </svg>
           </div>
-          <Button data-oid="5m56y3v">导出历史</Button>
+          <Button data-oid="b:zqrxk">导出历史</Button>
         </div>
       </div>
 
-      <div className="space-card" data-oid="j5zx1h8">
-        <div className="overflow-x-auto" data-oid="3qnw4-5">
-          <table className="w-full" data-oid="w5srr9x">
-            <thead data-oid="i5g1ckx">
-              <tr className="border-b border-indigo-800/30" data-oid="zebyqos">
+      <div className="space-card" data-oid="pcll.ws">
+        <div className="overflow-x-auto" data-oid=".14puwu">
+          <table className="w-full" data-oid="v53m0.5">
+            <thead data-oid="4g0uy-m">
+              <tr className="border-b border-indigo-800/30" data-oid="sjb:-iv">
                 <th
                   className="text-left p-4 text-indigo-100"
-                  data-oid="15hn9ig"
+                  data-oid="p1ygsyz"
                 >
                   会话ID
                 </th>
                 <th
                   className="text-left p-4 text-indigo-100"
-                  data-oid="84ha4k_"
+                  data-oid="kh1z2_1"
                 >
                   项目
                 </th>
                 <th
                   className="text-left p-4 text-indigo-100"
-                  data-oid="te1.aud"
+                  data-oid="7or:hgy"
                 >
                   参与代理
                 </th>
                 <th
                   className="text-left p-4 text-indigo-100"
-                  data-oid="9lz_396"
+                  data-oid="2a4k-cp"
                 >
                   目标
                 </th>
                 <th
                   className="text-left p-4 text-indigo-100"
-                  data-oid="v0a7zn:"
+                  data-oid=":0k26ak"
                 >
                   开始时间
                 </th>
                 <th
                   className="text-left p-4 text-indigo-100"
-                  data-oid="jx1320w"
+                  data-oid="_-aajdf"
                 >
                   持续时间
                 </th>
                 <th
                   className="text-left p-4 text-indigo-100"
-                  data-oid="nb55yr3"
+                  data-oid="z8_9pkj"
                 >
                   状态
                 </th>
                 <th
                   className="text-right p-4 text-indigo-100"
-                  data-oid="iubjke8"
+                  data-oid="fbw7jcy"
                 >
                   操作
                 </th>
               </tr>
             </thead>
-            <tbody data-oid="8or7-oe">
+            <tbody data-oid="9sbb-o9">
               <tr
                 className="border-b border-indigo-800/20 hover:bg-indigo-900/20"
-                data-oid="ege8m.k"
+                data-oid="b2h-9et"
               >
-                <td className="p-4 text-indigo-100" data-oid="q6u9w33">
+                <td className="p-4 text-indigo-100" data-oid="v2ch-ys">
                   #CS001
                 </td>
-                <td className="p-4 text-indigo-100" data-oid="w5t87ij">
+                <td className="p-4 text-indigo-100" data-oid="-x83ql0">
                   智能代理系统
                 </td>
-                <td className="p-4 text-indigo-300/70" data-oid="td4.dm1">
+                <td className="p-4 text-indigo-300/70" data-oid="oveqxxz">
                   产品经理, 架构师, 开发者
                 </td>
-                <td className="p-4 text-indigo-300/70" data-oid="gvzir.0">
+                <td className="p-4 text-indigo-300/70" data-oid="klsq4_-">
                   首页UI实现
                 </td>
-                <td className="p-4 text-indigo-300/70" data-oid="ai_0g26">
+                <td className="p-4 text-indigo-300/70" data-oid="adwxpv4">
                   2023-08-15 14:30
                 </td>
-                <td className="p-4 text-indigo-300/70" data-oid="f_9l6ru">
+                <td className="p-4 text-indigo-300/70" data-oid="sbje-3i">
                   45分钟
                 </td>
-                <td className="p-4" data-oid="io5jydy">
+                <td className="p-4" data-oid="wna3xau">
                   <span
                     className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full"
-                    data-oid="aqwf5j9"
+                    data-oid="qcjjpca"
                   >
                     已完成
                   </span>
                 </td>
-                <td className="p-4 text-right" data-oid="82cu.rr">
+                <td className="p-4 text-right" data-oid="rkfknni">
                   <Button
                     variant="outline"
                     size="sm"
                     className="mr-2"
-                    data-oid="5mlusk3"
+                    data-oid="mj5:6:z"
                   >
                     查看
                   </Button>
-                  <Button size="sm" data-oid="2435p4t">
+                  <Button size="sm" data-oid="0sq.il2">
                     继续
                   </Button>
                 </td>
               </tr>
               <tr
                 className="border-b border-indigo-800/20 hover:bg-indigo-900/20"
-                data-oid="3:8pynf"
+                data-oid="hqor2ec"
               >
-                <td className="p-4 text-indigo-100" data-oid="w41l333">
+                <td className="p-4 text-indigo-100" data-oid="u87dyqn">
                   #CS002
                 </td>
-                <td className="p-4 text-indigo-100" data-oid="x8sg2mg">
+                <td className="p-4 text-indigo-100" data-oid="vouxcsk">
                   个人网站重构
                 </td>
-                <td className="p-4 text-indigo-300/70" data-oid="_yyz3fb">
+                <td className="p-4 text-indigo-300/70" data-oid="-e.ts3g">
                   架构师, 开发者, 文档工程师
                 </td>
-                <td className="p-4 text-indigo-300/70" data-oid="dfje-rc">
+                <td className="p-4 text-indigo-300/70" data-oid="s8l:xts">
                   数据模型设计
                 </td>
-                <td className="p-4 text-indigo-300/70" data-oid="iq2r2tb">
+                <td className="p-4 text-indigo-300/70" data-oid="x56fdzd">
                   2023-08-20 10:15
                 </td>
-                <td className="p-4 text-indigo-300/70" data-oid="43o9tbr">
+                <td className="p-4 text-indigo-300/70" data-oid="8s9.k-q">
                   1小时30分钟
                 </td>
-                <td className="p-4" data-oid="sgcfyfz">
+                <td className="p-4" data-oid="ir_a-1o">
                   <span
                     className="px-2 py-1 bg-indigo-500/20 text-indigo-400 text-xs rounded-full"
-                    data-oid="q1ybi9q"
+                    data-oid="91xeb3d"
                   >
                     进行中
                   </span>
                 </td>
-                <td className="p-4 text-right" data-oid="r-y5tso">
+                <td className="p-4 text-right" data-oid="w9_-8br">
                   <Button
                     variant="outline"
                     size="sm"
                     className="mr-2"
-                    data-oid="n_o8i7p"
+                    data-oid="0tysl83"
                   >
                     查看
                   </Button>
-                  <Button size="sm" data-oid="0b64iiu">
+                  <Button size="sm" data-oid="9sxm0aj">
                     继续
                   </Button>
                 </td>
               </tr>
               <tr
                 className="border-b border-indigo-800/20 hover:bg-indigo-900/20"
-                data-oid="xxkagzn"
+                data-oid="-dcm0p1"
               >
-                <td className="p-4 text-indigo-100" data-oid="aclxj-c">
+                <td className="p-4 text-indigo-100" data-oid="w9nzyd7">
                   #CS003
                 </td>
-                <td className="p-4 text-indigo-100" data-oid="rg634b8">
+                <td className="p-4 text-indigo-100" data-oid=".72qegr">
                   数据可视化工具
                 </td>
-                <td className="p-4 text-indigo-300/70" data-oid=".lc-.ra">
+                <td className="p-4 text-indigo-300/70" data-oid="ltsvjls">
                   产品经理, 开发者
                 </td>
-                <td className="p-4 text-indigo-300/70" data-oid="i_eae.j">
+                <td className="p-4 text-indigo-300/70" data-oid="40-s96h">
                   API设计与规范
                 </td>
-                <td className="p-4 text-indigo-300/70" data-oid="1a.1_xj">
+                <td className="p-4 text-indigo-300/70" data-oid="-d6omq4">
                   2023-08-22 16:45
                 </td>
-                <td className="p-4 text-indigo-300/70" data-oid="y3y_djh">
+                <td className="p-4 text-indigo-300/70" data-oid="skr579m">
                   55分钟
                 </td>
-                <td className="p-4" data-oid="hihg4hc">
+                <td className="p-4" data-oid="9dbqx2.">
                   <span
                     className="px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded-full"
-                    data-oid="umgh0sz"
+                    data-oid="w4s4d89"
                   >
                     已暂停
                   </span>
                 </td>
-                <td className="p-4 text-right" data-oid="cnk13v:">
+                <td className="p-4 text-right" data-oid="8w_w85o">
                   <Button
                     variant="outline"
                     size="sm"
                     className="mr-2"
-                    data-oid="ia7w51m"
+                    data-oid="wj2wsti"
                   >
                     查看
                   </Button>
-                  <Button size="sm" data-oid="pa1huy4">
+                  <Button size="sm" data-oid="jhd1u_q">
                     继续
                   </Button>
                 </td>
@@ -235,16 +235,16 @@ export default function CollaborationHistoryPage() {
 
         <div
           className="flex justify-between items-center mt-6"
-          data-oid="-z:1l3t"
+          data-oid="drigq86"
         >
-          <div className="text-indigo-300/70" data-oid="lw1w0d9">
+          <div className="text-indigo-300/70" data-oid="-de6.wg">
             显示 1-3 条，共 3 条记录
           </div>
-          <div className="flex space-x-2" data-oid="ilp8d04">
-            <Button variant="outline" size="sm" disabled data-oid="fcp:l:9">
+          <div className="flex space-x-2" data-oid="9oc18tq">
+            <Button variant="outline" size="sm" disabled data-oid="b-6buvf">
               上一页
             </Button>
-            <Button variant="outline" size="sm" disabled data-oid="lfxcmva">
+            <Button variant="outline" size="sm" disabled data-oid="5d-wnpm">
               下一页
             </Button>
           </div>

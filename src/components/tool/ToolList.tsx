@@ -10,7 +10,7 @@ import { useSearchParams } from "next/navigation";
 import { TTool } from "@/types/tool-types";
 import ToolCard from "./ToolCard";
 import { Input } from "@/components/ui/input";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/components/ui/toast-unified";
 
 /**
  * 工具列表属性接口
@@ -123,16 +123,16 @@ export const ToolList: React.FC<IToolListProps> = ({ initialTools = [] }) => {
   };
 
   return (
-    <div className="space-y-6" data-oid="flo-zy5">
+    <div className="space-y-6" data-oid="e65r0qg">
       {/* 搜索框 */}
-      <div className="relative" data-oid="hw5vpkw">
+      <div className="relative" data-oid="6_diifl">
         <Input
           type="text"
           placeholder="搜索工具..."
           value={searchQuery}
           onChange={handleSearch}
           className="bg-slate-800/40 border-slate-700 text-white placeholder:text-gray-400 focus-visible:ring-indigo-500"
-          data-oid="_r7sgz8"
+          data-oid="t0urfs4"
         />
       </div>
 
@@ -140,11 +140,11 @@ export const ToolList: React.FC<IToolListProps> = ({ initialTools = [] }) => {
       {isLoading && (
         <div
           className="flex justify-center items-center py-20"
-          data-oid="-o8e-1c"
+          data-oid="il53zhr"
         >
           <div
             className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-500"
-            data-oid="ll56rng"
+            data-oid="bjl0pd1"
           ></div>
         </div>
       )}
@@ -153,9 +153,9 @@ export const ToolList: React.FC<IToolListProps> = ({ initialTools = [] }) => {
       {error && !isLoading && (
         <div
           className="bg-red-900/30 border border-red-800 rounded-lg p-4 text-red-300"
-          data-oid="3vip10m"
+          data-oid="_qc1:3c"
         >
-          <p className="text-center" data-oid="kshta26">
+          <p className="text-center" data-oid="u9s0:r9">
             {error}
           </p>
         </div>
@@ -167,20 +167,20 @@ export const ToolList: React.FC<IToolListProps> = ({ initialTools = [] }) => {
           {filteredTools.length > 0 ? (
             <div
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
-              data-oid="_qnzmkc"
+              data-oid="a8hn1t5"
             >
               {filteredTools.map((tool) => (
                 <ToolCard
                   key={tool.id}
                   tool={tool}
                   onClick={handleToolClick}
-                  data-oid="6w30_t6"
+                  data-oid="3f9n55j"
                 />
               ))}
             </div>
           ) : (
-            <div className="text-center py-10" data-oid="2s49e79">
-              <p className="text-gray-400" data-oid="g22y4cb">
+            <div className="text-center py-10" data-oid="5jsdf6e">
+              <p className="text-gray-400" data-oid="uirh-dp">
                 没有找到匹配的工具
               </p>
             </div>

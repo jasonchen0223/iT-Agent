@@ -9,9 +9,10 @@ import messageRouter, {
 
 export {
     messageRouter,
-    MessageRouter,
-    IMessageRouteRule,
-    TMessagePriority
+    MessageRouter
 };
+
+// 导出接口和类型
+export type { IMessageRouteRule, TMessagePriority };
 
 export default messageRouter; 

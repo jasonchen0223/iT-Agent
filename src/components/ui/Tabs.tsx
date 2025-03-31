@@ -1,24 +1,27 @@
-// components/ui/Tabs.tsx
+// components/ui/tabs.tsx
 "use client";
 
-import { useState } from "react";
+import * as React from "react";
+import * as TabsPrimitive from "@radix-ui/react-tabs";
+
 import { cn } from "@/lib/utils";
 
+// 原始的自定义Tabs组件
 interface Tab {
   id: string;
   label: string;
   disabled?: boolean;
 }
 
-interface TabsProps {
+interface BasicTabsProps {
   tabs: Tab[];
   defaultTab?: string;
   children: React.ReactNode;
   className?: string;
 }
 
-export function Tabs({ tabs, defaultTab, children, className }: TabsProps) {
-  const [activeTab, setActiveTab] = useState(defaultTab || tabs[0].id);
+export function BasicTabs({ tabs, defaultTab, children, className }: BasicTabsProps) {
+  const [activeTab, setActiveTab] = React.useState(defaultTab || tabs[0].id);
 
   // 找到所有子元素中与当前活动标签匹配的元素
   const findActiveChild = () => {
@@ -36,11 +39,11 @@ export function Tabs({ tabs, defaultTab, children, className }: TabsProps) {
   };
 
   return (
-    <div className={className} data-oid="d5laim5">
-      <div className="border-b border-indigo-800/30 mb-6" data-oid="1_:9f-l">
+    <div className={className} data-oid="zptqoqv">
+      <div className="border-b border-indigo-800/30 mb-6" data-oid="s:rdibt">
         <div
           className="flex space-x-6 overflow-x-auto no-scrollbar"
-          data-oid="jx9zr2:"
+          data-oid="wt8qws3"
         >
           {tabs.map((tab) => (
             <button
@@ -54,7 +57,7 @@ export function Tabs({ tabs, defaultTab, children, className }: TabsProps) {
                 tab.disabled && "opacity-50 cursor-not-allowed",
               )}
               disabled={tab.disabled}
-              data-oid="p_-7:hi"
+              data-oid="pxz1-y:"
             >
               {tab.label}
             </button>
@@ -62,9 +65,59 @@ export function Tabs({ tabs, defaultTab, children, className }: TabsProps) {
         </div>
       </div>
 
-      <div className="tab-content" data-oid="5q2svk5">
+      <div className="tab-content" data-oid="67v8-8s">
         {findActiveChild()}
       </div>
     </div>
   );
 }
+
+// Radix UI Tabs组件
+const Tabs = TabsPrimitive.Root;
+
+const TabsList = React.forwardRef<
+  React.ElementRef<typeof TabsPrimitive.List>,
+  React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>
+>(({ className, ...props }, ref) => (
+  <TabsPrimitive.List
+    ref={ref}
+    className={cn(
+      "inline-flex h-10 items-center justify-center rounded-md bg-indigo-950/40 p-1 text-indigo-300",
+      className
+    )}
+    {...props}
+  />
+));
+TabsList.displayName = TabsPrimitive.List.displayName;
+
+const TabsTrigger = React.forwardRef<
+  React.ElementRef<typeof TabsPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>
+>(({ className, ...props }, ref) => (
+  <TabsPrimitive.Trigger
+    ref={ref}
+    className={cn(
+      "inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-indigo-900/60 data-[state=active]:text-indigo-100 data-[state=active]:shadow-sm",
+      className
+    )}
+    {...props}
+  />
+));
+TabsTrigger.displayName = TabsPrimitive.Trigger.displayName;
+
+const TabsContent = React.forwardRef<
+  React.ElementRef<typeof TabsPrimitive.Content>,
+  React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>
+>(({ className, ...props }, ref) => (
+  <TabsPrimitive.Content
+    ref={ref}
+    className={cn(
+      "mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+      className
+    )}
+    {...props}
+  />
+));
+TabsContent.displayName = TabsPrimitive.Content.displayName;
+
+export { Tabs, TabsList, TabsTrigger, TabsContent };

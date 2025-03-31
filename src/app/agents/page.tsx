@@ -1,99 +1,94 @@
 // app/agents/page.tsx
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import { Button } from "@/components/ui/Button";
-import { Search } from "@/components/ui/Search";
-import { Card } from "@/components/ui/Card";
-import { AgentList } from "@/components/agent/AgentList";
-import { TAgentRole, TAgentStatus } from "@/types/agent";
-import { useRouter } from "next/navigation";
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Search } from '@/components/ui/search';
+import { Card } from '@/components/ui/card';
+import { AgentList } from '@/components/agent/AgentList';
+import { TAgentRole, TAgentStatus } from '@/types/agent';
+import { useRouter } from 'next/navigation';
 
 // 示例代理数据
 const SAMPLE_AGENTS = [
   {
-    id: "product-manager",
-    name: "产品经理代理",
+    id: 'product-manager',
+    name: '产品经理代理',
     role: TAgentRole.PLANNER,
-    description: "专注于需求分析和功能规划，擅长用户需求挖掘和产品功能设计。",
+    description: '专注于需求分析和功能规划，擅长用户需求挖掘和产品功能设计。',
     status: TAgentStatus.IDLE,
-    color: "#8b5cf6",
-    icon: "/icons/product-manager.svg",
-    systemMessage: "",
-    capability: ["需求分析", "功能规划", "用户调研"],
+    color: '#8b5cf6',
+    icon: '📝',
+    systemMessage: '',
+    capability: ['需求分析', '功能规划', '用户调研'],
   },
   {
-    id: "architect",
-    name: "架构师代理",
+    id: 'architect',
+    name: '架构师代理',
     role: TAgentRole.ORCHESTRATOR,
-    description: "负责系统设计和技术选型，构建可扩展、高性能的系统架构方案。",
+    description: '负责系统设计和技术选型，构建可扩展、高性能的系统架构方案。',
     status: TAgentStatus.IDLE,
-    color: "#3b82f6",
-    icon: "/icons/architect.svg",
-    systemMessage: "",
-    capability: ["架构设计", "技术选型", "性能优化"],
+    color: '#3b82f6',
+    icon: '🔄',
+    systemMessage: '',
+    capability: ['架构设计', '技术选型', '性能优化'],
   },
   {
-    id: "developer",
-    name: "开发者代理",
+    id: 'developer',
+    name: '开发者代理',
     role: TAgentRole.CODER,
-    description: "前端与后端实现专家，精通多种编程语言和前后端技术。",
+    description: '前端与后端实现专家，精通多种编程语言和前后端技术。',
     status: TAgentStatus.WORKING,
-    color: "#10b981",
-    icon: "/icons/developer.svg",
-    systemMessage: "",
-    capability: ["前端开发", "后端开发", "代码审查"],
+    color: '#10b981',
+    icon: '👨‍💻',
+    systemMessage: '',
+    capability: ['前端开发', '后端开发', '代码审查'],
   },
   {
-    id: "tester",
-    name: "测试工程师代理",
+    id: 'tester',
+    name: '测试工程师代理',
     role: TAgentRole.TESTER,
-    description:
-      "专注于质量保障，设计测试用例并执行自动化测试，确保产品可靠性。",
+    description: '专注于质量保障，设计测试用例并执行自动化测试，确保产品可靠性。',
     status: TAgentStatus.WAITING,
-    color: "#059669",
-    icon: "/icons/tester.svg",
-    systemMessage: "",
-    capability: ["测试用例设计", "自动化测试", "性能测试"],
+    color: '#059669',
+    icon: '🧪',
+    systemMessage: '',
+    capability: ['测试用例设计', '自动化测试', '性能测试'],
   },
   {
-    id: "devops",
-    name: "DevOps工程师代理",
+    id: 'devops',
+    name: 'DevOps工程师代理',
     role: TAgentRole.EXECUTOR,
-    description:
-      "自动化部署与运维专家，负责持续集成、持续交付流程的实施与优化。",
+    description: '自动化部署与运维专家，负责持续集成、持续交付流程的实施与优化。',
     status: TAgentStatus.DONE,
-    color: "#ef4444",
-    icon: "/icons/devops.svg",
-    systemMessage: "",
-    capability: ["自动化部署", "持续集成", "容器化"],
+    color: '#ef4444',
+    icon: '🚀',
+    systemMessage: '',
+    capability: ['自动化部署', '持续集成', '容器化'],
   },
   {
-    id: "doc-writer",
-    name: "文档工程师代理",
+    id: 'doc-writer',
+    name: '文档工程师代理',
     role: TAgentRole.REVIEWER,
-    description: "专注于技术文档撰写与维护，确保文档的准确性、完整性和可读性。",
+    description: '专注于技术文档撰写与维护，确保文档的准确性、完整性和可读性。',
     status: TAgentStatus.ERROR,
-    color: "#f97316",
-    icon: "/icons/doc-writer.svg",
-    systemMessage: "",
-    capability: ["技术文档", "API文档", "用户指南"],
-  },
+    color: '#f97316',
+    icon: '📋',
+    systemMessage: '',
+    capability: ['技术文档', 'API文档', '用户指南'],
+  }
 ];
 
 export default function AgentsPage() {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState('');
   const [agents, setAgents] = useState(SAMPLE_AGENTS);
   const router = useRouter();
 
   // 根据搜索查询过滤代理
-  const filteredAgents = agents.filter(
-    (agent) =>
-      agent.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      agent.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      agent.capability.some((cap) =>
-        cap.toLowerCase().includes(searchQuery.toLowerCase()),
-      ),
+  const filteredAgents = agents.filter(agent =>
+    agent.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    agent.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    agent.capability.some(cap => cap.toLowerCase().includes(searchQuery.toLowerCase()))
   );
 
   // 处理代理点击
@@ -107,109 +102,48 @@ export default function AgentsPage() {
   };
 
   return (
-    <div className="container mx-auto py-8" data-oid="u39v-k5">
-      <div
-        className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6"
-        data-oid="ndr37df"
-      >
-        <div data-oid="ppl1pwe">
-          <h1 className="text-2xl font-bold text-indigo-100" data-oid="u31hcyl">
-            智能代理
-          </h1>
-          <p className="text-indigo-300/70 mt-1" data-oid="bealdoz">
-            管理您的多智能代理团队
-          </p>
+    <div className="container mx-auto py-8 px-4">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+        <div>
+          <h1 className="text-2xl font-bold text-indigo-100">智能代理</h1>
+          <p className="text-indigo-300/70 mt-1">管理您的多智能代理团队</p>
         </div>
-
-        <div
-          className="flex flex-col sm:flex-row gap-3 w-full md:w-auto"
-          data-oid="wl4j2km"
-        >
-          <Search
-            placeholder="搜索代理..."
+        
+        <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+          <Search 
+            placeholder="搜索代理..." 
             onSearch={handleSearch}
             className="w-full sm:w-64"
-            data-oid="cib_603"
           />
-
-          <Button
-            onClick={() => router.push("/agents/create")}
-            data-oid="2s5yiy1"
-          >
+          <Button onClick={() => router.push('/agents/new')}>
             创建代理
           </Button>
         </div>
       </div>
-
+      
       {/* 过滤器和状态指示器 */}
-      <Card className="mb-6 p-4" data-oid="lc4a-vp">
-        <div className="flex flex-wrap items-center gap-3" data-oid="x0uzeny">
-          <span className="text-sm text-indigo-300/70" data-oid="0zsc24x">
-            过滤器:
-          </span>
-          <span
-            className="px-3 py-1 bg-indigo-900/40 text-indigo-300 text-sm rounded-full cursor-pointer hover:bg-indigo-900/60"
-            data-oid="89bpxs2"
-          >
-            全部
-          </span>
-          <span
-            className="px-3 py-1 bg-indigo-900/20 text-indigo-300 text-sm rounded-full cursor-pointer hover:bg-indigo-900/40"
-            data-oid="de3gtca"
-          >
-            在线
-          </span>
-          <span
-            className="px-3 py-1 bg-indigo-900/20 text-indigo-300 text-sm rounded-full cursor-pointer hover:bg-indigo-900/40"
-            data-oid="k5iambk"
-          >
-            工作中
-          </span>
-          <span
-            className="px-3 py-1 bg-indigo-900/20 text-indigo-300 text-sm rounded-full cursor-pointer hover:bg-indigo-900/40"
-            data-oid="n5x01ga"
-          >
-            错误
-          </span>
-
-          <div className="ml-auto flex items-center" data-oid="rtw1_ce">
-            <span
-              className="text-sm text-indigo-300/70 mr-2"
-              data-oid="_4xg28p"
-            >
-              显示 {filteredAgents.length} 个代理
-            </span>
+      <Card className="mb-6 p-4">
+        <div className="flex flex-wrap items-center gap-3">
+          <span className="text-sm text-indigo-300/70">过滤器:</span>
+          <span className="px-3 py-1 bg-indigo-900/40 text-indigo-300 text-sm rounded-full cursor-pointer hover:bg-indigo-900/60">全部</span>
+          <span className="px-3 py-1 bg-indigo-900/20 text-indigo-300 text-sm rounded-full cursor-pointer hover:bg-indigo-900/40">在线</span>
+          <span className="px-3 py-1 bg-indigo-900/20 text-indigo-300 text-sm rounded-full cursor-pointer hover:bg-indigo-900/40">工作中</span>
+          <span className="px-3 py-1 bg-indigo-900/20 text-indigo-300 text-sm rounded-full cursor-pointer hover:bg-indigo-900/40">错误</span>
+          
+          <div className="ml-auto flex items-center">
+            <span className="text-sm text-indigo-300/70 mr-2">显示 {filteredAgents.length} 个代理</span>
           </div>
         </div>
       </Card>
-
+      
       {/* 代理列表 */}
       {filteredAgents.length > 0 ? (
-        <AgentList
-          agents={filteredAgents}
-          onAgentClick={handleAgentClick}
-          data-oid="2hk5ps5"
-        />
+        <AgentList agents={filteredAgents} onAgentClick={handleAgentClick} />
       ) : (
-        <div
-          className="bg-indigo-900/20 border border-indigo-800/30 rounded-lg p-8 text-center"
-          data-oid="xy:ean_"
-        >
-          <h3
-            className="text-xl font-semibold text-indigo-100 mb-2"
-            data-oid=":u1m1k4"
-          >
-            未找到代理
-          </h3>
-          <p className="text-indigo-300/70 mb-4" data-oid="tyab9.a">
-            尝试调整搜索条件或创建新的代理
-          </p>
-          <Button
-            onClick={() => router.push("/agents/create")}
-            data-oid="rsn93kb"
-          >
-            创建代理
-          </Button>
+        <div className="bg-indigo-900/20 border border-indigo-800/30 rounded-lg p-8 text-center">
+          <h3 className="text-xl font-semibold text-indigo-100 mb-2">未找到代理</h3>
+          <p className="text-indigo-300/70 mb-4">尝试调整搜索条件或创建新的代理</p>
+          <Button onClick={() => router.push('/agents/new')}>创建代理</Button>
         </div>
       )}
     </div>

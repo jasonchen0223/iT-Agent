@@ -78,15 +78,15 @@ async function getToolLogDetails(id: string): Promise<IToolCallLog> {
 function StatusBadge({ status }: { status: "success" | "error" }) {
   if (status === "success") {
     return (
-      <Badge className="bg-green-500" data-oid="aektlpy">
-        <CheckCircle className="w-3 h-3 mr-1" data-oid="gi5djh8" />
+      <Badge className="bg-green-500" data-oid="2-581kn">
+        <CheckCircle className="w-3 h-3 mr-1" data-oid="xls:4rc" />
         成功
       </Badge>
     );
   } else {
     return (
-      <Badge className="bg-red-500" data-oid="a401fz8">
-        <AlertCircle className="w-3 h-3 mr-1" data-oid="0:.q5kp" />
+      <Badge className="bg-red-500" data-oid="801wq1g">
+        <AlertCircle className="w-3 h-3 mr-1" data-oid="0r7ghif" />
         失败
       </Badge>
     );
@@ -104,17 +104,17 @@ function CodeBlock({ title, content }: { title: string; content: any }) {
     typeof content === "object" ? JSON.stringify(content, null, 2) : content;
 
   return (
-    <div className="space-y-2" data-oid="2zih2:q">
-      <h3 className="text-lg font-medium text-gray-300" data-oid="6lz913t">
+    <div className="space-y-2" data-oid="n16i8wt">
+      <h3 className="text-lg font-medium text-gray-300" data-oid="3frkk4w">
         {title}
       </h3>
       <div
         className="bg-gray-900 rounded-lg p-4 overflow-x-auto border border-gray-800"
-        data-oid="paj3tc6"
+        data-oid="y6d0b8d"
       >
         <pre
           className="text-sm text-gray-300 font-mono whitespace-pre-wrap"
-          data-oid="9azxh9f"
+          data-oid="9j3hlcp"
         >
           {jsonContent}
         </pre>
@@ -144,109 +144,109 @@ export default async function ToolLogDetail({
     );
 
     return (
-      <div className="container mx-auto px-4 py-8 max-w-5xl" data-oid="_8v_xs1">
+      <div className="container mx-auto px-4 py-8 max-w-5xl" data-oid="1s68rmp">
         {/* 返回按钮 */}
         <Link
           href="/tool-logs"
           className="inline-flex items-center text-blue-400 hover:text-blue-500 mb-6"
-          data-oid="yjruf8m"
+          data-oid="cn23cz."
         >
-          <ArrowLeft className="w-4 h-4 mr-2" data-oid="0w:w2nv" />
+          <ArrowLeft className="w-4 h-4 mr-2" data-oid="cntpfyz" />
           返回日志列表
         </Link>
 
         {/* 标题区域 */}
         <div
           className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6"
-          data-oid="q0s3o7f"
+          data-oid="q2rhcp_"
         >
           <h1
             className="text-2xl font-bold mb-2 md:mb-0 text-blue-400"
-            data-oid="jcws1ij"
+            data-oid="wtcb::-"
           >
             工具调用详情
           </h1>
-          <StatusBadge status={log.status} data-oid="xiqq5uo" />
+          <StatusBadge status={log.status} data-oid="lf5whof" />
         </div>
 
         {/* 主要信息卡片 */}
         <div
           className="bg-gray-800 rounded-lg p-6 mb-8 border border-gray-700"
-          data-oid="buf27jx"
+          data-oid="qq1agdg"
         >
           <div
             className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 mb-6"
-            data-oid="ys-psmh"
+            data-oid="r05yywb"
           >
-            <div data-oid="wp5-f6t">
-              <span className="text-gray-400" data-oid="zh3gzpv">
+            <div data-oid="dmh992w">
+              <span className="text-gray-400" data-oid="a19kmqh">
                 工具ID:
               </span>
-              <span className="ml-2 font-medium" data-oid="9ym6sfy">
+              <span className="ml-2 font-medium" data-oid="jyj-leu">
                 {log.toolId}
               </span>
             </div>
 
-            <div data-oid=":g.v0w1">
-              <span className="text-gray-400" data-oid="_duhvwm">
+            <div data-oid=":rqv_y.">
+              <span className="text-gray-400" data-oid="o1tk:4p">
                 日志ID:
               </span>
-              <span className="ml-2 font-mono text-sm" data-oid="1d0b6nl">
+              <span className="ml-2 font-mono text-sm" data-oid="-qw4bql">
                 {log.id}
               </span>
             </div>
 
-            <div data-oid="d5wrq56">
-              <span className="text-gray-400" data-oid="ayw8maz">
+            <div data-oid="sl2cvbw">
+              <span className="text-gray-400" data-oid="k9ucvbf">
                 会话ID:
               </span>
-              <span className="ml-2 font-mono text-sm" data-oid="bmipsbl">
+              <span className="ml-2 font-mono text-sm" data-oid="zm95bvz">
                 {log.sessionId}
               </span>
             </div>
 
-            <div data-oid="p73yrp5">
-              <span className="text-gray-400" data-oid="spk_r03">
+            <div data-oid="tdy4kwm">
+              <span className="text-gray-400" data-oid="cq90ifh">
                 代理ID:
               </span>
-              <span className="ml-2 font-mono text-sm" data-oid="nojg8nc">
+              <span className="ml-2 font-mono text-sm" data-oid="d_9it-r">
                 {log.agentId}
               </span>
             </div>
 
-            <div className="flex items-center" data-oid="qx_3ujo">
-              <span className="text-gray-400" data-oid="dhbisfx">
+            <div className="flex items-center" data-oid="5ipsaoy">
+              <span className="text-gray-400" data-oid="xt6lgr6">
                 开始时间:
               </span>
-              <span className="ml-2 flex items-center" data-oid=".m82:4v">
+              <span className="ml-2 flex items-center" data-oid="p99ltam">
                 <Clock
                   className="w-3 h-3 mr-1 text-gray-500"
-                  data-oid=":77p272"
+                  data-oid="7.eg93y"
                 />
 
                 {formatDate(log.startTime)}
               </span>
             </div>
 
-            <div className="flex items-center" data-oid="6:7qxr9">
-              <span className="text-gray-400" data-oid="u18sosz">
+            <div className="flex items-center" data-oid=".smavqf">
+              <span className="text-gray-400" data-oid="f2.r1w-">
                 结束时间:
               </span>
-              <span className="ml-2 flex items-center" data-oid="mm2wil7">
+              <span className="ml-2 flex items-center" data-oid="1x4n4lj">
                 <Clock
                   className="w-3 h-3 mr-1 text-gray-500"
-                  data-oid="e489:tz"
+                  data-oid="7ywnpad"
                 />
 
                 {formatDate(log.endTime)}
               </span>
             </div>
 
-            <div className="flex items-center" data-oid="sa642js">
-              <span className="text-gray-400" data-oid="4r_ctvs">
+            <div className="flex items-center" data-oid="y4qy5kc">
+              <span className="text-gray-400" data-oid="aje4wy:">
                 执行时间:
               </span>
-              <span className="ml-2" data-oid="2nh-w48">
+              <span className="ml-2" data-oid="zg1d05c">
                 {log.executionTime}ms ({executionDuration})
               </span>
             </div>
@@ -254,36 +254,36 @@ export default async function ToolLogDetail({
         </div>
 
         {/* 参数和结果 */}
-        <div className="space-y-8" data-oid="462.gxc">
+        <div className="space-y-8" data-oid="uhfa6w:">
           {/* 参数 */}
-          <CodeBlock title="调用参数" content={log.params} data-oid="2j8xbvx" />
+          <CodeBlock title="调用参数" content={log.params} data-oid="ks:759h" />
 
           {/* 结果或错误 */}
           {log.status === "success" ? (
             <CodeBlock
               title="调用结果"
               content={log.result}
-              data-oid=":2o2m.q"
+              data-oid="8wnfd:6"
             />
           ) : (
-            <div className="space-y-2" data-oid="x8ze6xf">
+            <div className="space-y-2" data-oid="o-5si_3">
               <h3
                 className="text-lg font-medium text-red-400"
-                data-oid="zlyjfri"
+                data-oid="2bs5vfm"
               >
                 错误信息
               </h3>
               <div
                 className="bg-red-900/20 rounded-lg p-4 border border-red-800"
-                data-oid="f1jf_i5"
+                data-oid=".67uvfo"
               >
-                <div className="flex items-start" data-oid="gwll_zx">
+                <div className="flex items-start" data-oid="6hri7m5">
                   <AlertCircle
                     className="w-5 h-5 mr-2 text-red-500 mt-0.5"
-                    data-oid="zsqn0om"
+                    data-oid="._ncdca"
                   />
 
-                  <p className="text-red-300" data-oid="ch0xjaj">
+                  <p className="text-red-300" data-oid="jye610h">
                     {log.error}
                   </p>
                 </div>

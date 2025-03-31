@@ -65,14 +65,14 @@ export function NotificationItem({
             stroke="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
-            data-oid="t3nel26"
+            data-oid="n76pa11"
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
               d="M5 13l4 4L19 7"
-              data-oid="pbbj2ar"
+              data-oid="a4_o-kt"
             />
           </svg>
         );
@@ -85,14 +85,14 @@ export function NotificationItem({
             stroke="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
-            data-oid="rzbjaf-"
+            data-oid="rd2lfg3"
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
               d="M6 18L18 6M6 6l12 12"
-              data-oid="y4jouun"
+              data-oid="z3g5bsc"
             />
           </svg>
         );
@@ -105,14 +105,14 @@ export function NotificationItem({
             stroke="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
-            data-oid="x9gaol1"
+            data-oid="h0x:qcj"
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
               d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-              data-oid=":xskuid"
+              data-oid="11iq1:i"
             />
           </svg>
         );
@@ -125,14 +125,14 @@ export function NotificationItem({
             stroke="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
-            data-oid=":2q4u-0"
+            data-oid="x8nj1k1"
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
               d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              data-oid="gm4h_78"
+              data-oid="6qd9a_y"
             />
           </svg>
         );
@@ -149,28 +149,28 @@ export function NotificationItem({
         getBgColor(),
         isVisible ? "translate-x-0 opacity-100" : "translate-x-full opacity-0",
       )}
-      data-oid="b_7kw3s"
+      data-oid="rj8xbxv"
     >
-      <div className="flex" data-oid="ozbdmfi">
-        <div className="flex-shrink-0" data-oid="92p.fho">
+      <div className="flex" data-oid="_c5:61n">
+        <div className="flex-shrink-0" data-oid="tzshhaw">
           {getIcon()}
         </div>
-        <div className="ml-3 w-0 flex-1" data-oid="k3d_exs">
-          <p className="text-sm font-medium text-white" data-oid="f713cb4">
+        <div className="ml-3 w-0 flex-1" data-oid="bfje309">
+          <p className="text-sm font-medium text-white" data-oid="a8g.:_8">
             {title}
           </p>
-          <p className="mt-1 text-sm text-indigo-100/80" data-oid="mfgu06l">
+          <p className="mt-1 text-sm text-indigo-100/80" data-oid="az3fc8a">
             {message}
           </p>
         </div>
-        <div className="ml-4 flex-shrink-0 flex" data-oid="j9e17j_">
+        <div className="ml-4 flex-shrink-0 flex" data-oid="uv1sr-b">
           <button
             className="inline-flex text-indigo-300 hover:text-white focus:outline-none"
             onClick={() => {
               setIsVisible(false);
               setTimeout(() => onClose(id), 300);
             }}
-            data-oid="9pb17hq"
+            data-oid="2scbfq:"
           >
             <svg
               className="h-5 w-5"
@@ -178,14 +178,14 @@ export function NotificationItem({
               stroke="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
-              data-oid="rn-aerl"
+              data-oid="ctb.lsc"
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
                 d="M6 18L18 6M6 6l12 12"
-                data-oid="5g-4fvg"
+                data-oid="g4qgp2g"
               />
             </svg>
           </button>
@@ -212,7 +212,7 @@ export function NotificationContainer({
   return createPortal(
     <div
       className="fixed top-4 right-4 z-50 flex flex-col items-end"
-      data-oid="1gvibew"
+      data-oid="vl2agsv"
     >
       {children}
     </div>,

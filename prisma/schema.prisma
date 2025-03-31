@@ -71,6 +71,7 @@ model Session {
   toolCalls   ToolCall[]
   collaborationInstances AgentCollaborationInstance[]
   agentTasks  AgentTask[]
+  toolExecutions ToolExecutionHistory[] // 新增反向关系
   
   // 时间戳
   createdAt   DateTime @default(now())
@@ -140,7 +141,6 @@ model AgentTeam {
   // 关联关系
   user        User?    @relation("UserToAgentTeam", fields: [createdBy], references: [id], onDelete: SetNull)
   members     AgentTeamMember[]
-  sessions    Session[]
 }
 
 // 代理团队成员模型
@@ -154,10 +154,12 @@ model AgentTeamMember {
   metadata    String?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
+  sessionId   String?  // 新增会话ID字段来建立关系
   
   // 关联关系
   team        AgentTeam @relation(fields: [teamId], references: [id], onDelete: Cascade)
   config      AgentConfig @relation(fields: [configId], references: [id], onDelete: Cascade)
+  session     Session?  @relation(fields: [sessionId], references: [id]) // 新增会话关系
   
   // 修复关系
   agent       Agent? @relation(fields: [agentId], references: [id])
@@ -198,6 +200,7 @@ model Agent {
   updatedAt    DateTime          @updatedAt
   teamMembers  AgentTeamMember[]
   tasks        AgentTask[]
+  toolExecutions ToolExecutionHistory[] // 新增反向关系
 }
 
 // 代理协作模型
@@ -258,9 +261,96 @@ model AgentTask {
   parent                 AgentTask?                  @relation("TaskToSubTask", fields: [parentTaskId], references: [id])
   subTasks               AgentTask[]                 @relation("TaskToSubTask")
   collaborationInstance  AgentCollaborationInstance? @relation(fields: [collaborationInstanceId], references: [id])
+  toolExecutions         ToolExecutionHistory[]      // 新增反向关系
 
   @@index([assignedAgentId])
   @@index([sessionId])
   @@index([parentTaskId])
   @@index([collaborationInstanceId])
+}
+
+// 工具模型
+model Tool {
+  id          String      @id @default(cuid())
+  name        String      @unique
+  description String
+  type        String
+  status      String      @default("available")
+  icon        String?
+  version     String?
+  source      String      @default("internal")
+  permissions String       // 使用逗号分隔的权限列表，替代String[]
+  metadata    String?      // JSON字符串，替代Json?
+  
+  // 关联
+  configs             ToolConfig[]
+  executionHistories  ToolExecutionHistory[]
+  
+  // 时间戳
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+}
+
+// 工具配置模型
+model ToolConfig {
+  id         String    @id @default(cuid())
+  toolId     String
+  parameters String     // JSON字符串，替代Json
+  enabled    Boolean   @default(true)
+  
+  // 关联
+  tool       Tool      @relation(fields: [toolId], references: [id], onDelete: Cascade)
+  
+  // 时间戳
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+
+  @@index([toolId])
+}
+
+// 工具执行历史模型
+model ToolExecutionHistory {
+  id         String    @id @default(cuid())
+  toolId     String
+  agentId    String?
+  sessionId  String?
+  taskId     String?
+  action     String
+  parameters String?    // JSON字符串，替代Json?
+  result     String?    // JSON字符串，替代Json?
+  status     String
+  startTime  DateTime
+  endTime    DateTime
+  duration   Int
+  error      String?
+  
+  // 关联
+  tool       Tool      @relation(fields: [toolId], references: [id], onDelete: Cascade)
+  agent      Agent?    @relation(fields: [agentId], references: [id], onDelete: SetNull)
+  session    Session?  @relation(fields: [sessionId], references: [id], onDelete: SetNull)
+  task       AgentTask?     @relation(fields: [taskId], references: [id], onDelete: SetNull)
+  
+  // 时间戳
+  createdAt  DateTime  @default(now())
+
+  @@index([toolId])
+  @@index([agentId])
+  @@index([sessionId])
+  @@index([taskId])
+}
+
+// MCP工具包装器模型
+model McpToolWrapper {
+  id              String    @id @default(cuid())
+  name            String    @unique
+  description     String
+  mcpToolId       String    @unique
+  requestTemplate String     // JSON字符串，替代Json
+  responseMapping String     // JSON字符串，替代Json
+  enabled         Boolean   @default(true)
+  metadata        String?    // JSON字符串，替代Json?
+  
+  // 时间戳
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
 }

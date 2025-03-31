@@ -3,7 +3,7 @@
 
 import { createPortal } from "react-dom";
 import { useEffect, useState, Fragment } from "react";
-import { Button } from "./Button";
+import { Button } from './button';
 import { cn } from "@/lib/utils";
 
 interface DialogProps {
@@ -78,7 +78,7 @@ export function Dialog({
         )}
         onClick={handleBackdropClick}
         aria-hidden="true"
-        data-oid="u2rxf:4"
+        data-oid="fhp7vd7"
       />
 
       {/* 对话框内容 */}
@@ -87,32 +87,32 @@ export function Dialog({
           "fixed left-[50%] top-[50%] z-50 w-full max-w-md translate-x-[-50%] translate-y-[-50%] transition-all duration-150",
           open && !isClosing ? "scale-100 opacity-100" : "scale-95 opacity-0",
         )}
-        data-oid="lnk8qrm"
+        data-oid="98qffz."
       >
         <div
           className="bg-gradient-to-b from-indigo-950/90 to-black/90 border border-indigo-800/30 rounded-lg shadow-xl overflow-hidden"
-          data-oid="a2lst7q"
+          data-oid="efj5tr5"
         >
           {/* 对话框标题 */}
           <div
             className="flex flex-col space-y-1.5 p-6 border-b border-indigo-800/30"
-            data-oid="wjsrcp8"
+            data-oid="c4kbmtq"
           >
             <h2
               className="text-xl font-semibold text-indigo-100"
-              data-oid="-s-:7r7"
+              data-oid="d7ybrod"
             >
               {title}
             </h2>
             {description && (
-              <p className="text-sm text-indigo-300/70" data-oid="ohbq9uc">
+              <p className="text-sm text-indigo-300/70" data-oid="fm42tk9">
                 {description}
               </p>
             )}
           </div>
 
           {/* 对话框内容 */}
-          <div className="p-6" data-oid="h9_vr:0">
+          <div className="p-6" data-oid="0e.kpao">
             {children}
           </div>
 
@@ -120,23 +120,23 @@ export function Dialog({
           {footer ? (
             <div
               className="flex items-center justify-end space-x-3 p-6 border-t border-indigo-800/30 bg-indigo-950/50"
-              data-oid="ge497.a"
+              data-oid="66noxgk"
             >
               {footer}
             </div>
           ) : (
             <div
               className="flex items-center justify-end space-x-3 p-6 border-t border-indigo-800/30 bg-indigo-950/50"
-              data-oid="ej0ijwu"
+              data-oid=":zsx8-f"
             >
               <Button
                 variant="outline"
                 onClick={handleClose}
-                data-oid="_ub.:-d"
+                data-oid="bkinuxp"
               >
                 取消
               </Button>
-              <Button onClick={handleClose} data-oid=".2cojc.">
+              <Button onClick={handleClose} data-oid="jw5icf9">
                 确认
               </Button>
             </div>
@@ -186,7 +186,7 @@ export function useDialog() {
               dialogProps.onCancel?.();
               closeDialog();
             }}
-            data-oid="j6zckyi"
+            data-oid="v.b0jf-"
           >
             取消
           </Button>
@@ -195,13 +195,13 @@ export function useDialog() {
               dialogProps.onConfirm?.();
               closeDialog();
             }}
-            data-oid="e9d.ax6"
+            data-oid="n.5chr0"
           >
             确认
           </Button>
         </>
       }
-      data-oid="cnbtgdr"
+      data-oid="zvpjkv8"
     />
   );
 

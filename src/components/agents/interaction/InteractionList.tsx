@@ -166,7 +166,7 @@ const InteractionList: React.FC<InteractionListProps> = ({
   // 渲染消息类型标签
   const renderTypeTag = (type: string) => {
     let color = "bg-gray-500";
-    let icon = <FiMessageSquare className="mr-1" data-oid="xl_3b8t" />;
+    let icon = <FiMessageSquare className="mr-1" data-oid="5ukt_bk" />;
 
     switch (type) {
       case "text":
@@ -189,7 +189,7 @@ const InteractionList: React.FC<InteractionListProps> = ({
     return (
       <span
         className={`${color} text-white text-xs px-2 py-1 rounded flex items-center`}
-        data-oid="jp0vk30"
+        data-oid=":k_xyve"
       >
         {icon} {type}
       </span>
@@ -199,53 +199,53 @@ const InteractionList: React.FC<InteractionListProps> = ({
   return (
     <div
       className="bg-gradient-to-br from-gray-900 to-indigo-900 rounded-lg shadow-xl p-4 w-full"
-      data-oid="j0.h5ko"
+      data-oid="h7i3-v0"
     >
       <div
         className="flex justify-between items-center mb-6"
-        data-oid="udc25sx"
+        data-oid="l1byusg"
       >
         <h2
           className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600"
-          data-oid="4m1g1sf"
+          data-oid="dflyvdf"
         >
           代理交互历史
         </h2>
 
-        <div className="flex space-x-2" data-oid="dzeji8e">
+        <div className="flex space-x-2" data-oid="bzggmxk">
           <button
             onClick={() => setShowFilter(!showFilter)}
             className="flex items-center space-x-1 px-3 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white transition-colors"
-            data-oid="3-jnej:"
+            data-oid="ye755rj"
           >
-            <FiFilter data-oid="j3r81ef" />
-            <span data-oid="mqui14a">筛选</span>
+            <FiFilter data-oid="snmh9o9" />
+            <span data-oid="fcv10sb">筛选</span>
           </button>
 
-          <div className="relative group" data-oid="3xk1rgu">
+          <div className="relative group" data-oid="8:6jeij">
             <button
               className="flex items-center space-x-1 px-3 py-2 rounded-lg bg-teal-600 hover:bg-teal-700 text-white transition-colors"
-              data-oid="::kvzed"
+              data-oid="-3:8sbc"
             >
-              <FiDownload data-oid="zmwassq" />
-              <span data-oid="hq4at8t">导出</span>
+              <FiDownload data-oid="zqw.pqm" />
+              <span data-oid="4p9ry2n">导出</span>
             </button>
 
             <div
               className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg p-2 hidden group-hover:block z-10"
-              data-oid="ugyhuat"
+              data-oid="opkypox"
             >
               <button
                 onClick={() => exportData("json")}
                 className="w-full text-left px-4 py-2 hover:bg-gray-700 rounded"
-                data-oid="v6yhpwu"
+                data-oid="kn5t_fz"
               >
                 导出为 JSON
               </button>
               <button
                 onClick={() => exportData("csv")}
                 className="w-full text-left px-4 py-2 hover:bg-gray-700 rounded"
-                data-oid="x1cu-n6"
+                data-oid=".p:qi03"
               >
                 导出为 CSV
               </button>
@@ -258,28 +258,28 @@ const InteractionList: React.FC<InteractionListProps> = ({
       {showFilter && (
         <div
           className="mb-6 p-4 bg-gray-800 bg-opacity-50 rounded-lg backdrop-blur-sm"
-          data-oid="t83mvj9"
+          data-oid="517fe.y"
         >
           <h3
             className="text-xl font-semibold mb-4 text-white"
-            data-oid="rawjmrk"
+            data-oid="svmmr4q"
           >
             筛选条件
           </h3>
 
           <div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4"
-            data-oid="f-64sww"
+            data-oid="-ep.18t"
           >
-            <div data-oid="9ozli8m">
-              <label className="block text-gray-300 mb-1" data-oid="y07fj10">
+            <div data-oid="teyochq">
+              <label className="block text-gray-300 mb-1" data-oid="wsyiqg4">
                 关键词
               </label>
               <div
                 className="flex items-center bg-gray-700 rounded-lg px-3 py-2"
-                data-oid="n0xcpx6"
+                data-oid="gw9umit"
               >
-                <FiSearch className="text-gray-400 mr-2" data-oid="z5ov7:." />
+                <FiSearch className="text-gray-400 mr-2" data-oid="3z4haol" />
                 <input
                   type="text"
                   value={filter.keywords}
@@ -288,13 +288,13 @@ const InteractionList: React.FC<InteractionListProps> = ({
                   }
                   placeholder="搜索关键词..."
                   className="bg-transparent border-none focus:outline-none text-white w-full"
-                  data-oid="kg:6b0_"
+                  data-oid="fuysq4a"
                 />
               </div>
             </div>
 
-            <div data-oid="3t9rru_">
-              <label className="block text-gray-300 mb-1" data-oid="4l9w5-m">
+            <div data-oid="5f:ocwi">
+              <label className="block text-gray-300 mb-1" data-oid="2yl5s7q">
                 会话ID
               </label>
               <input
@@ -305,19 +305,19 @@ const InteractionList: React.FC<InteractionListProps> = ({
                 }
                 placeholder="输入会话ID"
                 className="w-full bg-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                data-oid="_ph9ij5"
+                data-oid="sdbi-z3"
               />
             </div>
 
-            <div data-oid="y9-e9kz">
-              <label className="block text-gray-300 mb-1" data-oid=":q3el2o">
+            <div data-oid="9xph-mo">
+              <label className="block text-gray-300 mb-1" data-oid="oq6cweg">
                 开始日期
               </label>
               <div
                 className="flex items-center bg-gray-700 rounded-lg px-3 py-2"
-                data-oid="u4pd8pt"
+                data-oid=":jtbi3."
               >
-                <FiClock className="text-gray-400 mr-2" data-oid="svp5:8r" />
+                <FiClock className="text-gray-400 mr-2" data-oid="uurgzul" />
                 <input
                   type="date"
                   value={filter.startDate}
@@ -325,20 +325,20 @@ const InteractionList: React.FC<InteractionListProps> = ({
                     setFilter({ ...filter, startDate: e.target.value })
                   }
                   className="bg-transparent border-none focus:outline-none text-white w-full"
-                  data-oid="hx83m1l"
+                  data-oid="z10ltb1"
                 />
               </div>
             </div>
 
-            <div data-oid="vy4klq_">
-              <label className="block text-gray-300 mb-1" data-oid="68hfgbj">
+            <div data-oid="fyayy3j">
+              <label className="block text-gray-300 mb-1" data-oid="jat8osr">
                 结束日期
               </label>
               <div
                 className="flex items-center bg-gray-700 rounded-lg px-3 py-2"
-                data-oid=":d6nx_r"
+                data-oid="adcz_.d"
               >
-                <FiClock className="text-gray-400 mr-2" data-oid=":66yl0f" />
+                <FiClock className="text-gray-400 mr-2" data-oid="g370qdi" />
                 <input
                   type="date"
                   value={filter.endDate}
@@ -346,23 +346,23 @@ const InteractionList: React.FC<InteractionListProps> = ({
                     setFilter({ ...filter, endDate: e.target.value })
                   }
                   className="bg-transparent border-none focus:outline-none text-white w-full"
-                  data-oid="43my2xf"
+                  data-oid=".1.xke3"
                 />
               </div>
             </div>
           </div>
 
-          <div className="mb-4" data-oid="9ky12_b">
-            <label className="block text-gray-300 mb-1" data-oid="u1t5yga">
+          <div className="mb-4" data-oid="0d0.ttv">
+            <label className="block text-gray-300 mb-1" data-oid="24gewum">
               消息类型
             </label>
-            <div className="flex flex-wrap gap-2" data-oid="hl62x02">
+            <div className="flex flex-wrap gap-2" data-oid="cdp-82z">
               {["text", "code", "tool_call", "tool_result", "error"].map(
                 (type) => (
                   <label
                     key={type}
                     className="flex items-center space-x-2"
-                    data-oid="zi4hxo."
+                    data-oid="wdmlit1"
                   >
                     <input
                       type="checkbox"
@@ -374,10 +374,10 @@ const InteractionList: React.FC<InteractionListProps> = ({
                         setFilter({ ...filter, types: newTypes });
                       }}
                       className="rounded bg-gray-700 border-gray-600 text-indigo-600 focus:ring-indigo-500"
-                      data-oid="t7fwdyh"
+                      data-oid="3qua1o-"
                     />
 
-                    <span className="text-gray-300" data-oid="_e_re.s">
+                    <span className="text-gray-300" data-oid="5pezo0y">
                       {type}
                     </span>
                   </label>
@@ -386,18 +386,18 @@ const InteractionList: React.FC<InteractionListProps> = ({
             </div>
           </div>
 
-          <div className="flex justify-end space-x-3" data-oid="4:4ax0k">
+          <div className="flex justify-end space-x-3" data-oid="1d0pl5t">
             <button
               onClick={resetFilter}
               className="px-4 py-2 rounded-lg bg-gray-600 hover:bg-gray-700 text-white transition-colors"
-              data-oid="h_9no9g"
+              data-oid="-t:g2dq"
             >
               重置
             </button>
             <button
               onClick={applyFilter}
               className="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white transition-colors"
-              data-oid="yyi4hhw"
+              data-oid="6e1jmxo"
             >
               应用筛选
             </button>
@@ -409,27 +409,27 @@ const InteractionList: React.FC<InteractionListProps> = ({
       {error ? (
         <div
           className="p-4 mb-4 text-red-400 bg-red-900 bg-opacity-30 rounded-lg"
-          data-oid="5wypdh3"
+          data-oid="4gc:arc"
         >
-          <p data-oid=":0a__55">{error}</p>
+          <p data-oid="epz_g.t">{error}</p>
           <button
             onClick={() => loadInteractions(true)}
             className="mt-2 px-3 py-1 bg-red-700 hover:bg-red-600 rounded text-white"
-            data-oid=".ad8khc"
+            data-oid="3s3km68"
           >
             重试
           </button>
         </div>
       ) : (
         <>
-          <div className="space-y-4" data-oid="ia_nyhj">
+          <div className="space-y-4" data-oid="v:tkxga">
             {interactions.length === 0 && !loading ? (
               <div
                 className="p-8 text-center text-gray-400 bg-gray-800 bg-opacity-30 rounded-lg"
-                data-oid="lcbclz1"
+                data-oid="277qofw"
               >
-                <FiInfo className="mx-auto mb-2 text-3xl" data-oid="8r5ijzx" />
-                <p data-oid="q0ijs-2">暂无交互历史记录</p>
+                <FiInfo className="mx-auto mb-2 text-3xl" data-oid="gzsevuo" />
+                <p data-oid="be_gndu">暂无交互历史记录</p>
               </div>
             ) : (
               interactions.map((interaction) => (
@@ -437,78 +437,78 @@ const InteractionList: React.FC<InteractionListProps> = ({
                   key={interaction.id}
                   href={`/agents/${agentId}/interactions/${interaction.id}`}
                   className="block"
-                  data-oid="217j:if"
+                  data-oid="r71mo2e"
                 >
                   <div
                     className="bg-gray-800 bg-opacity-50 hover:bg-opacity-70 p-4 rounded-lg transition-all duration-200 transform hover:scale-[1.01]"
-                    data-oid="yjbsjsl"
+                    data-oid="rzb.okp"
                   >
                     <div
                       className="flex justify-between items-start mb-2"
-                      data-oid="zoecn.f"
+                      data-oid="cs4x.2c"
                     >
                       <div
                         className="flex items-center space-x-3"
-                        data-oid="h71il-p"
+                        data-oid="kh93p-0"
                       >
-                        <div data-oid="hfx1lz1">
+                        <div data-oid="wials-9">
                           {renderTypeTag(interaction.type)}
                         </div>
                         <div
                           className="text-sm text-purple-300"
-                          data-oid="inimn.w"
+                          data-oid="j1sjr59"
                         >
                           {formatTime(interaction.timestamp)}
                         </div>
                       </div>
-                      <div className="text-xs text-gray-400" data-oid="7svcmfi">
+                      <div className="text-xs text-gray-400" data-oid="_21-d-l">
                         ID: {interaction.id}
                       </div>
                     </div>
 
-                    <div className="mb-3 text-white" data-oid="t7olo4z">
+                    <div className="mb-3 text-white" data-oid="kkas79.">
                       {formatContent(interaction.content)}
                     </div>
 
                     <div
                       className="flex justify-between text-xs text-gray-400"
-                      data-oid="to0jgem"
+                      data-oid="ub9xk4v"
                     >
-                      <div className="flex space-x-4" data-oid="4wy.tv_">
-                        <div data-oid="gb16va7">
-                          <span className="text-gray-500" data-oid="qq7_n00">
+                      <div className="flex space-x-4" data-oid="-4-hxhs">
+                        <div data-oid="bpoycw7">
+                          <span className="text-gray-500" data-oid="fdmd:fz">
                             从:
                           </span>{" "}
-                          <span className="text-teal-400" data-oid="kc9rvax">
+                          <span className="text-teal-400" data-oid="003n:-4">
                             {interaction.sender.name}
                           </span>
                           <span
                             className="text-gray-500 ml-1"
-                            data-oid="4da8hiy"
+                            data-oid="3j3jmiy"
                           >
                             ({interaction.sender.role})
                           </span>
                         </div>
-                        <div data-oid=".oc:sc3">
-                          <span className="text-gray-500" data-oid="xdzavxo">
+                        <div data-oid="_cihvem">
+                          <span className="text-gray-500" data-oid="6_11jn4">
                             至:
                           </span>{" "}
-                          <span className="text-pink-400" data-oid="vw2bsb8">
+                          <span className="text-pink-400" data-oid="np.hbml">
                             {interaction.receiver.name}
                           </span>
                           <span
                             className="text-gray-500 ml-1"
-                            data-oid="6mecx.3"
+                            data-oid="w4rlpv7"
                           >
                             ({interaction.receiver.role})
                           </span>
                         </div>
                       </div>
-                      <div data-oid="f6t4r:_">
-                        <span className="text-gray-500" data-oid="kem1mlc">
+                      <div data-oid="cu4f3yi">
+                        <span className="text-gray-500" data-oid="afny.ir">
                           会话:
                         </span>{" "}
-                        <span className="text-blue-400" data-oid=".dno9az">
+                        <span className="text-blue-400" data-oid="vd_a-ic">
                           {interaction.session.name}
                         </span>
                       </div>
@@ -521,7 +521,7 @@ const InteractionList: React.FC<InteractionListProps> = ({
 
           {/* 加载更多按钮 */}
           {hasMore && (
-            <div className="mt-6 text-center" data-oid="f48_ado">
+            <div className="mt-6 text-center" data-oid="4ic76h2">
               <button
                 onClick={() => loadInteractions()}
                 disabled={loading}
@@ -530,7 +530,7 @@ const InteractionList: React.FC<InteractionListProps> = ({
                     ? "bg-gray-700 cursor-not-allowed"
                     : "bg-indigo-600 hover:bg-indigo-700"
                 } text-white transition-colors`}
-                data-oid="01ydv_2"
+                data-oid="uw6gzaf"
               >
                 {loading ? "加载中..." : "加载更多"}
               </button>

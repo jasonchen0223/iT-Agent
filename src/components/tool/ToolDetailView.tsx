@@ -24,52 +24,52 @@ export interface IToolDetailViewProps {
  */
 export const ToolDetailView: React.FC<IToolDetailViewProps> = ({ tool }) => {
   return (
-    <div className="space-y-6" data-oid="cxx0.g2">
+    <div className="space-y-6" data-oid="9w2.nb_">
       {/* 工具基本信息 */}
-      <div data-oid=":q_xgsg">
+      <div data-oid="u8ijb40">
         <h2
           className="text-xl font-semibold text-white mb-2"
-          data-oid="h2twwqu"
+          data-oid="fldckbr"
         >
           工具信息
         </h2>
         <div
           className="bg-slate-800/50 rounded-md p-4 space-y-3"
-          data-oid=":3apj-:"
+          data-oid="8a4bf8j"
         >
-          <div data-oid=".k54nq5">
-            <span className="text-gray-400" data-oid="zvmrz1t">
+          <div data-oid="ef9zagk">
+            <span className="text-gray-400" data-oid="hkyypxg">
               ID:{" "}
             </span>
-            <span className="text-white" data-oid="h-03r_p">
+            <span className="text-white" data-oid="1ukaz:w">
               {tool.id}
             </span>
           </div>
-          <div data-oid="9.xv3y_">
-            <span className="text-gray-400" data-oid="s8w7yds">
+          <div data-oid="leicaj5">
+            <span className="text-gray-400" data-oid="sswz5cl">
               类别:{" "}
             </span>
-            <Badge data-oid="uocgjeb">{tool.category}</Badge>
+            <Badge data-oid="qn1s0ih">{tool.category}</Badge>
           </div>
           {tool.tags && tool.tags.length > 0 && (
-            <div data-oid="dh1sa2j">
-              <span className="text-gray-400" data-oid="ss4qsoe">
+            <div data-oid="qssmyqn">
+              <span className="text-gray-400" data-oid="5uq2f.h">
                 标签:{" "}
               </span>
-              <div className="flex flex-wrap gap-2 mt-1" data-oid="6d0ejez">
+              <div className="flex flex-wrap gap-2 mt-1" data-oid="h:ifahw">
                 {tool.tags.map((tag, index) => (
-                  <Badge key={index} variant="outline" data-oid=":7jurq7">
+                  <Badge key={index} variant="outline" data-oid="6amjnue">
                     {tag}
                   </Badge>
                 ))}
               </div>
             </div>
           )}
-          <div data-oid="adv:pp6">
-            <span className="text-gray-400" data-oid="p5vg4nd">
+          <div data-oid="843e81_">
+            <span className="text-gray-400" data-oid="mgu4.6t">
               内置工具:{" "}
             </span>
-            <span className="text-white" data-oid="u:mp-59">
+            <span className="text-white" data-oid="gd7unul">
               {tool.isBuiltin ? "是" : "否"}
             </span>
           </div>
@@ -77,15 +77,15 @@ export const ToolDetailView: React.FC<IToolDetailViewProps> = ({ tool }) => {
       </div>
 
       {/* 工具描述 */}
-      <div data-oid="78uc3np">
+      <div data-oid="qpc0-ln">
         <h2
           className="text-xl font-semibold text-white mb-2"
-          data-oid="dmi-bs4"
+          data-oid="bgezt3z"
         >
           描述
         </h2>
-        <div className="bg-slate-800/50 rounded-md p-4" data-oid="jqnzaha">
-          <p className="text-gray-300" data-oid="y5rgqst">
+        <div className="bg-slate-800/50 rounded-md p-4" data-oid="bh6_va.">
+          <p className="text-gray-300" data-oid="jef_ipj">
             {tool.description}
           </p>
         </div>
@@ -93,35 +93,35 @@ export const ToolDetailView: React.FC<IToolDetailViewProps> = ({ tool }) => {
 
       {/* 工具参数 */}
       {tool.parameters && tool.parameters.length > 0 && (
-        <div data-oid="km.7jko">
+        <div data-oid="2lypqoa">
           <h2
             className="text-xl font-semibold text-white mb-2"
-            data-oid="ao9sz9n"
+            data-oid="xvlh1a6"
           >
             参数
           </h2>
-          <div className="bg-slate-800/50 rounded-md p-4" data-oid="cg-0_ld">
-            <div className="divide-y divide-gray-700" data-oid="9yr-cn9">
+          <div className="bg-slate-800/50 rounded-md p-4" data-oid="s_sjwwt">
+            <div className="divide-y divide-gray-700" data-oid="jx7afjf">
               {tool.parameters.map((param: TToolParameter, index: number) => (
                 <div
                   key={index}
                   className="py-3 first:pt-0 last:pb-0"
-                  data-oid="qpd3k25"
+                  data-oid="9un5e_t"
                 >
                   <div
                     className="flex justify-between items-start"
-                    data-oid=".f:kmwc"
+                    data-oid="g8cshff"
                   >
-                    <div data-oid="_-tfdm_">
+                    <div data-oid="d.gtd0j">
                       <span
                         className="font-medium text-indigo-400"
-                        data-oid="-zndq21"
+                        data-oid="d3_imod"
                       >
                         {param.name}
                       </span>
                       <span
                         className="ml-2 text-sm text-gray-400"
-                        data-oid="smg4.ls"
+                        data-oid="-nr2tkj"
                       >
                         ({param.type})
                       </span>
@@ -129,45 +129,45 @@ export const ToolDetailView: React.FC<IToolDetailViewProps> = ({ tool }) => {
                         <Badge
                           variant="destructive"
                           className="ml-2"
-                          data-oid="e3e.24c"
+                          data-oid="x8jgmkz"
                         >
                           必需
                         </Badge>
                       )}
                     </div>
                     {param.defaultValue !== undefined && (
-                      <div className="text-sm text-gray-400" data-oid="ldqgvgo">
+                      <div className="text-sm text-gray-400" data-oid="o4xksgi">
                         默认值:{" "}
                         <code
                           className="bg-slate-700 px-1 py-0.5 rounded"
-                          data-oid=".nzamgj"
+                          data-oid="f_w9_w6"
                         >
                           {String(param.defaultValue)}
                         </code>
                       </div>
                     )}
                   </div>
-                  <p className="mt-1 text-gray-300 text-sm" data-oid="04x4dra">
+                  <p className="mt-1 text-gray-300 text-sm" data-oid="o1mz9ev">
                     {param.description}
                   </p>
 
                   {param.options && param.options.length > 0 && (
-                    <div className="mt-2" data-oid="92e8-_d">
+                    <div className="mt-2" data-oid="-adz5cy">
                       <span
                         className="text-sm text-gray-400"
-                        data-oid="q7xfnpq"
+                        data-oid="u6b4e7_"
                       >
                         可选值:{" "}
                       </span>
                       <div
                         className="flex flex-wrap gap-1 mt-1"
-                        data-oid="5dtl9yd"
+                        data-oid="p6rbjlf"
                       >
                         {param.options.map((option, optIndex) => (
                           <code
                             key={optIndex}
                             className="text-xs bg-slate-700 px-1 py-0.5 rounded"
-                            data-oid="3mty6zg"
+                            data-oid="wufk9v3"
                           >
                             {String(option)}
                           </code>
@@ -184,15 +184,15 @@ export const ToolDetailView: React.FC<IToolDetailViewProps> = ({ tool }) => {
 
       {/* 返回值类型 */}
       {tool.returnType && (
-        <div data-oid="vpqvqmj">
+        <div data-oid="0x3njb1">
           <h2
             className="text-xl font-semibold text-white mb-2"
-            data-oid="acnov3_"
+            data-oid="2q_e2gf"
           >
             返回值
           </h2>
-          <div className="bg-slate-800/50 rounded-md p-4" data-oid="qxyq0qy">
-            <p className="text-gray-300" data-oid="7pqfq3u">
+          <div className="bg-slate-800/50 rounded-md p-4" data-oid="bp2nxt8">
+            <p className="text-gray-300" data-oid="-qx:gsu">
               {tool.returnType}
             </p>
           </div>
@@ -201,24 +201,24 @@ export const ToolDetailView: React.FC<IToolDetailViewProps> = ({ tool }) => {
 
       {/* 使用示例 */}
       {tool.examples && tool.examples.length > 0 && (
-        <div data-oid="0tkz:kh">
+        <div data-oid="2vygue2">
           <h2
             className="text-xl font-semibold text-white mb-2"
-            data-oid="f1mjwr4"
+            data-oid="5.xems6"
           >
             使用示例
           </h2>
-          <div className="bg-slate-800/50 rounded-md p-4" data-oid="scfl5di">
-            <div className="space-y-4" data-oid="u4ytvta">
+          <div className="bg-slate-800/50 rounded-md p-4" data-oid="xg5em4o">
+            <div className="space-y-4" data-oid="cauty1:">
               {tool.examples.map((example, index) => (
                 <div
                   key={index}
                   className="bg-slate-900 p-3 rounded-md border border-gray-700"
-                  data-oid="37kjy0k"
+                  data-oid="adyd4ud"
                 >
                   <code
                     className="text-sm text-gray-300 font-mono whitespace-pre-wrap"
-                    data-oid="-u_nkgj"
+                    data-oid="eq1r.f."
                   >
                     {example}
                   </code>

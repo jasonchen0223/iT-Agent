@@ -1,28 +1,17 @@
 // app/layout.tsx
-import "./globals.css";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import './globals.css'
+import type { Metadata } from 'next'
+import ServerLayout from '@/components/layout/ServerLayout'
 
 export const metadata: Metadata = {
-  title: "iT-Agent | 智能代理协作系统",
-  description: "基于AutoGen构建的多智能代理协作系统",
-};
+  title: 'iT-Agent | 智能代理协作系统',
+  description: '基于AutoGen构建的多智能代理协作系统',
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
-  return (
-    <html lang="zh-CN" data-oid="q2c4nej">
-      <body
-        className={`${inter.className} bg-gradient-to-b from-indigo-950 to-black min-h-screen text-indigo-100`}
-        data-oid="1r7nen."
-      >
-        {children}
-      </body>
-    </html>
-  );
+  return <ServerLayout>{children}</ServerLayout>
 }

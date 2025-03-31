@@ -14,8 +14,8 @@ import {
   CardTitle,
   CardContent,
   CardFooter,
-} from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { TTool } from "@/types/tool-types";
 import { cn } from "@/lib/utils";
 
@@ -53,7 +53,7 @@ const ToolStatusBadge: React.FC<{ status: "active" | "idle" }> = ({
           ? "bg-emerald-500/20 text-emerald-300 border-emerald-500/50"
           : "bg-slate-500/20 text-slate-300 border-slate-500/50",
       )}
-      data-oid="nj4rpv4"
+      data-oid="xkwyobl"
     >
       {status === "active" ? "活跃" : "休眠"}
     </Badge>
@@ -82,7 +82,7 @@ export const McpToolCard: React.FC<IMcpToolCardProps> = ({
     <div
       onClick={handleClick}
       className={cn("cursor-pointer transition-all duration-300 group")}
-      data-oid="22.y09u"
+      data-oid="u.4ph5i"
     >
       <Card
         className={cn(
@@ -91,42 +91,42 @@ export const McpToolCard: React.FC<IMcpToolCardProps> = ({
           "border border-purple-500/30 hover:border-purple-400/50",
           "shadow-lg hover:shadow-purple-500/20",
         )}
-        data-oid="p.shkdl"
+        data-oid=".2ug6go"
       >
         <div
           className="absolute inset-0 bg-purple-500/5 group-hover:bg-purple-500/10 transition-colors duration-300"
-          data-oid="-irm8wk"
+          data-oid="d3hyjyp"
         />
 
-        <CardHeader className="relative" data-oid="94o7i:w">
+        <CardHeader className="relative" data-oid=".2v5z06">
           <CardTitle
             className="flex items-center text-white"
-            data-oid="ff6gz-0"
+            data-oid=":fh51o."
           >
             {/* 这里可以添加工具图标 */}
-            <span className="text-lg" data-oid="tuo7x64">
+            <span className="text-lg" data-oid="ia-_gr.">
               {tool.name}
             </span>
           </CardTitle>
-          <ToolStatusBadge status={status} data-oid="lseiuk9" />
+          <ToolStatusBadge status={status} data-oid="x6jb_5o" />
         </CardHeader>
 
-        <CardContent data-oid="4x60p1d">
+        <CardContent data-oid="r33m6uf">
           <p
             className="text-slate-300 text-sm mb-4 line-clamp-2"
-            data-oid="029bzoo"
+            data-oid="ke8vd87"
           >
             {tool.description}
           </p>
 
-          <div className="flex flex-wrap gap-2" data-oid="0.q_mcd">
+          <div className="flex flex-wrap gap-2" data-oid=".-6i5_e">
             {tool.tags &&
               tool.tags.map((tag, index) => (
                 <Badge
                   key={index}
                   variant="outline"
                   className="bg-purple-500/10 border-purple-500/30 text-purple-300"
-                  data-oid="x8m87th"
+                  data-oid="5wzik-t"
                 >
                   {tag}
                 </Badge>
@@ -136,7 +136,7 @@ export const McpToolCard: React.FC<IMcpToolCardProps> = ({
 
         <CardFooter
           className="flex justify-between items-center"
-          data-oid="_i9-5wh"
+          data-oid=".b6b0xq"
         >
           <Button
             variant="ghost"
@@ -145,7 +145,7 @@ export const McpToolCard: React.FC<IMcpToolCardProps> = ({
               e.stopPropagation();
               // 这里可以添加使用工具的逻辑
             }}
-            data-oid="w.np2ze"
+            data-oid="2.507gz"
           >
             使用工具
           </Button>
@@ -154,7 +154,7 @@ export const McpToolCard: React.FC<IMcpToolCardProps> = ({
             href={`/tools/${tool.id}`}
             className="text-purple-400 hover:text-purple-300 text-sm font-medium"
             onClick={(e) => e.stopPropagation()}
-            data-oid="dyt83yj"
+            data-oid="x4soop3"
           >
             详情
           </Link>

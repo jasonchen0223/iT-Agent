@@ -1,0 +1,1494 @@
+
+> it-agent@0.1.0 dev
+> next dev
+
+ ⚠ Port 3000 is in use, trying 3001 instead.
+  ▲ Next.js 14.2.26
+  - Local:        http://localhost:3001
+  - Environments: .env.local, .env
+  - Experiments (use with caution):
+    · optimizeCss
+
+ ✓ Starting...
+ ⚠ Invalid next.config.js options detected: 
+ ⚠     Expected object, received boolean at "experimental.serverActions"
+ ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+ ⚠ Server Actions are available by default now, `experimental.serverActions` option can be safely removed.
+ ✓ Ready in 1993ms
+ ○ Compiling / ...
+The user aborted a request.
+
+Retrying 1/3...
+The user aborted a request.
+
+Retrying 2/3...
+The user aborted a request.
+
+Retrying 3/3...
+AbortError: The user aborted a request.
+    at abort (/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/compiled/node-fetch/index.js:1:65594)
+    at AbortSignal.abortAndFinalize (/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/compiled/node-fetch/index.js:1:65814)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:827:20)
+    at AbortSignal.dispatchEvent (node:internal/event_target:762:26)
+    at runAbort (node:internal/abort_controller:449:10)
+    at abortSignal (node:internal/abort_controller:435:3)
+    at AbortController.abort (node:internal/abort_controller:468:5)
+    at Timeout.<anonymous> (/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/compiled/@next/font/dist/google/fetch-css-from-google-fonts.js:44:47)
+    at listOnTimeout (node:internal/timers:611:17)
+    at process.processTimers (node:internal/timers:546:7) {
+  type: 'aborted'
+}
+ ⨯ Failed to download `Inter` from Google Fonts. Using fallback font instead.
+
+Failed to fetch `Inter` from Google Fonts.}
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/form.tsx
+Attempted import error: 'FormProvider' is not exported from 'react-hook-form' (imported as 'FormProvider').
+
+Import trace for requested module:
+./src/components/ui/form.tsx
+./src/components/ui/index.ts
+./src/app/not-found.tsx
+
+./src/components/ui/form.tsx
+Attempted import error: 'Controller' is not exported from 'react-hook-form' (imported as 'Controller').
+
+Import trace for requested module:
+./src/components/ui/form.tsx
+./src/components/ui/index.ts
+./src/app/not-found.tsx
+
+./src/components/ui/form.tsx
+Attempted import error: 'useFormContext' is not exported from 'react-hook-form' (imported as 'useFormContext').
+
+Import trace for requested module:
+./src/components/ui/form.tsx
+./src/components/ui/index.ts
+./src/app/not-found.tsx
+
+./src/components/ui/index.ts
+The requested module './toaster' contains conflicting star exports for the name 'Toaster' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/not-found.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/not-found.tsx
+ ⨯ src/components/ui/form.tsx (32:26) @ React
+ ⨯ createContext only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/context-in-server-component
+    at eval (./src/components/ui/form.tsx:32:75)
+    at (rsc)/./src/components/ui/form.tsx (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:680:1)
+    at __webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+    at eval (./src/components/ui/index.ts:56:63)
+    at (rsc)/./src/components/ui/index.ts (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:702:1)
+    at __webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+    at eval (./src/app/not-found.tsx:8:72)
+    at (rsc)/./src/app/not-found.tsx (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:513:1)
+    at Function.__webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+digest: "3853448398"
+  30 | };
+  31 |
+> 32 | const FormFieldContext = React.createContext<FormFieldContextValue>(
+     |                          ^
+  33 |   {} as FormFieldContextValue
+  34 | );
+  35 |
+ ⨯ src/components/ui/form.tsx (32:26) @ React
+ ⨯ createContext only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/context-in-server-component
+    at eval (./src/components/ui/form.tsx:32:75)
+    at (rsc)/./src/components/ui/form.tsx (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:680:1)
+    at __webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+    at eval (./src/components/ui/index.ts:56:63)
+    at (rsc)/./src/components/ui/index.ts (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:702:1)
+    at __webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+    at eval (./src/app/not-found.tsx:8:72)
+    at (rsc)/./src/app/not-found.tsx (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:513:1)
+    at Function.__webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+digest: "3853448398"
+  30 | };
+  31 |
+> 32 | const FormFieldContext = React.createContext<FormFieldContextValue>(
+     |                          ^
+  33 |   {} as FormFieldContextValue
+  34 | );
+  35 |
+ GET / 500 in 19189ms
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/form.tsx
+Attempted import error: 'FormProvider' is not exported from 'react-hook-form' (imported as 'FormProvider').
+
+Import trace for requested module:
+./src/components/ui/form.tsx
+./src/components/ui/index.ts
+./src/app/not-found.tsx
+
+./src/components/ui/form.tsx
+Attempted import error: 'Controller' is not exported from 'react-hook-form' (imported as 'Controller').
+
+Import trace for requested module:
+./src/components/ui/form.tsx
+./src/components/ui/index.ts
+./src/app/not-found.tsx
+
+./src/components/ui/form.tsx
+Attempted import error: 'useFormContext' is not exported from 'react-hook-form' (imported as 'useFormContext').
+
+Import trace for requested module:
+./src/components/ui/form.tsx
+./src/components/ui/index.ts
+./src/app/not-found.tsx
+
+./src/components/ui/index.ts
+The requested module './toaster' contains conflicting star exports for the name 'Toaster' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/not-found.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/not-found.tsx
+ ⨯ src/components/ui/form.tsx (32:26) @ React
+ ⨯ createContext only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/context-in-server-component
+    at eval (./src/components/ui/form.tsx:32:75)
+    at (rsc)/./src/components/ui/form.tsx (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:680:1)
+    at __webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+    at eval (./src/components/ui/index.ts:56:63)
+    at (rsc)/./src/components/ui/index.ts (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:702:1)
+    at __webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+    at eval (./src/app/not-found.tsx:8:72)
+    at (rsc)/./src/app/not-found.tsx (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:513:1)
+    at Function.__webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+digest: "3365271779"
+  30 | };
+  31 |
+> 32 | const FormFieldContext = React.createContext<FormFieldContextValue>(
+     |                          ^
+  33 |   {} as FormFieldContextValue
+  34 | );
+  35 |
+ ⨯ src/components/ui/form.tsx (32:26) @ React
+ ⨯ createContext only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/context-in-server-component
+    at eval (./src/components/ui/form.tsx:32:75)
+    at (rsc)/./src/components/ui/form.tsx (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:680:1)
+    at __webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+    at eval (./src/components/ui/index.ts:56:63)
+    at (rsc)/./src/components/ui/index.ts (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:702:1)
+    at __webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+    at eval (./src/app/not-found.tsx:8:72)
+    at (rsc)/./src/app/not-found.tsx (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:513:1)
+    at Function.__webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+digest: "3365271779"
+  30 | };
+  31 |
+> 32 | const FormFieldContext = React.createContext<FormFieldContextValue>(
+     |                          ^
+  33 |   {} as FormFieldContextValue
+  34 | );
+  35 |
+ GET / 500 in 39ms
+ ⨯ src/components/ui/form.tsx (32:26) @ React
+ ⨯ createContext only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/context-in-server-component
+    at eval (./src/components/ui/form.tsx:32:75)
+    at (rsc)/./src/components/ui/form.tsx (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:680:1)
+    at __webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+    at eval (./src/components/ui/index.ts:56:63)
+    at (rsc)/./src/components/ui/index.ts (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:702:1)
+    at __webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+    at eval (./src/app/not-found.tsx:8:72)
+    at (rsc)/./src/app/not-found.tsx (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:513:1)
+    at Function.__webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+digest: "3853448398"
+  30 | };
+  31 |
+> 32 | const FormFieldContext = React.createContext<FormFieldContextValue>(
+     |                          ^
+  33 |   {} as FormFieldContextValue
+  34 | );
+  35 |
+ ⨯ src/components/ui/form.tsx (32:26) @ React
+ ⨯ createContext only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/context-in-server-component
+    at eval (./src/components/ui/form.tsx:32:75)
+    at (rsc)/./src/components/ui/form.tsx (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:680:1)
+    at __webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+    at eval (./src/components/ui/index.ts:56:63)
+    at (rsc)/./src/components/ui/index.ts (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:702:1)
+    at __webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+    at eval (./src/app/not-found.tsx:8:72)
+    at (rsc)/./src/app/not-found.tsx (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:513:1)
+    at Function.__webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+digest: "3853448398"
+  30 | };
+  31 |
+> 32 | const FormFieldContext = React.createContext<FormFieldContextValue>(
+     |                          ^
+  33 |   {} as FormFieldContextValue
+  34 | );
+  35 |
+ GET / 500 in 75ms
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './toaster' contains conflicting star exports for the name 'Toaster' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/not-found.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/not-found.tsx
+ ⨯ src/components/ui/use-toast.tsx (141:29) @ React
+ ⨯ createContext only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/context-in-server-component
+    at eval (./src/components/ui/use-toast.tsx:84:75)
+    at (rsc)/./src/components/ui/use-toast.tsx (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:922:1)
+    at __webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+    at eval (./src/components/ui/index.ts:60:69)
+    at (rsc)/./src/components/ui/index.ts (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:731:1)
+    at __webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+    at eval (./src/app/not-found.tsx:8:72)
+    at (rsc)/./src/app/not-found.tsx (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:513:1)
+    at Function.__webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+digest: "566062603"
+  139 |  * Toast上下文
+  140 |  */
+> 141 | export const ToastContext = React.createContext<{
+      |                             ^
+  142 |   state: ToastState
+  143 |   dispatch: React.Dispatch<ToastActionType>
+  144 | }>({
+ ⨯ src/components/ui/use-toast.tsx (141:29) @ React
+ ⨯ createContext only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/context-in-server-component
+    at eval (./src/components/ui/use-toast.tsx:84:75)
+    at (rsc)/./src/components/ui/use-toast.tsx (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:922:1)
+    at __webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+    at eval (./src/components/ui/index.ts:60:69)
+    at (rsc)/./src/components/ui/index.ts (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:731:1)
+    at __webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+    at eval (./src/app/not-found.tsx:8:72)
+    at (rsc)/./src/app/not-found.tsx (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:513:1)
+    at Function.__webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+digest: "566062603"
+  139 |  * Toast上下文
+  140 |  */
+> 141 | export const ToastContext = React.createContext<{
+      |                             ^
+  142 |   state: ToastState
+  143 |   dispatch: React.Dispatch<ToastActionType>
+  144 | }>({
+ GET / 500 in 261ms
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './toaster' contains conflicting star exports for the name 'Toaster' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/not-found.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/not-found.tsx
+ ⨯ src/components/ui/use-toast.tsx (141:29) @ React
+ ⨯ createContext only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/context-in-server-component
+    at eval (./src/components/ui/use-toast.tsx:84:75)
+    at (rsc)/./src/components/ui/use-toast.tsx (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:930:1)
+    at __webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+    at eval (./src/components/ui/index.ts:60:69)
+    at (rsc)/./src/components/ui/index.ts (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:739:1)
+    at __webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+    at eval (./src/app/not-found.tsx:8:72)
+    at (rsc)/./src/app/not-found.tsx (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:513:1)
+    at Function.__webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+digest: "1668072576"
+  139 |  * Toast上下文
+  140 |  */
+> 141 | export const ToastContext = React.createContext<{
+      |                             ^
+  142 |   state: ToastState
+  143 |   dispatch: React.Dispatch<ToastActionType>
+  144 | }>({
+ ⨯ src/components/ui/use-toast.tsx (141:29) @ React
+ ⨯ createContext only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/context-in-server-component
+    at eval (./src/components/ui/use-toast.tsx:84:75)
+    at (rsc)/./src/components/ui/use-toast.tsx (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:930:1)
+    at __webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+    at eval (./src/components/ui/index.ts:60:69)
+    at (rsc)/./src/components/ui/index.ts (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:739:1)
+    at __webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+    at eval (./src/app/not-found.tsx:8:72)
+    at (rsc)/./src/app/not-found.tsx (/Users/jimimacmini/Documents/iT-Agent/.next/server/app/page.js:513:1)
+    at Function.__webpack_require__ (/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js:33:42)
+digest: "1668072576"
+  139 |  * Toast上下文
+  140 |  */
+> 141 | export const ToastContext = React.createContext<{
+      |                             ^
+  142 |   state: ToastState
+  143 |   dispatch: React.Dispatch<ToastActionType>
+  144 | }>({
+ GET / 500 in 154ms
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ GET / 200 in 89ms
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/jimimacmini/Documents/iT-Agent/.next/cache/webpack/server-development/0.pack.gz_' -> '/Users/jimimacmini/Documents/iT-Agent/.next/cache/webpack/server-development/0.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/jimimacmini/Documents/iT-Agent/.next/cache/webpack/client-development/0.pack.gz_' -> '/Users/jimimacmini/Documents/iT-Agent/.next/cache/webpack/client-development/0.pack.gz'
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ GET /icons/product-manager.svg 404 in 369ms
+ GET /icons/doc-writer.svg 404 in 355ms
+ GET /icons/devops.svg 404 in 356ms
+ GET /icons/tester.svg 404 in 357ms
+ GET /icons/architect.svg 404 in 363ms
+ GET /icons/developer.svg 404 in 361ms
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⨯ Error: Cannot find module './vendor-chunks/framer-motion.js'
+Require stack:
+- /Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js
+- /Users/jimimacmini/Documents/iT-Agent/.next/server/app/projects/[id]/page.js
+- /Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/require.js
+- /Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/load-components.js
+- /Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/build/utils.js
+- /Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1405:15)
+    at /Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1061:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1066:22)
+    at Function._load (node:internal/modules/cjs/loader:1215:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1491:12)
+    at mod.require (/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:135:16) {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js',
+    '/Users/jimimacmini/Documents/iT-Agent/.next/server/app/projects/[id]/page.js',
+    '/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/require.js',
+    '/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/load-components.js',
+    '/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/build/utils.js',
+    '/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/dev/static-paths-worker.js',
+    '/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/compiled/jest-worker/processChild.js'
+  ],
+  page: '/projects/2'
+}
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+Time 2.955709
+ ⨯ Error: Cannot find module './vendor-chunks/framer-motion.js'
+Require stack:
+- /Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js
+- /Users/jimimacmini/Documents/iT-Agent/.next/server/app/projects/[id]/page.js
+- /Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/require.js
+- /Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/load-components.js
+- /Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/build/utils.js
+- /Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1405:15)
+    at /Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1061:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1066:22)
+    at Function._load (node:internal/modules/cjs/loader:1215:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1491:12)
+    at mod.require (/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:135:16) {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js',
+    '/Users/jimimacmini/Documents/iT-Agent/.next/server/app/projects/[id]/page.js',
+    '/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/require.js',
+    '/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/load-components.js',
+    '/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/build/utils.js',
+    '/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/dev/static-paths-worker.js',
+    '/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/compiled/jest-worker/processChild.js'
+  ],
+  page: '/projects/2'
+}
+Time 1.202833
+ ⨯ Error: Cannot find module './vendor-chunks/framer-motion.js'
+Require stack:
+- /Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js
+- /Users/jimimacmini/Documents/iT-Agent/.next/server/app/projects/[id]/page.js
+- /Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/require.js
+- /Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/load-components.js
+- /Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/build/utils.js
+- /Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1405:15)
+    at /Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1061:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1066:22)
+    at Function._load (node:internal/modules/cjs/loader:1215:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1491:12)
+    at mod.require (/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:135:16) {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js',
+    '/Users/jimimacmini/Documents/iT-Agent/.next/server/app/projects/[id]/page.js',
+    '/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/require.js',
+    '/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/load-components.js',
+    '/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/build/utils.js',
+    '/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/dev/static-paths-worker.js',
+    '/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/compiled/jest-worker/processChild.js'
+  ],
+  page: '/projects/2'
+}
+Time 1.598833
+ ⨯ Error: Cannot find module './vendor-chunks/framer-motion.js'
+Require stack:
+- /Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js
+- /Users/jimimacmini/Documents/iT-Agent/.next/server/app/projects/[id]/page.js
+- /Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/require.js
+- /Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/load-components.js
+- /Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/build/utils.js
+- /Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1405:15)
+    at /Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1061:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1066:22)
+    at Function._load (node:internal/modules/cjs/loader:1215:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1491:12)
+    at mod.require (/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:135:16) {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/jimimacmini/Documents/iT-Agent/.next/server/webpack-runtime.js',
+    '/Users/jimimacmini/Documents/iT-Agent/.next/server/app/projects/[id]/page.js',
+    '/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/require.js',
+    '/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/load-components.js',
+    '/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/build/utils.js',
+    '/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/server/dev/static-paths-worker.js',
+    '/Users/jimimacmini/Documents/iT-Agent/node_modules/next/dist/compiled/jest-worker/processChild.js'
+  ],
+  page: '/projects/2'
+}
+Time 0.509792
+ GET /projects/2 500 in 240ms
+ GET /projects 200 in 66ms
+ GET /_next/static/css/app/layout.css?v=1743049328711 404 in 123ms
+ GET /_next/static/chunks/main-app.js?v=1743049328711 404 in 58ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 56ms
+ GET /_next/static/chunks/app/not-found.js 404 in 44ms
+ GET /_next/static/chunks/app/layout.js 404 in 54ms
+ GET /_next/static/chunks/app/error.js 404 in 52ms
+ GET /_next/static/chunks/app/loading.js 404 in 66ms
+ GET /_next/static/chunks/app/global-error.js 404 in 52ms
+ GET / 200 in 42ms
+ GET /_next/static/css/app/layout.css?v=1743049336116 404 in 28ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 37ms
+ GET /_next/static/chunks/main-app.js?v=1743049336116 404 in 39ms
+ GET /_next/static/chunks/app/page.js 404 in 37ms
+ GET /_next/static/chunks/app/layout.js 404 in 37ms
+ GET /_next/static/chunks/app/error.js 404 in 37ms
+ GET /_next/static/chunks/app/not-found.js 404 in 37ms
+ GET /_next/static/chunks/app/loading.js 404 in 63ms
+ GET /_next/static/chunks/app/global-error.js 404 in 61ms
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/jimimacmini/Documents/iT-Agent/.next/cache/webpack/server-development/0.pack.gz_' -> '/Users/jimimacmini/Documents/iT-Agent/.next/cache/webpack/server-development/0.pack.gz'
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/jimimacmini/Documents/iT-Agent/.next/cache/webpack/client-development/0.pack.gz_' -> '/Users/jimimacmini/Documents/iT-Agent/.next/cache/webpack/client-development/0.pack.gz'
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/jimimacmini/Documents/iT-Agent/.next/cache/webpack/client-development/0.pack.gz_' -> '/Users/jimimacmini/Documents/iT-Agent/.next/cache/webpack/client-development/0.pack.gz'
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+ ⚠ ./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx
+
+./src/components/ui/index.ts
+The requested module './use-toast' contains conflicting star exports for the names 'ToastProvider', 'useToast' with the previous requested module './toast-unified'
+
+Import trace for requested module:
+./src/components/ui/index.ts
+./src/app/global-error.tsx

@@ -5,7 +5,7 @@
  */
 
 import { errorManager, BaseError } from '@/lib/errors';
-import { ToastData } from '@/components/ui/ToastNotification';
+import { ToastProps } from '@/components/ui/toast-unified';
 
 /**
  * 将错误转换为用户友好的消息
@@ -54,13 +54,13 @@ export function getUserFriendlyErrorMessage(error: any): string {
  * @param error 错误对象 
  * @returns Toast数据对象
  */
-export function errorToToast(error: any): Omit<ToastData, 'id'> {
+export function errorToToast(error: any): Omit<ToastProps, 'id'> {
     const isCustomError = error instanceof BaseError;
     
     return {
         type: 'error',
         title: isCustomError ? `错误: ${error.code}` : '操作失败',
-        message: getUserFriendlyErrorMessage(error),
+        description: getUserFriendlyErrorMessage(error),
         duration: 5000,
     };
 }

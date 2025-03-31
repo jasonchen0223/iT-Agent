@@ -3,7 +3,7 @@
 
 import { createContext, useContext, useState, useCallback } from 'react'
 import { v4 as uuidv4 } from 'uuid'
-import { NotificationContainer, NotificationItem, NotificationType } from '@/components/ui/Notification'
+import { NotificationContainer, NotificationItem, NotificationType } from '@/components/ui/notification'
 
 interface Notification {
   id: string

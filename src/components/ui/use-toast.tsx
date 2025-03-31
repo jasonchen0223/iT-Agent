@@ -2,6 +2,17 @@
 // 提供toast通知功能
 
 import * as React from "react"
+import { Slot } from "@radix-ui/react-slot"
+import {
+  Toast,
+  ToastClose,
+  ToastDescription,
+  ToastProvider,
+  ToastTitle,
+  ToastViewport,
+} from "@/components/ui/toast"
+
+import { useToast } from "@/hooks/use-toast"
 
 /**
  * Toast位置
@@ -241,4 +252,32 @@ export function useToastTimer(
 
     return () => clearTimeout(timer)
   }, [toast.id, toast.duration, dispatch])
+}
+
+export const Toaster = () => {
+  const { toasts } = useToast()
+
+  return (
+    <ToastProvider>
+      {toasts.map(function ({ id, title, description, action, ...props }) {
+        return (
+          <Toast key={id} {...props}>
+            <div className="grid gap-1">
+              {title && <ToastTitle>{title}</ToastTitle>}
+              {description && (
+                <ToastDescription>{description}</ToastDescription>
+              )}
+            </div>
+            {action && (
+              <div className="flex items-center justify-end">
+                <Slot className="flex-shrink-0">{action}</Slot>
+              </div>
+            )}
+            <ToastClose />
+          </Toast>
+        )
+      })}
+      <ToastViewport />
+    </ToastProvider>
+  )
 } 

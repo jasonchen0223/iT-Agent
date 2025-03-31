@@ -1,223 +1,371 @@
-// app/collaboration/[id]/page.tsx
-import Footer from "@/components/ui/Footer";
-import StarBackground from "@/components/ui/StarBackground";
+'use client';
 
-export default function CollaborationSession({
-  params,
-}: {
-  params: { id: string };
-}) {
-  return (
-    <>
-      <StarBackground data-oid="kt-3y:1" />
-      <div className="min-h-screen flex flex-col" data-oid="y25c2on">
-        {/* 会话信息栏 */}
-        <div className="border-b border-indigo-800/20 py-4" data-oid="gajq.lt">
-          <div className="container mx-auto" data-oid="t26jgt4">
-            <h1
-              className="text-2xl font-bold text-indigo-100"
-              data-oid="t4ng7yf"
-            >
-              前端开发协作会话
-            </h1>
-            <p className="text-indigo-300/70" data-oid="vvejw7x">
-              目标: 实现首页UI组件 • 进行中
-            </p>
-          </div>
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'next/navigation';
+import { PageHeader } from '@/components/common/PageHeader';
+import { CollaborationVisualizer } from '@/components/collaboration/CollaborationVisualizer';
+import { Button } from '@/components/ui/button';
+import { ICollaborationSession } from '@/types/collaboration';
+import { ArrowLeft, Pause, Play, StopCircle } from 'lucide-react';
+import Link from 'next/link';
+
+/**
+ * 代理协作详情页面
+ * 
+ * 展示特定代理协作会话的详细信息
+ * 
+ * @returns {React.ReactElement} 代理协作详情页面
+ */
+export default function CollaborationDetailPage() {
+    const params = useParams();
+    const id = (params?.id as string) || '';
+    
+    const [session, setSession] = useState<ICollaborationSession | null>(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
+    
+    // 模拟加载协作会话数据
+    useEffect(() => {
+        const loadCollaborationSession = async () => {
+            try {
+                setLoading(true);
+                // 模拟API调用延迟
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                
+                // 模拟数据
+                const mockSession: ICollaborationSession = {
+                    id,
+                    name: '多代理协作分析项目',
+                    description: '由不同专长的代理共同协作完成项目分析任务',
+                    status: 'active',
+                    startTime: '2023-12-15 14:30',
+                    messageCount: 86,
+                    taskCount: 12,
+                    nodes: [
+                        {
+                            id: 'agent1',
+                            name: '项目经理',
+                            type: 'leader',
+                            status: 'active',
+                            description: '负责协调和分配任务',
+                            messageCount: 32,
+                            capabilities: ['任务分配', '进度管理', '风险评估']
+                        },
+                        {
+                            id: 'agent2',
+                            name: '需求分析师',
+                            type: 'specialist',
+                            status: 'active',
+                            description: '分析和整理项目需求',
+                            messageCount: 24,
+                            capabilities: ['需求分析', '用户故事', '场景设计']
+                        },
+                        {
+                            id: 'agent3',
+                            name: '架构师',
+                            type: 'specialist',
+                            status: 'active',
+                            description: '负责系统架构设计',
+                            messageCount: 18,
+                            capabilities: ['架构设计', '技术选型', '性能优化']
+                        },
+                        {
+                            id: 'agent4',
+                            name: '开发协调员',
+                            type: 'coordinator',
+                            status: 'active',
+                            description: '协调开发任务和资源',
+                            messageCount: 20,
+                            capabilities: ['任务协调', '资源分配', '进度跟踪']
+                        },
+                        {
+                            id: 'agent5',
+                            name: '前端专家',
+                            type: 'executor',
+                            status: 'active',
+                            description: '负责前端实现',
+                            messageCount: 15,
+                            capabilities: ['UI设计', '前端开发', '用户体验']
+                        },
+                        {
+                            id: 'agent6',
+                            name: '后端专家',
+                            type: 'executor',
+                            status: 'active',
+                            description: '负责后端实现',
+                            messageCount: 13,
+                            capabilities: ['API设计', '数据库', '性能优化']
+                        },
+                        {
+                            id: 'agent7',
+                            name: '测试专家',
+                            type: 'executor',
+                            status: 'active',
+                            description: '负责测试和质量保证',
+                            messageCount: 10,
+                            capabilities: ['测试策略', '自动化测试', '质量评估']
+                        }
+                    ],
+                    links: [
+                        {
+                            id: 'link1',
+                            source: 'agent1',
+                            target: 'agent2',
+                            type: 'command',
+                            label: '任务分配',
+                            messageCount: 10,
+                            color: '#6d28d9'
+                        },
+                        {
+                            id: 'link2',
+                            source: 'agent1',
+                            target: 'agent3',
+                            type: 'command',
+                            label: '任务分配',
+                            messageCount: 8,
+                            color: '#6d28d9'
+                        },
+                        {
+                            id: 'link3',
+                            source: 'agent1',
+                            target: 'agent4',
+                            type: 'command',
+                            label: '协调要求',
+                            messageCount: 12,
+                            color: '#6d28d9'
+                        },
+                        {
+                            id: 'link4',
+                            source: 'agent2',
+                            target: 'agent3',
+                            type: 'communication',
+                            label: '需求交流',
+                            messageCount: 15,
+                            color: '#2563eb'
+                        },
+                        {
+                            id: 'link5',
+                            source: 'agent4',
+                            target: 'agent5',
+                            type: 'command',
+                            label: '任务分配',
+                            messageCount: 8,
+                            color: '#10b981'
+                        },
+                        {
+                            id: 'link6',
+                            source: 'agent4',
+                            target: 'agent6',
+                            type: 'command',
+                            label: '任务分配',
+                            messageCount: 7,
+                            color: '#10b981'
+                        },
+                        {
+                            id: 'link7',
+                            source: 'agent4',
+                            target: 'agent7',
+                            type: 'command',
+                            label: '测试安排',
+                            messageCount: 6,
+                            color: '#10b981'
+                        },
+                        {
+                            id: 'link8',
+                            source: 'agent5',
+                            target: 'agent6',
+                            type: 'collaboration',
+                            label: '接口协作',
+                            messageCount: 18,
+                            color: '#f59e0b'
+                        },
+                        {
+                            id: 'link9',
+                            source: 'agent3',
+                            target: 'agent5',
+                            type: 'communication',
+                            label: '架构指导',
+                            messageCount: 5,
+                            color: '#2563eb'
+                        },
+                        {
+                            id: 'link10',
+                            source: 'agent3',
+                            target: 'agent6',
+                            type: 'communication',
+                            label: '架构指导',
+                            messageCount: 6,
+                            color: '#2563eb'
+                        },
+                        {
+                            id: 'link11',
+                            source: 'agent7',
+                            target: 'agent5',
+                            type: 'collaboration',
+                            label: '测试协作',
+                            messageCount: 4,
+                            color: '#f59e0b'
+                        },
+                        {
+                            id: 'link12',
+                            source: 'agent7',
+                            target: 'agent6',
+                            type: 'collaboration',
+                            label: '测试协作',
+                            messageCount: 5,
+                            color: '#f59e0b'
+                        }
+                    ]
+                };
+                
+                setSession(mockSession);
+            } catch (err) {
+                console.error('加载协作会话数据失败:', err);
+                setError('加载协作会话数据失败，请稍后重试');
+            } finally {
+                setLoading(false);
+            }
+        };
+        
+        loadCollaborationSession();
+    }, [id]);
+    
+    // 刷新协作会话数据
+    const handleRefresh = () => {
+        setLoading(true);
+        // 模拟刷新
+        setTimeout(() => {
+            setLoading(false);
+        }, 1000);
+    };
+    
+    // 暂停协作会话
+    const handlePause = () => {
+        if (!session) return;
+        
+        setSession({
+            ...session,
+            status: 'paused'
+        });
+    };
+    
+    // 继续协作会话
+    const handleResume = () => {
+        if (!session) return;
+        
+        setSession({
+            ...session,
+            status: 'active'
+        });
+    };
+    
+    // 结束协作会话
+    const handleStop = () => {
+        if (!session) return;
+        
+        setSession({
+            ...session,
+            status: 'completed'
+        });
+    };
+    
+    // 显示加载状态
+    if (loading && !session) {
+        return (
+            <div className="container mx-auto py-8">
+                <div className="flex items-center mb-6">
+                    <Link href="/collaboration" className="text-indigo-400 mr-4">
+                        <ArrowLeft size={20} />
+                    </Link>
+                    <h1 className="text-2xl font-bold text-indigo-100">加载协作会话...</h1>
+                </div>
+                
+                <div className="space-card p-8 text-center">
+                    <div className="animate-pulse space-y-4">
+                        <div className="h-8 bg-indigo-900/40 rounded w-1/3 mx-auto"></div>
+                        <div className="h-4 bg-indigo-900/40 rounded w-2/3 mx-auto"></div>
+                        <div className="h-64 bg-indigo-900/30 rounded mt-8"></div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+    
+    // 显示错误状态
+    if (error) {
+        return (
+            <div className="container mx-auto py-8">
+                <div className="flex items-center mb-6">
+                    <Link href="/collaboration" className="text-indigo-400 mr-4">
+                        <ArrowLeft size={20} />
+                    </Link>
+                    <h1 className="text-2xl font-bold text-indigo-100">协作会话</h1>
+                </div>
+                
+                <div className="space-card p-8 text-center">
+                    <p className="text-red-400 mb-4">{error}</p>
+                    <Button onClick={handleRefresh}>重试</Button>
+                </div>
+            </div>
+        );
+    }
+    
+    if (!session) return null;
+    
+    return (
+        <div className="container mx-auto py-8">
+            <div className="flex justify-between items-center mb-6">
+                <div className="flex items-center">
+                    <Link href="/collaboration" className="text-indigo-400 mr-4">
+                        <ArrowLeft size={20} />
+                    </Link>
+                    <PageHeader 
+                        title={session.name}
+                        description={session.description || '代理协作会话详情'}
+                    />
+                </div>
+                
+                <div className="flex gap-2">
+                    {session.status === 'active' ? (
+                        <Button 
+                            variant="outline" 
+                            size="sm"
+                            className="flex items-center gap-1"
+                            onClick={handlePause}
+                        >
+                            <Pause size={16} />
+                            暂停
+                        </Button>
+                    ) : session.status === 'paused' ? (
+                        <Button 
+                            variant="outline" 
+                            size="sm"
+                            className="flex items-center gap-1"
+                            onClick={handleResume}
+                        >
+                            <Play size={16} />
+                            继续
+                        </Button>
+                    ) : null}
+                    
+                    {(session.status === 'active' || session.status === 'paused') && (
+                        <Button 
+                            variant="default" 
+                            size="sm"
+                            className="flex items-center gap-1 bg-red-500 hover:bg-red-600 text-white"
+                            onClick={handleStop}
+                        >
+                            <StopCircle size={16} />
+                            结束
+                        </Button>
+                    )}
+                </div>
+            </div>
+            
+            <CollaborationVisualizer 
+                session={session}
+                onRefresh={handleRefresh}
+            />
         </div>
-
-        {/* 三列布局主体 */}
-        <main className="flex-1 container mx-auto py-6" data-oid="t03j2id">
-          <div
-            className="grid grid-cols-1 md:grid-cols-12 gap-6"
-            data-oid="a4dr:g7"
-          >
-            {/* 左侧参与代理列表 */}
-            <div className="md:col-span-2 space-card" data-oid="-910rfb">
-              <h2
-                className="text-lg font-semibold text-indigo-100 mb-3"
-                data-oid="2z7nzvn"
-              >
-                参与代理
-              </h2>
-              <div className="space-y-3" data-oid="7ramork">
-                <div
-                  className="flex items-center p-2 bg-indigo-900/30 rounded-md"
-                  data-oid="x9b5_q2"
-                >
-                  <div
-                    className="w-3 h-3 bg-green-500 rounded-full mr-2"
-                    data-oid="9ky6uu4"
-                  ></div>
-                  <span className="text-indigo-100" data-oid="oxyyt_9">
-                    产品经理
-                  </span>
-                </div>
-                <div
-                  className="flex items-center p-2 bg-indigo-900/30 rounded-md"
-                  data-oid="cag:o:."
-                >
-                  <div
-                    className="w-3 h-3 bg-green-500 rounded-full mr-2"
-                    data-oid="1sh:yph"
-                  ></div>
-                  <span className="text-indigo-100" data-oid="nu2tekp">
-                    架构师
-                  </span>
-                </div>
-                <div
-                  className="flex items-center p-2 bg-indigo-900/30 rounded-md"
-                  data-oid="_srou2v"
-                >
-                  <div
-                    className="w-3 h-3 bg-yellow-500 rounded-full mr-2"
-                    data-oid="ee5wwy4"
-                  ></div>
-                  <span className="text-indigo-100" data-oid="c:7ye3t">
-                    前端开发
-                  </span>
-                </div>
-                <div
-                  className="flex items-center p-2 bg-indigo-900/20 rounded-md"
-                  data-oid="z:bub_6"
-                >
-                  <div
-                    className="w-3 h-3 bg-gray-500 rounded-full mr-2"
-                    data-oid="2747ku0"
-                  ></div>
-                  <span className="text-indigo-300/70" data-oid="1nt4v-d">
-                    测试工程师
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* 中央消息流 */}
-            <div className="md:col-span-7 space-card" data-oid="r3.6-5b">
-              <div
-                className="space-y-4 max-h-[600px] overflow-y-auto"
-                data-oid="k-9q:r2"
-              >
-                {/* 代理消息 */}
-                <div className="flex" data-oid="m6uw3en">
-                  <div
-                    className="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center mr-2"
-                    data-oid="vvsqx-i"
-                  >
-                    <span className="text-xs text-white" data-oid="z9nrtd9">
-                      PM
-                    </span>
-                  </div>
-                  <div
-                    className="bg-indigo-900/30 p-3 rounded-tl-sm rounded-tr-lg rounded-br-lg rounded-bl-lg max-w-[80%]"
-                    data-oid="tya4d8h"
-                  >
-                    <p className="text-indigo-100" data-oid="jgb-qs6">
-                      我们需要根据UI设计系统实现首页的三列布局
-                    </p>
-                  </div>
-                </div>
-
-                {/* 另一个代理消息 */}
-                <div className="flex" data-oid="9p.n51t">
-                  <div
-                    className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center mr-2"
-                    data-oid="235ajv9"
-                  >
-                    <span className="text-xs text-white" data-oid="hw.9g5x">
-                      AR
-                    </span>
-                  </div>
-                  <div
-                    className="bg-indigo-900/30 p-3 rounded-tl-sm rounded-tr-lg rounded-br-lg rounded-bl-lg max-w-[80%]"
-                    data-oid="-43-:.u"
-                  >
-                    <p className="text-indigo-100" data-oid="3ifi-pn">
-                      建议使用Grid布局实现，确保响应式效果
-                    </p>
-                  </div>
-                </div>
-
-                {/* 用户消息 */}
-                <div className="flex justify-end" data-oid="m7esr1q">
-                  <div
-                    className="bg-indigo-600/50 p-3 rounded-tl-lg rounded-tr-sm rounded-br-sm rounded-bl-lg max-w-[80%]"
-                    data-oid="hsd8sdr"
-                  >
-                    <p className="text-white" data-oid="uhnrdq5">
-                      好的，请提供具体的实现方案
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* 输入区域 */}
-              <div
-                className="mt-4 border-t border-indigo-800/20 pt-4"
-                data-oid="c5.musi"
-              >
-                <div className="flex" data-oid="o0jqmdy">
-                  <input
-                    type="text"
-                    className="flex-1 bg-indigo-900/20 text-indigo-100 p-3 rounded-l-md border border-indigo-800/30 focus:outline-none focus:border-indigo-500"
-                    placeholder="输入消息..."
-                    data-oid="twon-ej"
-                  />
-
-                  <button
-                    className="bg-indigo-600 text-white px-4 rounded-r-md"
-                    data-oid="y0fx525"
-                  >
-                    发送
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* 右侧上下文面板 */}
-            <div className="md:col-span-3 space-card" data-oid="_2bnsq3">
-              <h2
-                className="text-lg font-semibold text-indigo-100 mb-3"
-                data-oid=".l49qu."
-              >
-                上下文资料
-              </h2>
-              <div className="space-y-3" data-oid="vul:59y">
-                <div
-                  className="p-3 bg-indigo-900/20 rounded-md"
-                  data-oid="0gvy.xw"
-                >
-                  <h3
-                    className="text-indigo-100 text-sm font-medium"
-                    data-oid="m.llp39"
-                  >
-                    首页设计稿
-                  </h3>
-                  <p className="text-indigo-300/70 text-xs" data-oid="s4:q6z.">
-                    包含三列布局的设计规范
-                  </p>
-                </div>
-                <div
-                  className="p-3 bg-indigo-900/20 rounded-md"
-                  data-oid="fr4gq9c"
-                >
-                  <h3
-                    className="text-indigo-100 text-sm font-medium"
-                    data-oid="tzu6atg"
-                  >
-                    组件库文档
-                  </h3>
-                  <p className="text-indigo-300/70 text-xs" data-oid="otkrz56">
-                    shadcn/ui组件使用参考
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </main>
-
-        <Footer data-oid="v4v3_gg" />
-      </div>
-    </>
-  );
+    );
 }

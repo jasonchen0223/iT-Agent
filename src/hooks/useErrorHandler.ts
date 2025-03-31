@@ -4,7 +4,7 @@
  * 用于在React组件中处理错误
  */
 import { useState, useCallback } from 'react';
-import { useToast } from '@/components/ui/ToastNotification';
+import { useToast } from '@/components/ui/toast-unified';
 import { errorToToast, logError } from '@/utils/error-utils';
 
 /**

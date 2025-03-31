@@ -2,7 +2,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Card } from "./Card";
+import { Card } from './card';
 
 interface ChartDataPoint {
   label: string;
@@ -67,17 +67,17 @@ export function Chart({
   }, [data, type, height, showLabels]);
 
   return (
-    <Card className={className} data-oid="zf3nl.y">
-      <div className="flex justify-between items-start mb-4" data-oid="_apt10m">
-        <div data-oid="dh87ig5">
+    <Card className={className} data-oid="g.kb0bh">
+      <div className="flex justify-between items-start mb-4" data-oid="r_bud2l">
+        <div data-oid="4q-ealx">
           <h3
             className="text-lg font-semibold text-indigo-100"
-            data-oid="lizlltb"
+            data-oid="yt8y7:v"
           >
             {title}
           </h3>
           {description && (
-            <p className="text-sm text-indigo-300/70" data-oid="1rvlnwr">
+            <p className="text-sm text-indigo-300/70" data-oid=".0deu8a">
               {description}
             </p>
           )}
@@ -87,30 +87,30 @@ export function Chart({
       <div
         className="relative"
         style={{ height: `${height}px` }}
-        data-oid="oga_62t"
+        data-oid="is8rgy7"
       >
         <canvas
           ref={canvasRef}
           style={{ width: "100%", height: `${height}px` }}
           className="absolute inset-0"
-          data-oid="m--fzd2"
+          data-oid="mei46q5"
         />
       </div>
 
       {showLabels && (
-        <div className="mt-4 flex flex-wrap gap-3" data-oid="-abaxb6">
+        <div className="mt-4 flex flex-wrap gap-3" data-oid="elu.h4:">
           {data.map((item, index) => (
-            <div key={index} className="flex items-center" data-oid="hicl2k3">
+            <div key={index} className="flex items-center" data-oid="6nz:ze4">
               <span
                 className="block w-3 h-3 rounded-full mr-2"
                 style={{
                   backgroundColor:
                     item.color || DEFAULT_COLORS[index % DEFAULT_COLORS.length],
                 }}
-                data-oid="e6zl1ta"
+                data-oid="ro2vyir"
               />
 
-              <span className="text-sm text-indigo-300/70" data-oid="6jnliui">
+              <span className="text-sm text-indigo-300/70" data-oid="i4d0qt5">
                 {item.label}
               </span>
             </div>
